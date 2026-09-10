@@ -206,5 +206,3 @@ Simply upload all files to your web server.
 Personal portfolio - All rights reserved
 
 ---
-
-**Built with ❤️ using vanilla web technologies**
