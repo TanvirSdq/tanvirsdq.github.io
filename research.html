@@ -21,9 +21,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,900;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=8">
+<link rel="stylesheet" href="styles.css?v=9">
 </head>
 <body>
+
+<a class="skip-link" href="#main-content">Skip to content</a>
 
 <header class="subpage-header">
   <a class="back-link" href="./">
@@ -40,14 +42,15 @@
   </button>
 </header>
 
-<main class="subpage-wrap">
-  <article class="sop-header">
-    <div class="sop-meta">Statement of Purpose &bull; Direction</div>
-    <h1 class="sop-title">Building, Learning, and What Comes Next</h1>
-    <p class="sop-subtitle">
-      First-year CSE student at KUET. Practical open-source builder, daily problem solver, and working toward low-level ML engineering.
-    </p>
-  </article>
+<main id="main-content" class="subpage-wrap">
+  <article class="sop-article">
+    <header class="sop-header">
+      <div class="sop-meta">Statement of Purpose &bull; Direction</div>
+      <h1 class="sop-title">Building, Learning, and What Comes Next</h1>
+      <p class="sop-subtitle">
+        First-year CSE student at KUET. Practical open-source builder, daily problem solver, and working toward low-level ML engineering.
+      </p>
+    </header>
 
   <div class="sop-prose">
     <blockquote>
@@ -137,20 +140,21 @@
     </p>
 
     <div style="margin-top: 36px; padding-top: 24px; border-top: var(--rule-hair); display: flex; gap: 16px; flex-wrap: wrap;">
-      <a class="badge badge--accent" href="mailto:siddiquetanvir27@gmail.com" style="padding: 10px 18px; font-size: 13px;">
+      <a class="badge badge--accent" href="mailto:siddiquetanvir27@gmail.com" style="padding: 10px 18px; font-size: 13px; min-height: 44px; display: inline-flex; align-items: center;">
         Email Me &rarr;
       </a>
-      <a class="badge" href="https://www.linkedin.com/in/tanvirsdq" target="_blank" rel="noopener noreferrer" style="padding: 10px 18px; font-size: 13px;">
-        LinkedIn &#8599;
+      <a class="badge" href="https://www.linkedin.com/in/tanvirsdq" target="_blank" rel="noopener noreferrer" style="padding: 10px 18px; font-size: 13px; min-height: 44px; display: inline-flex; align-items: center;">
+        LinkedIn <span aria-hidden="true">&#8599;</span>
       </a>
-      <a class="badge" href="https://github.com/siddiquetanvir" target="_blank" rel="noopener noreferrer" style="padding: 10px 18px; font-size: 13px;">
-        GitHub &#8599;
+      <a class="badge" href="https://github.com/siddiquetanvir" target="_blank" rel="noopener noreferrer" style="padding: 10px 18px; font-size: 13px; min-height: 44px; display: inline-flex; align-items: center;">
+        GitHub <span aria-hidden="true">&#8599;</span>
       </a>
-      <a class="badge" href="./" style="padding: 10px 18px; font-size: 13px;">
+      <a class="badge" href="./" style="padding: 10px 18px; font-size: 13px; min-height: 44px; display: inline-flex; align-items: center;">
         &larr; Back to Portfolio
       </a>
     </div>
   </div>
+  </article>
 </main>
 
 <footer class="site-footer">

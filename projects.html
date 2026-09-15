@@ -21,9 +21,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,900;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=8">
+<link rel="stylesheet" href="styles.css?v=9">
 </head>
 <body>
+
+<a class="skip-link" href="#main-content">Skip to content</a>
 
 <header class="subpage-header">
   <a class="back-link" href="./">
@@ -40,7 +42,7 @@
   </button>
 </header>
 
-<main class="subpage-wrap">
+<main id="main-content" class="subpage-wrap">
   <header class="sop-header">
     <div class="sop-meta" id="archive-meta">Projects &bull; Archive</div>
     <h1 class="sop-title">Projects &amp; Systems Archive</h1>
@@ -49,12 +51,12 @@
 
   <!-- Filter buttons injected here -->
   <nav class="filter-bar" id="filter-bar" aria-label="Project category filters">
-    <button type="button" class="filter-btn is-active" data-filter="all">All Projects</button>
+    <button type="button" class="filter-btn is-active" data-filter="all" aria-pressed="true">All Projects</button>
   </nav>
 
   <!-- Project cards injected here -->
   <div class="projects" id="projects-grid">
-    <p style="color: var(--text-secondary); font-family: var(--font-mono); font-size: 13px;">Loading projects…</p>
+    <p role="status" aria-live="polite" style="color: var(--text-secondary); font-family: var(--font-mono); font-size: 13px;">Loading projects…</p>
   </div>
 
   <div style="margin-top: 56px; text-align: center;">
@@ -117,6 +119,7 @@
     allBtn.type = "button";
     allBtn.className = "filter-btn is-active";
     allBtn.dataset.filter = "all";
+    allBtn.setAttribute("aria-pressed", "true");
     allBtn.textContent = "All Projects";
     filterBar.appendChild(allBtn);
 
@@ -125,6 +128,7 @@
       btn.type = "button";
       btn.className = "filter-btn";
       btn.dataset.filter = cat;
+      btn.setAttribute("aria-pressed", "false");
       btn.textContent = cat;
       filterBar.appendChild(btn);
     });
@@ -148,11 +152,15 @@
 
       const links = [];
       if (p.github) links.push(
-        `<a class="project-card__link" href="${esc(p.github)}" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a>`
+        `<a class="project-card__link project-card__link--primary" href="${esc(p.github)}" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a>`
       );
-      if (p.demo || p.streamlit) links.push(
-        `<a class="project-card__link" href="${esc(p.demo || p.streamlit)}" target="_blank" rel="noopener noreferrer">Live Demo <span aria-hidden="true">&#8599;</span></a>`
-      );
+      if (p.demo || p.streamlit) {
+        const isSecond = Boolean(p.github);
+        const linkClass = isSecond ? "project-card__link project-card__link--secondary" : "project-card__link project-card__link--primary";
+        links.push(
+          `<a class="${linkClass}" href="${esc(p.demo || p.streamlit)}" target="_blank" rel="noopener noreferrer">Live Demo <span aria-hidden="true">&#8599;</span></a>`
+        );
+      }
 
       /* Featured badge in title area */
       const featuredBadge = p.featured
@@ -174,13 +182,33 @@
 
     allBtns.forEach(btn => {
       btn.addEventListener("click", () => {
-        allBtns.forEach(b => b.classList.remove("is-active"));
-        btn.classList.add("is-active");
-        const filter = btn.dataset.filter;
-        allCards.forEach(card => {
-          card.style.display =
-            (filter === "all" || card.dataset.category === filter) ? "flex" : "none";
+        allBtns.forEach(b => {
+          b.classList.remove("is-active");
+          b.setAttribute("aria-pressed", "false");
         });
+        btn.classList.add("is-active");
+        btn.setAttribute("aria-pressed", "true");
+        const filter = btn.dataset.filter;
+        let visibleCount = 0;
+        allCards.forEach(card => {
+          const match = (filter === "all" || card.dataset.category === filter);
+          card.style.display = match ? "flex" : "none";
+          if (match) visibleCount++;
+        });
+
+        let emptyNotice = document.getElementById("projects-empty-notice");
+        if (visibleCount === 0) {
+          if (!emptyNotice) {
+            emptyNotice = document.createElement("div");
+            emptyNotice.id = "projects-empty-notice";
+            emptyNotice.className = "empty-state-notice";
+            emptyNotice.setAttribute("role", "status");
+            emptyNotice.textContent = `No projects found matching the "${filter}" category.`;
+            grid.appendChild(emptyNotice);
+          }
+        } else if (emptyNotice) {
+          emptyNotice.remove();
+        }
       });
     });
   }

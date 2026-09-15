@@ -165,7 +165,10 @@
     if (metrics.length === 0) return null;
     const section = el("section", "section wrap reveal");
     section.id = "impact";
-    section.innerHTML = `<div class="eyebrow">By the numbers</div>`;
+    section.innerHTML = `
+      <div class="eyebrow">By the numbers</div>
+      <h2 class="section-title sr-only">Key Impact Metrics</h2>
+    `;
 
     const ledger = el("div", "ledger");
     metrics.forEach((m) => {
@@ -228,14 +231,16 @@
       let linksHTML = '';
       if (p.github) {
         linksHTML += `
-          <a class="project-card__link" href="${escapeHtml(p.github)}" target="_blank" rel="noopener noreferrer">
+          <a class="project-card__link project-card__link--primary" href="${escapeHtml(p.github)}" target="_blank" rel="noopener noreferrer">
             View on GitHub <span aria-hidden="true">&#8599;</span>
           </a>
         `;
       }
       if (p.demo || p.streamlit) {
+        const isSecond = Boolean(p.github);
+        const linkClass = isSecond ? "project-card__link project-card__link--secondary" : "project-card__link project-card__link--primary";
         linksHTML += `
-          <a class="project-card__link" href="${escapeHtml(p.demo || p.streamlit)}" target="_blank" rel="noopener noreferrer">
+          <a class="${linkClass}" href="${escapeHtml(p.demo || p.streamlit)}" target="_blank" rel="noopener noreferrer">
             Live Demo <span aria-hidden="true">&#8599;</span>
           </a>
         `;
@@ -453,7 +458,7 @@
     section.innerHTML = `
       <div class="colophon">
         <div class="eyebrow" style="justify-content:center;">${escapeHtml(interests.category || "")}</div>
-        <p class="colophon__title">${escapeHtml(interests.title || "")}</p>
+        <h2 class="colophon__title">${escapeHtml(interests.title || "")}</h2>
         <p class="colophon__desc">${escapeHtml(interests.description || "")}</p>
         <div style="margin-top: 24px; text-align: center;">
           <a class="cta-link-btn" href="${escapeHtml(interests.link || "research.html")}">
@@ -480,7 +485,7 @@
           <a class="contact__email" href="mailto:${escapeHtml(contact.email)}">${escapeHtml(contact.email)}</a>
           <button type="button" class="copy-email-btn" id="copy-email-btn" data-email="${escapeHtml(contact.email)}" aria-label="Copy email address">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-            <span id="copy-email-text">Copy</span>
+            <span id="copy-email-text" aria-live="polite">Copy</span>
           </button>
         </div>
       `;
@@ -498,7 +503,7 @@
       a.href = s.url || "#";
       a.target = "_blank";
       a.rel = "noopener noreferrer";
-      a.innerHTML = `<span>${escapeHtml(s.label || "")}</span><span class="arrow">&#8599;</span>`;
+      a.innerHTML = `<span>${escapeHtml(s.label || "")}</span><span class="arrow" aria-hidden="true">&#8599;</span>`;
       li.appendChild(a);
       list.appendChild(li);
     });
@@ -513,7 +518,7 @@
           ${devProfiles.map((p) => `
             <a class="dev-chip" href="${escapeHtml(p.url)}" target="_blank" rel="noopener noreferrer">
               <span>${escapeHtml(p.label)}</span>
-              <span class="arrow" style="font-size:10px; color:var(--text-secondary);">&#8599;</span>
+              <span class="arrow" style="font-size:10px; color:var(--text-secondary);" aria-hidden="true">&#8599;</span>
             </a>
           `).join("")}
         </div>
