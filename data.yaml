@@ -34,7 +34,7 @@ nav:
   # - id: "certifications"    # Uncomment once certifications list below is populated
   #   label: "Certifications"
   - id: "research"
-    label: "Trajectory"
+    label: "Direction"
   - id: "contact"
     label: "Contact"
 
@@ -129,10 +129,10 @@ projects:
     github: "https://github.com/siddiquetanvir/MLP-Implementation"
     featured: false
 
-  - title: "C Algorithmic Survival Guide"
+  - title: "C Problem Solving & Practice"
     category: "Systems"
-    tags: ["C", "C99", "POSIX", "Algorithms", "Competitive Programming", "UVa OJ"]
-    description: "Curated collection of robust POSIX C99 solutions to classic UVa Online Judge problems, covering dynamic programming, tree structures, graph theory, computational geometry, and grid simulation."
+    tags: ["C", "C99", "Codeforces", "Algorithms", "Problem Solving"]
+    description: "Daily competitive programming problem solutions in C from Codeforces (Watermelon, Long Words, Domino Piling, etc.) and university lab work, building core logic and memory discipline."
     github: "https://github.com/siddiquetanvir/guide"
     featured: false
 
@@ -214,9 +214,9 @@ extracurricular_activities:
 # RESEARCH TEASER (Teaser on Home -> Full SOP on /research.html)
 # ==============================================================================
 research_interests:
-  category: "Engineering Trajectory & Statement of Purpose"
-  title: "Building from First Principles: Systems Rigor, Real-World Scale & Machine Intelligence"
-  description: "First-year Computer Science & Engineering undergraduate at KUET bridging low-level C systems programming, full-stack product execution, and foundational machine learning. Exploring the convergence of systems software and low-level AI compute."
+  category: "Statement of Purpose & Direction"
+  title: "Building, Learning, and What Comes Next"
+  description: "First-year CSE student at KUET (3 months in) with a track record of open-source automation, full-stack shipping, and hands-on ML. Working toward mastering ML/AI from a systems perspective, starting with building tokenizers from scratch."
   link: "research.html"
 
 # ==============================================================================
