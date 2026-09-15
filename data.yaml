@@ -34,7 +34,7 @@ nav:
   # - id: "certifications"    # Uncomment once certifications list below is populated
   #   label: "Certifications"
   - id: "research"
-    label: "Research"
+    label: "Trajectory"
   - id: "contact"
     label: "Contact"
 
@@ -214,9 +214,9 @@ extracurricular_activities:
 # RESEARCH TEASER (Teaser on Home -> Full SOP on /research.html)
 # ==============================================================================
 research_interests:
-  category: "Academic Inquiries & Vision"
-  title: "Machine Learning, Natural Language Processing, Linguistics & Open Access"
-  description: "Exploring the intersection of machine learning, natural language processing, and linguistics to enhance open-access knowledge systems. Focused on developing tools and frameworks that facilitate automated content curation, multilingual data processing, and the democratization of information."
+  category: "Engineering Trajectory & Statement of Purpose"
+  title: "Building from First Principles: Systems Rigor, Real-World Scale & Machine Intelligence"
+  description: "First-year Computer Science & Engineering undergraduate at KUET bridging low-level C systems programming, full-stack product execution, and foundational machine learning. Exploring the convergence of systems software and low-level AI compute."
   link: "research.html"
 
 # ==============================================================================
