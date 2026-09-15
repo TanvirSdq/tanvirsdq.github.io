@@ -1,0 +1,19 @@
+# OS & Editor
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+
+# Node (if any tooling is added)
+node_modules/
+
+# Misc
+*.log
+*.tmp
+*.bak
+

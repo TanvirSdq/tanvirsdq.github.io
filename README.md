@@ -4,7 +4,110 @@ A modern, single-source-of-truth portfolio website built with **YAML configurati
 
 ## 🎯 Features
 
+## 🏗️ Architecture
+
+### 1. System Overview (ASCII)
+
+```
+========================================================================================
+              SIDDIQUETANVIR.GITHUB.IO — STATIC PORTFOLIO ARCHITECTURE
+========================================================================================
+
+   [ Visitor Browser ]
+          │
+          ▼  GitHub Pages CDN (HTTPS)
+   ┌──────────────────────────────────────────────────────────────────────┐
+   │                     STATIC HTML SHELL (index.html)                   │
+   │                       projects.html | research.html                  │
+   └──────────────────────┬─────────────────────┬────────────────────────┘
+                          │                     │
+                          ▼                     ▼
+   ┌─────────────────────────────┐  ┌───────────────────────────────────┐
+   │  CONTENT ENGINE (script.js) │  │  DESIGN SYSTEM (styles.css)       │
+   │  • Parses data.yaml         │  │  • CSS custom properties           │
+   │  • Renders DOM from data    │  │  • Dark / Light theme toggle       │
+   │  • Category filter logic    │  │  • Mobile-first responsive grid    │
+   │  • Theme persistence        │  │  • Sidebar nav rail               │
+   │    (localStorage)           │  └───────────────────────────────────┘
+   └──────────────┬──────────────┘
+                  │
+                  ▼
+   ┌─────────────────────────────┐
+   │  DATA SOURCE (data.yaml)    │
+   │  • Projects, Skills         │
+   │  • Education, Experience    │
+   │  • Navigation config        │
+   └─────────────────────────────┘
+   Deployed: GitHub Pages CDN (zero build step)
+========================================================================================
+```
+
+---
+
+### 2. Content Rendering Pipeline (Mermaid)
+
+```mermaid
+flowchart TD
+    subgraph Source["Single Source of Truth"]
+        YAML["data.yaml\n(Projects, Skills, Nav, Education)"]
+    end
+
+    subgraph Pages["HTML Pages"]
+        INDEX["index.html\n(Homepage)"]
+        PROJ["projects.html\n(Filterable Archive)"]
+        RES["research.html\n(Academic Vision)"]
+    end
+
+    subgraph Engine["JavaScript Rendering Engine (script.js)"]
+        PARSE["Parse & Load YAML data"]
+        RENDER["DOM Component Renderer\n(Projects, Skills, Sections)"]
+        FILTER["Category Filter Logic\n(WebApp | Bot | ML/AI)"]
+        THEME["Theme Manager\n(localStorage persistence)"]
+    end
+
+    subgraph Output["Rendered Output"]
+        NAV["Sticky Sidebar Nav Rail"]
+        CARDS["Project Cards with Tags"]
+        DARK["Dark / Light Mode UI"]
+    end
+
+    YAML --> PARSE
+    PARSE --> RENDER
+    RENDER --> FILTER
+    RENDER --> THEME
+    FILTER --> CARDS
+    THEME --> DARK
+    INDEX --> PARSE
+    PROJ --> FILTER
+    RENDER --> NAV
+
+    classDef src fill:#e3f2fd,stroke:#1976d2,stroke-width:2px;
+    classDef page fill:#ede7f6,stroke:#5e35b1,stroke-width:2px;
+    classDef engine fill:#e8f5e9,stroke:#388e3c,stroke-width:2px;
+    classDef out fill:#fff3e0,stroke:#f57c00,stroke-width:2px;
+    class YAML src;
+    class INDEX,PROJ,RES page;
+    class PARSE,RENDER,FILTER,THEME engine;
+    class NAV,CARDS,DARK out;
+```
+
+---
+
+### 3. Tech Stack
+
+| Layer | Technology | Purpose |
+| :--- | :--- | :--- |
+| **Markup** | HTML5 (Semantic) | Page structure, accessibility, ARIA labels |
+| **Styling** | CSS3 (Custom Properties, Grid, Flexbox) | Design system, responsive layout, dark/light theming |
+| **Logic** | Vanilla JavaScript (ES6+) | YAML parsing, DOM rendering, filter logic, localStorage theme |
+| **Content Config** | YAML (`data.yaml`) | Single source of truth for all portfolio content |
+| **Hosting** | GitHub Pages (CDN) | Zero-config static site deployment |
+| **Assets** | PDF (`MasterCV.pdf`) | Downloadable CV artifact |
+
+---
+
 ### Core Architecture
+
 - **Data-Driven Design** - Single `data.yaml` file manages all content (projects, skills, education, experience)
 - **Vanilla Stack** - Pure HTML, CSS, and JavaScript (no frameworks or build tools required)
 - **Theme Support** - Automatic dark/light mode detection with persistent user preference
