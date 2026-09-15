@@ -129,10 +129,10 @@ projects:
     github: "https://github.com/siddiquetanvir/MLP-Implementation"
     featured: false
 
-  - title: "C Problem Solving & Practice"
+  - title: "C Academic Problem Solving"
     category: "Systems"
-    tags: ["C", "C99", "Codeforces", "Algorithms", "Problem Solving"]
-    description: "Daily competitive programming problem solutions in C from Codeforces (Watermelon, Long Words, Domino Piling, etc.) and university lab work, building core logic and memory discipline."
+    tags: ["C", "C99", "Problem Solving", "Academic"]
+    description: "C programming practice and problem solutions for academic coursework and fundamental logic building."
     github: "https://github.com/siddiquetanvir/guide"
     featured: false
 
@@ -194,21 +194,7 @@ extracurricular_activities:
       - "Directed leadership and management operations for the college's English-language club."
       - "Organized language-enrichment events, debates, and peer-mentoring programs."
       - "Coordinated logistics and member engagement across the academic year."
-  - role: "Member"
-    organization: "KUET Programming Society (KUETPS)"
-    period: "2026 — Present"
-    bullets:
-      - "Active participant in competitive programming sessions and algorithm workshops."
-  - role: "Member"
-    organization: "HACK (Hardware & Autonomous Club of KUET)"
-    period: "2026 — Present"
-    bullets:
-      - "Collaborating on embedded hardware, sensor integration, and robotics initiatives."
-  - role: "Member"
-    organization: "SGIPC (Society of Graphical Information & Photo-Communication)"
-    period: "2026 — Present"
-    bullets:
-      - "Participating in visual media, publication design, and visual communication projects."
+
 
 # ==============================================================================
 # RESEARCH TEASER (Teaser on Home -> Full SOP on /research.html)
