@@ -82,44 +82,60 @@ skills:
 
 # ==============================================================================
 # PROJECTS (Featured on Home & Filterable on /projects.html)
-# Categories: "Automated Bot", "WebApp", "ML/AI"
+# Categories: "Automated Bot", "WebApp", "ML/AI", "Hackathon"
 # ==============================================================================
 projects:
-  - title: "Wikimedia Campaign Analytics"
+  - title: "CampusShare KUET"
+    category: "Hackathon"
+    tags: ["React 18", "FastAPI", "PostgreSQL", "MapLibre GL", "JWT", "Render"]
+    description: "Full-stack campus P2P borrowing & lending platform with a God's Eye radar map, OTP/QR handover verification, real-time 1:1 chat, and a self-regulating KUET Karma Protocol. Built for ForkedArch Freshers Hackathon 2026."
+    github: "https://github.com/siddiquetanvir/CampusShare"
+    demo: "https://forkathon2026-team-kuet-mantis-3.onrender.com/"
+    featured: true
+
+  - title: "Wikimedia Campaign Analytics Suite"
     category: "WebApp"
-    tags: ["Python", "Streamlit", "Data Visualization", "MediaWiki APIs"]
-    description: "An interactive web app providing retention metrics and raw data visualization across open-knowledge initiatives."
+    tags: ["Python", "Streamlit", "Pandas", "Plotly", "Seaborn", "MediaWiki API"]
+    description: "Interactive analytics platform for evaluating Wikimedia campaign health and contributor retention. Supports 5-dimension weighted health scoring, regional peer benchmarking, and exportable choropleth world maps."
     github: "https://github.com/siddiquetanvir/WebApp"
     demo: "https://wikistats.streamlit.app/"
     featured: true
 
-  - title: "Wikipedia Bot & Categorization Framework"
+  - title: "TanvirSdqBot — Wikimedia Automation Engine"
     category: "Automated Bot"
-    tags: ["Python", "JupyterLab", "Pywikibot", "Taxonomy Automation"]
-    description: "Custom Python framework (TanvirSdqBot) executing cross-wiki updates, user onboarding, and automated taxonomy management."
+    tags: ["Python", "Pywikibot", "MediaWiki API", "Pandas", "Matplotlib"]
+    description: "Production-grade Pywikibot framework that structured the entire Fulani Wikipedia (~10,000 articles) with 25+ core categories, automated new-editor welcome messages, and processed event data for Wiki Loves campaigns."
     github: "https://github.com/siddiquetanvir/TanvirSdqBot"
     featured: true
 
-  #- title: "Low-Resource NLP Toolkit (Fulfulde & Basque)"
-   # category: "ML/AI"
-   # tags: ["Python", "NLP", "Linguistics", "Tokenization"]
-   # description: "Exploratory scripts, morpho-syntactic tokenization experiments, and corpus curation for underrepresented languages."
-   # github: "https://github.com/siddiquetanvir"
-   # featured: true
+  - title: "Crop Disease Detection"
+    category: "ML/AI"
+    tags: ["Python", "TensorFlow", "Keras", "EfficientNet", "Streamlit", "Transfer Learning"]
+    description: "CNN-based plant pathology classifier using EfficientNet transfer learning to detect 38 crop disease classes from leaf photos, served via a Streamlit web app."
+    github: "https://github.com/siddiquetanvir/MainCropDiseaseDetection"
+    featured: true
 
-  #- title: "Wikidata Entity & Property Consistency Bot"
-   # category: "Automated Bot"
-   # tags: ["Pywikibot", "Wikidata", "SPARQL", "Taxonomy"]
-   # description: "Automated batch validation of multilingual statement claims and taxonomy tree reconciliation across Wikidata items."
-   # github: "https://github.com/siddiquetanvir/TanvirSdqBot"
-   # featured: false
+  - title: "Kaggle ML & Data Science Workspace"
+    category: "ML/AI"
+    tags: ["Python", "Scikit-Learn", "XGBoost", "LightGBM", "Pandas", "Jupyter"]
+    description: "Hands-on repository of Kaggle competition solutions (Titanic, Spaceship Titanic, House Prices, Credit Card Fraud) and GCI World 2026 coursework from UTokyo's Matsuo-Iwasawa Laboratory."
+    github: "https://github.com/siddiquetanvir/Kaggle"
+    featured: false
 
-  #- title: "Open Knowledge Retention Dashboard"
-   # category: "WebApp"
-   # tags: ["Python", "Pandas", "Streamlit", "APIs"]
-   # description: "Cohort retention analysis tool measuring editor onboarding, edit frequency, and longevity in community campaigns."
-   # github: "https://github.com/siddiquetanvir/WebApp"
-   # featured: false
+  - title: "MLP Implementation Lab"
+    category: "ML/AI"
+    tags: ["Python", "PyTorch", "NLP", "Bigram LM", "Jupyter"]
+    description: "Experimental lab scaling simple ML projects toward production. Includes a character-level Bigram Language Model trained on The Wizard of Oz, with full tokenization, training, and autoregressive generation pipelines."
+    github: "https://github.com/siddiquetanvir/MLP-Implementation"
+    featured: false
+
+  - title: "C Algorithmic Survival Guide"
+    category: "Systems"
+    tags: ["C", "C99", "POSIX", "Algorithms", "Competitive Programming", "UVa OJ"]
+    description: "Curated collection of robust POSIX C99 solutions to classic UVa Online Judge problems, covering dynamic programming, tree structures, graph theory, computational geometry, and grid simulation."
+    github: "https://github.com/siddiquetanvir/guide"
+    featured: false
+
 
 # ==============================================================================
 # PROFESSIONAL EXPERIENCE (Industry Internships & Jobs)
