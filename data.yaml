@@ -194,7 +194,17 @@ extracurricular_activities:
       - "Directed leadership and management operations for the college's English-language club."
       - "Organized language-enrichment events, debates, and peer-mentoring programs."
       - "Coordinated logistics and member engagement across the academic year."
+  - role: "Member"
+    organization: "KUET Photographic Society (KUETPS)"
+    period: "2026 — Present"
 
+  - role: "Member"
+    organization: "Hardware Acceleration Club of KUET (HACK)"
+    period: "2026 — Present"
+
+  - role: "Member"
+    organization: "Special Group Interested In Programming Contest (SGIPC)"
+    period: "2026 — Present"
 
 # ==============================================================================
 # RESEARCH TEASER (Teaser on Home -> Full SOP on /research.html)
