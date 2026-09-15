@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tanvir Siddique | Projects & Systems Archive</title>
-<meta name="description" content="Complete projects archive of Tanvir Siddique: Automated bots, open-source frameworks, interactive web applications, and NLP utilities.">
+<title>Tanvir Siddique | Projects &amp; Systems Archive</title>
+<meta name="description" content="Complete projects archive of Tanvir Siddique: Hackathon builds, open-source automation bots, web apps, machine learning pipelines, and systems programming.">
 
 <script>
   (function () {
@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,900;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=7">
+<link rel="stylesheet" href="styles.css?v=8">
 </head>
 <body>
 
@@ -42,34 +42,63 @@
 
 <main class="subpage-wrap">
   <header class="sop-header">
-    <div class="sop-meta">Software &bull; Bots &bull; Systems</div>
+    <div class="sop-meta">Hackathon &bull; Software &bull; Bots &bull; ML &bull; Systems</div>
     <h1 class="sop-title">Projects &amp; Systems Archive</h1>
     <p class="sop-subtitle">
-      A filterable catalogue of automation bots, web dashboards, and machine learning utilities built for open knowledge ecosystems and systems experimentation.
+      A filterable catalogue of all real projects — hackathon builds, automation bots, web dashboards, machine learning pipelines, and systems programming.
     </p>
   </header>
 
   <!-- Filter Buttons -->
   <nav class="filter-bar" aria-label="Project category filters">
     <button type="button" class="filter-btn is-active" data-filter="all">All Projects</button>
+    <button type="button" class="filter-btn" data-filter="Hackathon">Hackathon</button>
     <button type="button" class="filter-btn" data-filter="Automated Bot">Automated Bot</button>
     <button type="button" class="filter-btn" data-filter="WebApp">WebApp</button>
     <button type="button" class="filter-btn" data-filter="ML/AI">ML/AI</button>
+    <button type="button" class="filter-btn" data-filter="Systems">Systems</button>
   </nav>
 
   <!-- Projects Grid -->
   <div class="projects" id="projects-grid">
-    <!-- Project 1 -->
+
+    <!-- CampusShare KUET -->
+    <article class="project-card" data-category="Hackathon">
+      <div class="project-card__tags">
+        <span class="badge badge--accent">Hackathon</span>
+        <span class="badge">React 18</span>
+        <span class="badge">FastAPI</span>
+        <span class="badge">PostgreSQL</span>
+        <span class="badge">MapLibre GL</span>
+        <span class="badge">Render</span>
+      </div>
+      <h2 class="project-card__title">CampusShare KUET</h2>
+      <p class="project-card__desc">
+        Full-stack campus P2P borrowing &amp; lending platform built for ForkedArch Freshers Hackathon 2026. Features a God's Eye radar map, OTP/QR cryptographic handover verification, real-time 1:1 chat, and a self-regulating KUET Karma Protocol (+10 lend, +5 return, −30 penalty). Deployed live on Render with Neon PostgreSQL.
+      </p>
+      <div style="display: flex; flex-direction: column; width: 100%;">
+        <a class="project-card__link" href="https://github.com/siddiquetanvir/CampusShare" target="_blank" rel="noopener noreferrer">
+          View on GitHub <span aria-hidden="true">&#8599;</span>
+        </a>
+        <a class="project-card__link" href="https://forkathon2026-team-kuet-mantis-3.onrender.com/" target="_blank" rel="noopener noreferrer">
+          Live Demo <span aria-hidden="true">&#8599;</span>
+        </a>
+      </div>
+    </article>
+
+    <!-- Wikimedia Campaign Analytics Suite -->
     <article class="project-card" data-category="WebApp">
       <div class="project-card__tags">
         <span class="badge badge--accent">WebApp</span>
         <span class="badge">Python</span>
         <span class="badge">Streamlit</span>
-        <span class="badge">Data Visualization</span>
+        <span class="badge">Pandas</span>
+        <span class="badge">Plotly</span>
+        <span class="badge">MediaWiki API</span>
       </div>
-      <h2 class="project-card__title">Wikimedia Campaign Analytics</h2>
+      <h2 class="project-card__title">Wikimedia Campaign Analytics Suite</h2>
       <p class="project-card__desc">
-        An interactive web application providing retention metrics, edit longevity, and raw participation analytics across open-knowledge initiatives and editor cohorts.
+        Interactive analytics platform for evaluating Wikimedia campaign health and contributor retention. Supports 5-dimension weighted health scoring (Retention 35%, Growth 20%, Usage 20%, Quality 15%, Diversity 10%), regional peer benchmarking across geographic clusters, and exportable choropleth world maps and heatmaps.
       </p>
       <div style="display: flex; flex-direction: column; width: 100%;">
         <a class="project-card__link" href="https://github.com/siddiquetanvir/WebApp" target="_blank" rel="noopener noreferrer">
@@ -81,17 +110,18 @@
       </div>
     </article>
 
-    <!-- Project 2 -->
+    <!-- TanvirSdqBot -->
     <article class="project-card" data-category="Automated Bot">
       <div class="project-card__tags">
         <span class="badge badge--accent">Automated Bot</span>
         <span class="badge">Python</span>
         <span class="badge">Pywikibot</span>
-        <span class="badge">JupyterLab</span>
+        <span class="badge">MediaWiki API</span>
+        <span class="badge">Pandas</span>
       </div>
-      <h2 class="project-card__title">Wikipedia Bot &amp; Categorization Framework</h2>
+      <h2 class="project-card__title">TanvirSdqBot — Wikimedia Automation Engine</h2>
       <p class="project-card__desc">
-        Custom automated framework (TanvirSdqBot) executing cross-wiki batch maintenance, user onboarding, namespace categorization, and structural taxonomy verification.
+        Production-grade Pywikibot framework that structured the entire Fulani Wikipedia (~10,000 articles) by adding 25+ core categories, automated welcome messages for new editors, and processed event data for Wiki Loves Folklore, Wiki Loves Earth campaigns. All scripts are production-tested and live on Wikimedia infrastructure.
       </p>
       <div style="display: flex; flex-direction: column; width: 100%;">
         <a class="project-card__link" href="https://github.com/siddiquetanvir/TanvirSdqBot" target="_blank" rel="noopener noreferrer">
@@ -100,62 +130,90 @@
       </div>
     </article>
 
-    <!-- Project 3 -->
+    <!-- Crop Disease Detection -->
     <article class="project-card" data-category="ML/AI">
       <div class="project-card__tags">
         <span class="badge badge--accent">ML/AI</span>
         <span class="badge">Python</span>
-        <span class="badge">NLP</span>
-        <span class="badge">Linguistics</span>
-      </div>
-      <h2 class="project-card__title">Low-Resource NLP Toolkit (Fulfulde &amp; Basque)</h2>
-      <p class="project-card__desc">
-        Exploratory scripts, morpho-syntactic tokenization experiments, and corpus curation for underrepresented languages with non-standard agglutinative structures.
-      </p>
-      <div style="display: flex; flex-direction: column; width: 100%;">
-        <a class="project-card__link" href="https://github.com/siddiquetanvir" target="_blank" rel="noopener noreferrer">
-          View on GitHub <span aria-hidden="true">&#8599;</span>
-        </a>
-      </div>
-    </article>
-
-    <!-- Project 4 -->
-    <article class="project-card" data-category="Automated Bot">
-      <div class="project-card__tags">
-        <span class="badge badge--accent">Automated Bot</span>
-        <span class="badge">Pywikibot</span>
-        <span class="badge">Wikidata</span>
-        <span class="badge">SPARQL</span>
-      </div>
-      <h2 class="project-card__title">Wikidata Entity &amp; Property Consistency Bot</h2>
-      <p class="project-card__desc">
-        Automated batch validation of multilingual statement claims and taxonomy tree reconciliation across Wikidata items to ensure ontological consistency.
-      </p>
-      <div style="display: flex; flex-direction: column; width: 100%;">
-        <a class="project-card__link" href="https://github.com/siddiquetanvir/TanvirSdqBot" target="_blank" rel="noopener noreferrer">
-          View on GitHub <span aria-hidden="true">&#8599;</span>
-        </a>
-      </div>
-    </article>
-
-    <!-- Project 5 -->
-    <article class="project-card" data-category="WebApp">
-      <div class="project-card__tags">
-        <span class="badge badge--accent">WebApp</span>
-        <span class="badge">Python</span>
-        <span class="badge">Pandas</span>
+        <span class="badge">TensorFlow</span>
+        <span class="badge">Keras</span>
+        <span class="badge">EfficientNet</span>
         <span class="badge">Streamlit</span>
       </div>
-      <h2 class="project-card__title">Open Knowledge Retention Dashboard</h2>
+      <h2 class="project-card__title">Crop Disease Detection</h2>
       <p class="project-card__desc">
-        Cohort retention analysis tool measuring editor onboarding, edit frequency, and longevity in community open-access campaigns.
+        CNN-based plant pathology classifier using EfficientNet transfer learning to detect 38 crop disease classes from leaf photos, served via a Streamlit web app. Includes 3 notebook milestones — custom CNN baseline, pretrained transfer learning, and high-resolution fine-tuning — culminating in a production Keras model.
       </p>
       <div style="display: flex; flex-direction: column; width: 100%;">
-        <a class="project-card__link" href="https://github.com/siddiquetanvir/WebApp" target="_blank" rel="noopener noreferrer">
+        <a class="project-card__link" href="https://github.com/siddiquetanvir/MainCropDiseaseDetection" target="_blank" rel="noopener noreferrer">
           View on GitHub <span aria-hidden="true">&#8599;</span>
         </a>
       </div>
     </article>
+
+    <!-- Kaggle ML Workspace -->
+    <article class="project-card" data-category="ML/AI">
+      <div class="project-card__tags">
+        <span class="badge badge--accent">ML/AI</span>
+        <span class="badge">Python</span>
+        <span class="badge">Scikit-Learn</span>
+        <span class="badge">XGBoost</span>
+        <span class="badge">LightGBM</span>
+        <span class="badge">Jupyter</span>
+      </div>
+      <h2 class="project-card__title">Kaggle ML &amp; Data Science Workspace</h2>
+      <p class="project-card__desc">
+        Hands-on repository of Kaggle competition solutions — Titanic (binary classification), Spaceship Titanic (multimodal classification), House Prices (high-dimensional regression), and Credit Card Fraud (imbalanced anomaly detection) — plus GCI World 2026 coursework from UTokyo's Matsuo-Iwasawa Laboratory.
+      </p>
+      <div style="display: flex; flex-direction: column; width: 100%;">
+        <a class="project-card__link" href="https://github.com/siddiquetanvir/Kaggle" target="_blank" rel="noopener noreferrer">
+          View on GitHub <span aria-hidden="true">&#8599;</span>
+        </a>
+      </div>
+    </article>
+
+    <!-- MLP Implementation Lab -->
+    <article class="project-card" data-category="ML/AI">
+      <div class="project-card__tags">
+        <span class="badge badge--accent">ML/AI</span>
+        <span class="badge">Python</span>
+        <span class="badge">PyTorch</span>
+        <span class="badge">NLP</span>
+        <span class="badge">Bigram LM</span>
+        <span class="badge">Jupyter</span>
+      </div>
+      <h2 class="project-card__title">MLP Implementation Lab</h2>
+      <p class="project-card__desc">
+        Experimental lab scaling simple ML projects toward production. Implements a character-level Bigram Language Model trained on The Wizard of Oz with a full PyTorch pipeline — tokenization, batching, cross-entropy training, AdamW optimization, and autoregressive generation.
+      </p>
+      <div style="display: flex; flex-direction: column; width: 100%;">
+        <a class="project-card__link" href="https://github.com/siddiquetanvir/MLP-Implementation" target="_blank" rel="noopener noreferrer">
+          View on GitHub <span aria-hidden="true">&#8599;</span>
+        </a>
+      </div>
+    </article>
+
+    <!-- C Algorithmic Survival Guide -->
+    <article class="project-card" data-category="Systems">
+      <div class="project-card__tags">
+        <span class="badge badge--accent">Systems</span>
+        <span class="badge">C</span>
+        <span class="badge">C99</span>
+        <span class="badge">POSIX</span>
+        <span class="badge">Algorithms</span>
+        <span class="badge">UVa OJ</span>
+      </div>
+      <h2 class="project-card__title">C Algorithmic Survival Guide</h2>
+      <p class="project-card__desc">
+        Curated collection of robust POSIX C99 solutions to classic UVa Online Judge problems (Volume 1), covering dynamic programming, tree structures &amp; recursion, graph theory &amp; Eulerian paths, computational geometry, greedy sorting, and grid simulation — all compiled with zero runtime dependencies.
+      </p>
+      <div style="display: flex; flex-direction: column; width: 100%;">
+        <a class="project-card__link" href="https://github.com/siddiquetanvir/guide" target="_blank" rel="noopener noreferrer">
+          View on GitHub <span aria-hidden="true">&#8599;</span>
+        </a>
+      </div>
+    </article>
+
   </div>
 
   <div style="margin-top: 56px; text-align: center;">
@@ -167,7 +225,7 @@
 
 <footer class="site-footer">
   <div class="site-footer__group">
-    <span>Systems &bull; Software Archive</span>
+    <span>Hackathon &bull; Systems &bull; Software Archive</span>
     <span>KUET &mdash; Khulna, Bangladesh</span>
   </div>
   <div class="site-footer__group">
