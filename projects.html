@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tanvir Siddique | Projects &amp; Systems Archive</title>
-<meta name="description" content="Complete projects archive of Tanvir Siddique: Hackathon builds, open-source automation bots, web apps, machine learning pipelines, and systems programming.">
+<meta name="description" content="Complete projects archive of Tanvir Siddique — all real projects from GitHub.">
 
 <script>
   (function () {
@@ -42,178 +42,19 @@
 
 <main class="subpage-wrap">
   <header class="sop-header">
-    <div class="sop-meta">Hackathon &bull; Software &bull; Bots &bull; ML &bull; Systems</div>
+    <div class="sop-meta" id="archive-meta">Projects &bull; Archive</div>
     <h1 class="sop-title">Projects &amp; Systems Archive</h1>
-    <p class="sop-subtitle">
-      A filterable catalogue of all real projects — hackathon builds, automation bots, web dashboards, machine learning pipelines, and systems programming.
-    </p>
+    <p class="sop-subtitle">All real projects — filterable by category.</p>
   </header>
 
-  <!-- Filter Buttons -->
-  <nav class="filter-bar" aria-label="Project category filters">
+  <!-- Filter buttons injected here -->
+  <nav class="filter-bar" id="filter-bar" aria-label="Project category filters">
     <button type="button" class="filter-btn is-active" data-filter="all">All Projects</button>
-    <button type="button" class="filter-btn" data-filter="Hackathon">Hackathon</button>
-    <button type="button" class="filter-btn" data-filter="Automated Bot">Automated Bot</button>
-    <button type="button" class="filter-btn" data-filter="WebApp">WebApp</button>
-    <button type="button" class="filter-btn" data-filter="ML/AI">ML/AI</button>
-    <button type="button" class="filter-btn" data-filter="Systems">Systems</button>
   </nav>
 
-  <!-- Projects Grid -->
+  <!-- Project cards injected here -->
   <div class="projects" id="projects-grid">
-
-    <!-- CampusShare KUET -->
-    <article class="project-card" data-category="Hackathon">
-      <div class="project-card__tags">
-        <span class="badge badge--accent">Hackathon</span>
-        <span class="badge">React 18</span>
-        <span class="badge">FastAPI</span>
-        <span class="badge">PostgreSQL</span>
-        <span class="badge">MapLibre GL</span>
-        <span class="badge">Render</span>
-      </div>
-      <h2 class="project-card__title">CampusShare KUET</h2>
-      <p class="project-card__desc">
-        Full-stack campus P2P borrowing &amp; lending platform built for ForkedArch Freshers Hackathon 2026. Features a God's Eye radar map, OTP/QR cryptographic handover verification, real-time 1:1 chat, and a self-regulating KUET Karma Protocol (+10 lend, +5 return, −30 penalty). Deployed live on Render with Neon PostgreSQL.
-      </p>
-      <div style="display: flex; flex-direction: column; width: 100%;">
-        <a class="project-card__link" href="https://github.com/siddiquetanvir/CampusShare" target="_blank" rel="noopener noreferrer">
-          View on GitHub <span aria-hidden="true">&#8599;</span>
-        </a>
-        <a class="project-card__link" href="https://forkathon2026-team-kuet-mantis-3.onrender.com/" target="_blank" rel="noopener noreferrer">
-          Live Demo <span aria-hidden="true">&#8599;</span>
-        </a>
-      </div>
-    </article>
-
-    <!-- Wikimedia Campaign Analytics Suite -->
-    <article class="project-card" data-category="WebApp">
-      <div class="project-card__tags">
-        <span class="badge badge--accent">WebApp</span>
-        <span class="badge">Python</span>
-        <span class="badge">Streamlit</span>
-        <span class="badge">Pandas</span>
-        <span class="badge">Plotly</span>
-        <span class="badge">MediaWiki API</span>
-      </div>
-      <h2 class="project-card__title">Wikimedia Campaign Analytics Suite</h2>
-      <p class="project-card__desc">
-        Interactive analytics platform for evaluating Wikimedia campaign health and contributor retention. Supports 5-dimension weighted health scoring (Retention 35%, Growth 20%, Usage 20%, Quality 15%, Diversity 10%), regional peer benchmarking across geographic clusters, and exportable choropleth world maps and heatmaps.
-      </p>
-      <div style="display: flex; flex-direction: column; width: 100%;">
-        <a class="project-card__link" href="https://github.com/siddiquetanvir/WebApp" target="_blank" rel="noopener noreferrer">
-          View on GitHub <span aria-hidden="true">&#8599;</span>
-        </a>
-        <a class="project-card__link" href="https://wikistats.streamlit.app/" target="_blank" rel="noopener noreferrer">
-          Live Demo <span aria-hidden="true">&#8599;</span>
-        </a>
-      </div>
-    </article>
-
-    <!-- TanvirSdqBot -->
-    <article class="project-card" data-category="Automated Bot">
-      <div class="project-card__tags">
-        <span class="badge badge--accent">Automated Bot</span>
-        <span class="badge">Python</span>
-        <span class="badge">Pywikibot</span>
-        <span class="badge">MediaWiki API</span>
-        <span class="badge">Pandas</span>
-      </div>
-      <h2 class="project-card__title">TanvirSdqBot — Wikimedia Automation Engine</h2>
-      <p class="project-card__desc">
-        Production-grade Pywikibot framework that structured the entire Fulani Wikipedia (~10,000 articles) by adding 25+ core categories, automated welcome messages for new editors, and processed event data for Wiki Loves Folklore, Wiki Loves Earth campaigns. All scripts are production-tested and live on Wikimedia infrastructure.
-      </p>
-      <div style="display: flex; flex-direction: column; width: 100%;">
-        <a class="project-card__link" href="https://github.com/siddiquetanvir/TanvirSdqBot" target="_blank" rel="noopener noreferrer">
-          View on GitHub <span aria-hidden="true">&#8599;</span>
-        </a>
-      </div>
-    </article>
-
-    <!-- Crop Disease Detection -->
-    <article class="project-card" data-category="ML/AI">
-      <div class="project-card__tags">
-        <span class="badge badge--accent">ML/AI</span>
-        <span class="badge">Python</span>
-        <span class="badge">TensorFlow</span>
-        <span class="badge">Keras</span>
-        <span class="badge">EfficientNet</span>
-        <span class="badge">Streamlit</span>
-      </div>
-      <h2 class="project-card__title">Crop Disease Detection</h2>
-      <p class="project-card__desc">
-        CNN-based plant pathology classifier using EfficientNet transfer learning to detect 38 crop disease classes from leaf photos, served via a Streamlit web app. Includes 3 notebook milestones — custom CNN baseline, pretrained transfer learning, and high-resolution fine-tuning — culminating in a production Keras model.
-      </p>
-      <div style="display: flex; flex-direction: column; width: 100%;">
-        <a class="project-card__link" href="https://github.com/siddiquetanvir/MainCropDiseaseDetection" target="_blank" rel="noopener noreferrer">
-          View on GitHub <span aria-hidden="true">&#8599;</span>
-        </a>
-      </div>
-    </article>
-
-    <!-- Kaggle ML Workspace -->
-    <article class="project-card" data-category="ML/AI">
-      <div class="project-card__tags">
-        <span class="badge badge--accent">ML/AI</span>
-        <span class="badge">Python</span>
-        <span class="badge">Scikit-Learn</span>
-        <span class="badge">XGBoost</span>
-        <span class="badge">LightGBM</span>
-        <span class="badge">Jupyter</span>
-      </div>
-      <h2 class="project-card__title">Kaggle ML &amp; Data Science Workspace</h2>
-      <p class="project-card__desc">
-        Hands-on repository of Kaggle competition solutions — Titanic (binary classification), Spaceship Titanic (multimodal classification), House Prices (high-dimensional regression), and Credit Card Fraud (imbalanced anomaly detection) — plus GCI World 2026 coursework from UTokyo's Matsuo-Iwasawa Laboratory.
-      </p>
-      <div style="display: flex; flex-direction: column; width: 100%;">
-        <a class="project-card__link" href="https://github.com/siddiquetanvir/Kaggle" target="_blank" rel="noopener noreferrer">
-          View on GitHub <span aria-hidden="true">&#8599;</span>
-        </a>
-      </div>
-    </article>
-
-    <!-- MLP Implementation Lab -->
-    <article class="project-card" data-category="ML/AI">
-      <div class="project-card__tags">
-        <span class="badge badge--accent">ML/AI</span>
-        <span class="badge">Python</span>
-        <span class="badge">PyTorch</span>
-        <span class="badge">NLP</span>
-        <span class="badge">Bigram LM</span>
-        <span class="badge">Jupyter</span>
-      </div>
-      <h2 class="project-card__title">MLP Implementation Lab</h2>
-      <p class="project-card__desc">
-        Experimental lab scaling simple ML projects toward production. Implements a character-level Bigram Language Model trained on The Wizard of Oz with a full PyTorch pipeline — tokenization, batching, cross-entropy training, AdamW optimization, and autoregressive generation.
-      </p>
-      <div style="display: flex; flex-direction: column; width: 100%;">
-        <a class="project-card__link" href="https://github.com/siddiquetanvir/MLP-Implementation" target="_blank" rel="noopener noreferrer">
-          View on GitHub <span aria-hidden="true">&#8599;</span>
-        </a>
-      </div>
-    </article>
-
-    <!-- C Algorithmic Survival Guide -->
-    <article class="project-card" data-category="Systems">
-      <div class="project-card__tags">
-        <span class="badge badge--accent">Systems</span>
-        <span class="badge">C</span>
-        <span class="badge">C99</span>
-        <span class="badge">POSIX</span>
-        <span class="badge">Algorithms</span>
-        <span class="badge">UVa OJ</span>
-      </div>
-      <h2 class="project-card__title">C Algorithmic Survival Guide</h2>
-      <p class="project-card__desc">
-        Curated collection of robust POSIX C99 solutions to classic UVa Online Judge problems (Volume 1), covering dynamic programming, tree structures &amp; recursion, graph theory &amp; Eulerian paths, computational geometry, greedy sorting, and grid simulation — all compiled with zero runtime dependencies.
-      </p>
-      <div style="display: flex; flex-direction: column; width: 100%;">
-        <a class="project-card__link" href="https://github.com/siddiquetanvir/guide" target="_blank" rel="noopener noreferrer">
-          View on GitHub <span aria-hidden="true">&#8599;</span>
-        </a>
-      </div>
-    </article>
-
+    <p style="color: var(--text-secondary); font-family: var(--font-mono); font-size: 13px;">Loading projects…</p>
   </div>
 
   <div style="margin-top: 56px; text-align: center;">
@@ -223,50 +64,142 @@
   </div>
 </main>
 
-<footer class="site-footer">
+<footer class="site-footer" id="archive-footer">
   <div class="site-footer__group">
-    <span>Hackathon &bull; Systems &bull; Software Archive</span>
-    <span>KUET &mdash; Khulna, Bangladesh</span>
+    <span>Projects Archive</span>
   </div>
   <div class="site-footer__group">
     <span>&copy; <script>document.write(new Date().getFullYear())</script> Tanvir Siddique</span>
   </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
 <script>
-  (function () {
-    // Theme toggle
-    const themeBtn = document.getElementById("theme-toggle");
-    if (themeBtn) {
-      themeBtn.addEventListener("click", () => {
-        const current = document.documentElement.getAttribute("data-theme") || "light";
-        const next = current === "dark" ? "light" : "dark";
-        document.documentElement.setAttribute("data-theme", next);
-        try { localStorage.setItem("theme", next); } catch (e) {}
-      });
+(function () {
+  /* ── Theme toggle ── */
+  const themeBtn = document.getElementById("theme-toggle");
+  if (themeBtn) {
+    themeBtn.addEventListener("click", () => {
+      const cur = document.documentElement.getAttribute("data-theme") || "light";
+      const next = cur === "dark" ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", next);
+      try { localStorage.setItem("theme", next); } catch (e) {}
+    });
+  }
+
+  function esc(str) {
+    return String(str || "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+
+  /* ── Render ── */
+  function render(data) {
+    const projects = data.projects || [];
+    if (!projects.length) {
+      document.getElementById("projects-grid").innerHTML =
+        "<p style=\"color:var(--text-secondary)\">No projects found in data.yaml.</p>";
+      return;
     }
 
-    // Category Filter
-    const filterButtons = document.querySelectorAll(".filter-btn");
-    const cards = document.querySelectorAll("#projects-grid .project-card");
+    /* Collect unique categories in the order they first appear */
+    const categories = [];
+    projects.forEach(p => {
+      if (p.category && !categories.includes(p.category)) categories.push(p.category);
+    });
 
-    filterButtons.forEach((btn) => {
+    /* Build filter buttons */
+    const filterBar = document.getElementById("filter-bar");
+    filterBar.innerHTML = "";
+    const allBtn = document.createElement("button");
+    allBtn.type = "button";
+    allBtn.className = "filter-btn is-active";
+    allBtn.dataset.filter = "all";
+    allBtn.textContent = "All Projects";
+    filterBar.appendChild(allBtn);
+
+    categories.forEach(cat => {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "filter-btn";
+      btn.dataset.filter = cat;
+      btn.textContent = cat;
+      filterBar.appendChild(btn);
+    });
+
+    /* Update meta line with category labels */
+    const metaEl = document.getElementById("archive-meta");
+    if (metaEl) metaEl.textContent = categories.join(" \u2022 ");
+
+    /* Build project cards */
+    const grid = document.getElementById("projects-grid");
+    grid.innerHTML = "";
+
+    projects.forEach(p => {
+      const card = document.createElement("article");
+      card.className = "project-card";
+      card.dataset.category = p.category || "";
+
+      const tags = (p.tags || []).map((t, i) =>
+        `<span class="badge${i === 0 ? " badge--accent" : ""}">${esc(t)}</span>`
+      ).join("");
+
+      const links = [];
+      if (p.github) links.push(
+        `<a class="project-card__link" href="${esc(p.github)}" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a>`
+      );
+      if (p.demo || p.streamlit) links.push(
+        `<a class="project-card__link" href="${esc(p.demo || p.streamlit)}" target="_blank" rel="noopener noreferrer">Live Demo <span aria-hidden="true">&#8599;</span></a>`
+      );
+
+      /* Featured badge in title area */
+      const featuredBadge = p.featured
+        ? `<span class="badge badge--accent" style="margin-left:8px;font-size:10px;vertical-align:middle;">Featured</span>`
+        : "";
+
+      card.innerHTML = `
+        <div class="project-card__tags">${tags}</div>
+        <h2 class="project-card__title">${esc(p.title)}${featuredBadge}</h2>
+        <p class="project-card__desc">${esc(p.description)}</p>
+        <div style="display:flex;flex-direction:column;width:100%;">${links.join("")}</div>
+      `;
+      grid.appendChild(card);
+    });
+
+    /* Wire up filter buttons */
+    const allCards = grid.querySelectorAll(".project-card");
+    const allBtns = filterBar.querySelectorAll(".filter-btn");
+
+    allBtns.forEach(btn => {
       btn.addEventListener("click", () => {
-        filterButtons.forEach((b) => b.classList.remove("is-active"));
+        allBtns.forEach(b => b.classList.remove("is-active"));
         btn.classList.add("is-active");
-
-        const filter = btn.getAttribute("data-filter");
-        cards.forEach((card) => {
-          const category = card.getAttribute("data-category");
-          if (filter === "all" || category === filter) {
-            card.style.display = "flex";
-          } else {
-            card.style.display = "none";
-          }
+        const filter = btn.dataset.filter;
+        allCards.forEach(card => {
+          card.style.display =
+            (filter === "all" || card.dataset.category === filter) ? "flex" : "none";
         });
       });
     });
-  })();
+  }
+
+  /* ── Fetch data.yaml ── */
+  fetch("data.yaml", { cache: "no-store" })
+    .then(res => {
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      return res.text();
+    })
+    .then(text => {
+      const data = jsyaml.load(text);
+      render(data);
+    })
+    .catch(err => {
+      document.getElementById("projects-grid").innerHTML =
+        `<p style="color:var(--accent-color);font-family:var(--font-mono)">Could not load data.yaml: ${esc(err.message)}</p>`;
+    });
+})();
 </script>
 
 </body>
