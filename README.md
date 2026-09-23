@@ -1,311 +1,44 @@
-# Personal Portfolio Website
+# siddiquetanvir.github.io
 
-A modern, single-source-of-truth portfolio website built with **YAML configuration** and vanilla JavaScript. All content is managed through `data.yaml`, enabling rapid updates, theme customization, and responsive rendering across desktop, tablet, and mobile.
+Personal portfolio website built with HTML, CSS, JavaScript, and YAML-driven content.
 
-## 🎯 Features
+## What this repo contains
 
-## 🏗️ Architecture
+- `index.html` — main portfolio page
+- `projects.html` — projects archive
+- `research.html` — research page
+- `cv.html` — CV page
+- `data.yaml` — primary content source
+- `script.js` — rendering and interactivity
+- `styles.css` — styling and theme
 
-### 1. System Overview (ASCII)
+## Quick update guide
 
-```
-========================================================================================
-              SIDDIQUETANVIR.GITHUB.IO — STATIC PORTFOLIO ARCHITECTURE
-========================================================================================
+Most content updates happen in `data.yaml`:
 
-   [ Visitor Browser ]
-          │
-          ▼  GitHub Pages CDN (HTTPS)
-   ┌──────────────────────────────────────────────────────────────────────┐
-   │                     STATIC HTML SHELL (index.html)                   │
-   │                       projects.html | research.html                  │
-   └──────────────────────┬─────────────────────┬────────────────────────┘
-                          │                     │
-                          ▼                     ▼
-   ┌─────────────────────────────┐  ┌───────────────────────────────────┐
-   │  CONTENT ENGINE (script.js) │  │  DESIGN SYSTEM (styles.css)       │
-   │  • Parses data.yaml         │  │  • CSS custom properties           │
-   │  • Renders DOM from data    │  │  • Dark / Light theme toggle       │
-   │  • Category filter logic    │  │  • Mobile-first responsive grid    │
-   │  • Theme persistence        │  │  • Sidebar nav rail               │
-   │    (localStorage)           │  └───────────────────────────────────┘
-   └──────────────┬──────────────┘
-                  │
-                  ▼
-   ┌─────────────────────────────┐
-   │  DATA SOURCE (data.yaml)    │
-   │  • Projects, Skills         │
-   │  • Education, Experience    │
-   │  • Navigation config        │
-   └─────────────────────────────┘
-   Deployed: GitHub Pages CDN (zero build step)
-========================================================================================
-```
+- profile/about text
+- project entries
+- skills and experience
+- links and contact details
 
----
+After editing, refresh the site to see changes.
 
-### 2. Content Rendering Pipeline (Mermaid)
+## Local preview
 
-```mermaid
-flowchart TD
-    subgraph Source["Single Source of Truth"]
-        YAML["data.yaml\n(Projects, Skills, Nav, Education)"]
-    end
+No build step is required.
 
-    subgraph Pages["HTML Pages"]
-        INDEX["index.html\n(Homepage)"]
-        PROJ["projects.html\n(Filterable Archive)"]
-        RES["research.html\n(Academic Vision)"]
-    end
-
-    subgraph Engine["JavaScript Rendering Engine (script.js)"]
-        PARSE["Parse & Load YAML data"]
-        RENDER["DOM Component Renderer\n(Projects, Skills, Sections)"]
-        FILTER["Category Filter Logic\n(WebApp | Bot | ML/AI)"]
-        THEME["Theme Manager\n(localStorage persistence)"]
-    end
-
-    subgraph Output["Rendered Output"]
-        NAV["Sticky Sidebar Nav Rail"]
-        CARDS["Project Cards with Tags"]
-        DARK["Dark / Light Mode UI"]
-    end
-
-    YAML --> PARSE
-    PARSE --> RENDER
-    RENDER --> FILTER
-    RENDER --> THEME
-    FILTER --> CARDS
-    THEME --> DARK
-    INDEX --> PARSE
-    PROJ --> FILTER
-    RENDER --> NAV
-
-    classDef src fill:#e3f2fd,stroke:#1976d2,stroke-width:2px;
-    classDef page fill:#ede7f6,stroke:#5e35b1,stroke-width:2px;
-    classDef engine fill:#e8f5e9,stroke:#388e3c,stroke-width:2px;
-    classDef out fill:#fff3e0,stroke:#f57c00,stroke-width:2px;
-    class YAML src;
-    class INDEX,PROJ,RES page;
-    class PARSE,RENDER,FILTER,THEME engine;
-    class NAV,CARDS,DARK out;
-```
-
----
-
-### 3. Tech Stack
-
-| Layer | Technology | Purpose |
-| :--- | :--- | :--- |
-| **Markup** | HTML5 (Semantic) | Page structure, accessibility, ARIA labels |
-| **Styling** | CSS3 (Custom Properties, Grid, Flexbox) | Design system, responsive layout, dark/light theming |
-| **Logic** | Vanilla JavaScript (ES6+) | YAML parsing, DOM rendering, filter logic, localStorage theme |
-| **Content Config** | YAML (`data.yaml`) | Single source of truth for all portfolio content |
-| **Hosting** | GitHub Pages (CDN) | Zero-config static site deployment |
-| **Assets** | PDF (`MasterCV.pdf`) | Downloadable CV artifact |
-
----
-
-### Core Architecture
-
-- **Data-Driven Design** - Single `data.yaml` file manages all content (projects, skills, education, experience)
-- **Vanilla Stack** - Pure HTML, CSS, and JavaScript (no frameworks or build tools required)
-- **Theme Support** - Automatic dark/light mode detection with persistent user preference
-- **Fully Responsive** - Mobile-first design with adaptive typography and spacing
-- **Accessibility First** - Semantic HTML, ARIA labels, keyboard navigation support
-
-### Pages & Sections
-- **Homepage (`index.html`)** - Featured projects, impact metrics, skills, education, and contact
-- **Projects Archive (`projects.html`)** - Filterable gallery of all projects by category (Automated Bot, WebApp, ML/AI)
-- **Research Statement (`research.html`)** - Comprehensive research interests and academic vision
-- **Navigation Rail** - Sticky sidebar navigation for quick section access
-
-### Content Management
-The `data.yaml` file defines:
-- **Navigation sections** (9 configurable sections)
-- **Hero content** (name, status, bio, tech stack)
-- **Featured projects** (5 projects with categories, tags, GitHub links, and live demos)
-- **Skills** (organized by 3 categories)
-- **Education & achievements**
-- **Professional experience** (ready to enable)
-- **Open source contributions** (structure ready)
-
-## 📁 Project Structure
-
-```
-.
-├── index.html              # Homepage
-├── projects.html           # Filterable projects archive
-├── research.html           # Research statement/vision
-├── data.yaml              # Single source of truth for all content
-├── script.js              # Rendering logic & interactivity
-├── styles.css             # Complete design system
-└── README.md              # This file
-```
-
-## 🚀 Getting Started
-
-### No Installation Required
-This is a static site with no build step or dependencies. Simply:
-
-1. **Edit `data.yaml`** to update content:
-   ```yaml
-   projects:
-     - title: "My Project"
-       category: "WebApp"
-       tags: ["Python", "Streamlit"]
-       description: "Brief description"
-       github: "https://github.com/user/project"
-       demo: "https://demo-url.com"
-       featured: true
-   ```
-
-2. **Save and refresh browser** - Changes appear immediately
-
-3. **Deploy anywhere** - Push to GitHub Pages, Netlify, Vercel, or any static host
-
-### Local Development
 ```bash
-# No build step needed - just open in browser
-open index.html
-
-# Or use a local server (Python example)
 python3 -m http.server 8000
-# Visit http://localhost:8000
 ```
 
-## 🎨 Customization
+Then open `http://localhost:8000`.
 
-### Add/Remove Navigation Sections
-In `data.yaml`, uncomment or comment sections in the `nav` array:
-```yaml
-nav:
-  - id: "about"
-    label: "About"
-  # - id: "achievements"    # Uncomment when ready
-  #   label: "Achievements"
-```
+## Deployment
 
-### Update Projects
-Add new projects to the `projects` array:
-```yaml
-projects:
-  - title: "Project Name"
-    category: "Automated Bot"  # or "WebApp" or "ML/AI"
-    tags: ["Python", "Pywikibot"]
-    description: "What this project does"
-    github: "https://github.com/..."
-    featured: true            # Shows on homepage
-```
+This site is intended for GitHub Pages.  
+Push changes to the repository and GitHub Pages serves the updated static files.
 
-### Enable Professional Experience
-Uncomment the experience section in `nav` and populate `professional_experience` in `data.yaml`
+## Usage and content notice
 
-### Styling
-Modify CSS variables in `styles.css`:
-```css
-:root {
-  --accent-color: #6366f1;
-  --text-primary: #111827;
-  --text-secondary: #6b7280;
-  --bg-color: #ffffff;
-}
-```
-
-## 📱 Responsive Design
-
-- **Mobile** (≤640px) - Single column, optimized touch targets
-- **Tablet** (641-1024px) - Two-column grid for projects
-- **Desktop** (≥1025px) - Full layout with sidebar navigation and multi-column grids
-
-## 🌓 Theme Support
-
-- **Auto-detection** - Respects OS dark/light preference on first visit
-- **Toggle button** - Users can manually switch themes (persisted in localStorage)
-- **CSS variables** - All colors use CSS custom properties for easy theming
-
-## 📄 Content Sections
-
-| Section | Description | Status |
-|---------|-------------|--------|
-| About | Hero section with intro & tech stack | ✓ Active |
-| Impact | Key metrics and achievements | ✓ Active |
-| Toolkit | Skills and technical expertise | ✓ Active |
-| Projects | Featured work with CTA to archive | ✓ Active |
-| Open Source | Contributions and community work | ✓ Ready |
-| Education | Degrees and institutions | ✓ Active |
-| Activities | Extracurricular and club involvement | ✓ Active |
-| Research | Academic inquiries & vision | ✓ Active (dedicated page) |
-| Contact | Email and social links | ✓ Active |
-
-## 🔗 Navigation
-
-- **Homepage** - Main portfolio overview with featured projects
-- **Projects (`/projects.html`)** - Complete searchable archive with category filters
-- **Research (`/research.html`)** - Statement of research interests and academic trajectory
-
-## 🛠️ Technologies
-
-- **HTML5** - Semantic markup, forms, and accessibility
-- **CSS3** - Custom properties, flexbox, grid, media queries
-- **JavaScript (ES6+)** - DOM manipulation, event listeners, localStorage
-- **YAML** - Human-readable data configuration
-
-## 📚 Data Schema
-
-### Project Object
-```javascript
-{
-  title: string,           // Project name
-  category: string,        // "WebApp" | "Automated Bot" | "ML/AI"
-  tags: string[],         // Technology tags
-  description: string,     // Brief description
-  github: string,         // GitHub repository URL
-  demo?: string,          // Optional live demo URL (Streamlit, etc.)
-  featured?: boolean      // Show on homepage (default: false)
-}
-```
-
-### Navigation Section
-```javascript
-{
-  id: string,    // Unique identifier for section
-  label: string  // Display label in nav
-}
-```
-
-## 🚀 Deployment
-
-### GitHub Pages
-```bash
-git add .
-git commit -m "Update portfolio"
-git push origin main
-```
-
-### Netlify / Vercel
-Connect repository and deploy from `main` branch. No build configuration needed.
-
-### Custom Server
-Simply upload all files to your web server.
-
-## 📝 Editing Workflow
-
-1. **Update `data.yaml`** with new content
-2. **Test locally** - Open `index.html` in browser
-3. **Commit & push** - `git add . && git commit -m "..." && git push`
-4. **Site updates automatically** on GitHub Pages / deployment service
-
-## 🎯 Future Enhancements
-
-- [ ] Search functionality for projects
-- [ ] Project detail pages
-- [ ] Blog integration
-- [ ] Analytics tracking
-- [ ] Form submission backend
-
-## 📄 License
-
-Personal portfolio - All rights reserved
-
----
+This repository contains personal portfolio content and branding.  
+Please do not copy personal text, identity details, or documents without permission.
