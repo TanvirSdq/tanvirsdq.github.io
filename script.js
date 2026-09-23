@@ -236,12 +236,27 @@
           </a>
         `;
       }
-      if (p.demo || p.streamlit) {
+      if (p.demo) {
         const isSecond = Boolean(p.github);
         const linkClass = isSecond ? "project-card__link project-card__link--secondary" : "project-card__link project-card__link--primary";
+        const label = p.demo_label || "Live Demo";
         linksHTML += `
-          <a class="${linkClass}" href="${escapeHtml(p.demo || p.streamlit)}" target="_blank" rel="noopener noreferrer">
-            Live Demo <span aria-hidden="true">&#8599;</span>
+          <a class="${linkClass}" href="${escapeHtml(p.demo)}" target="_blank" rel="noopener noreferrer">
+            ${escapeHtml(label)} <span aria-hidden="true">&#8599;</span>
+          </a>
+        `;
+      }
+      if (p.streamlit && p.streamlit !== p.demo) {
+        linksHTML += `
+          <a class="project-card__link project-card__link--secondary" href="${escapeHtml(p.streamlit)}" target="_blank" rel="noopener noreferrer">
+            ${escapeHtml(p.streamlit_label || "Streamlit Dashboard")} <span aria-hidden="true">&#8599;</span>
+          </a>
+        `;
+      }
+      if (p.apk) {
+        linksHTML += `
+          <a class="project-card__link project-card__link--secondary" href="${escapeHtml(p.apk)}" target="_blank" rel="noopener noreferrer">
+            ${escapeHtml(p.apk_label || "Android APK Release")} <span aria-hidden="true">&#8599;</span>
           </a>
         `;
       }
@@ -399,7 +414,7 @@
     const list = el("ul", "timeline__bullets");
     items.forEach((text) => {
       const li = document.createElement("li");
-      li.textContent = text;
+      li.innerHTML = escapeHtml(text).replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
       list.appendChild(li);
     });
     section.appendChild(list);

@@ -154,11 +154,22 @@
       if (p.github) links.push(
         `<a class="project-card__link project-card__link--primary" href="${esc(p.github)}" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a>`
       );
-      if (p.demo || p.streamlit) {
+      if (p.demo) {
         const isSecond = Boolean(p.github);
         const linkClass = isSecond ? "project-card__link project-card__link--secondary" : "project-card__link project-card__link--primary";
+        const label = p.demo_label || "Live Demo";
         links.push(
-          `<a class="${linkClass}" href="${esc(p.demo || p.streamlit)}" target="_blank" rel="noopener noreferrer">Live Demo <span aria-hidden="true">&#8599;</span></a>`
+          `<a class="${linkClass}" href="${esc(p.demo)}" target="_blank" rel="noopener noreferrer">${esc(label)} <span aria-hidden="true">&#8599;</span></a>`
+        );
+      }
+      if (p.streamlit && p.streamlit !== p.demo) {
+        links.push(
+          `<a class="project-card__link project-card__link--secondary" href="${esc(p.streamlit)}" target="_blank" rel="noopener noreferrer">${esc(p.streamlit_label || "Streamlit Dashboard")} <span aria-hidden="true">&#8599;</span></a>`
+        );
+      }
+      if (p.apk) {
+        links.push(
+          `<a class="project-card__link project-card__link--secondary" href="${esc(p.apk)}" target="_blank" rel="noopener noreferrer">${esc(p.apk_label || "Android APK Release")} <span aria-hidden="true">&#8599;</span></a>`
         );
       }
 

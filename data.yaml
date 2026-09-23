@@ -15,16 +15,16 @@ nav:
     label: "About"
   - id: "impact"
     label: "Impact"
-  # - id: "achievements"      # Uncomment once achievements list below is populated
-  #   label: "Achievements"
+  - id: "achievements"
+    label: "Awards"
   - id: "skills"
     label: "Toolkit"
   - id: "projects"
     label: "Projects"
-  # - id: "experience"        # Professional Experience (uncomment when adding internships/jobs)
+  # - id: "experience"        # Professional Experience (uncomment when adding industry internships/jobs)
   #   label: "Experience"
   - id: "open_source"
-    label: "Open Source"
+    label: "Experience"
   - id: "education"
     label: "Education"
   - id: "extracurricular"
@@ -41,15 +41,17 @@ nav:
 hero:
   name: "Tanvir Siddique"
   alias: "@TanvirSdq"
-  status_badge: "Computer Science & Engineering Student"
-  headline: "Building CS Foundations & Open Source Automation"
-  bio: "First-year Computer Science & Engineering student at KUET. Building core programming foundations in C/C++ while automating open-data systems with Python. Actively learning about machine learning, natural language processing, and computational linguistics."
+  status_badge: "KUET CSE · Open-Source & Wikimedia Contributor"
+  headline: "Computer Science Student & Practical Tools Builder"
+  bio: "First-year CSE student at KUET. Creator of CampAnalytics for Wikimedia campaign analytics and CodeFunc for VS Code. Building practical tools with Python, TypeScript, and C++, with active contributions across the Wikimedia ecosystem."
   tech_stack:
-    - "C / C++"
     - "Python"
+    - "TypeScript"
+    - "FastAPI & React"
+    - "Wikimedia Toolforge"
     - "Machine Learning"
-    - "Git & GitHub"
-    - "Pywikibot"
+    - "PostgreSQL"
+    - "C / C++"
 
 impact_metrics:
   - number: "46,900+"
@@ -63,111 +65,137 @@ impact_metrics:
 
 skills:
   core_programming:
-    - "C / C++"
     - "Python"
+    - "TypeScript / JavaScript"
+    - "C / C++"
+    - "SQL (PostgreSQL)"
     - "Git & GitHub"
   automation_and_data:
-    - "Pywikibot"
-    - "Streamlit"
-    - "JupyterLab"
-    - "Machine Learning"
-    - "Numpy / Pandas"
-    - "REST APIs"
-    - "Data Visualization"
+    - "FastAPI & REST APIs"
+    - "React 18 & Vite"
+    - "VS Code Extension API"
+    - "Wikimedia Toolforge & Pywikibot"
+    - "Streamlit & Plotly"
+    - "TensorFlow / Keras & PyTorch"
+    - "Numpy & Pandas"
+    - "Capacitor Mobile Runtime"
   leadership_and_ops:
     - "Open Source Coordination"
-    - "Metadata Taxonomy"
+    - "Metadata & Categorization"
     - "Technical Operations"
-    - "Linguistics"
+    - "Linguistics & Classical Arabic"
+    - "Community Mentorship"
 
 # ==============================================================================
 # PROJECTS (Featured on Home & Filterable on /projects.html)
-# Categories: "Automated Bot", "WebApp", "ML/AI", "Hackathon"
+# Categories: "WebApp", "Developer Tool", "Hackathon", "Automated Bot", "ML/AI", "Systems"
 # ==============================================================================
 projects:
-  - title: "CampusShare KUET"
-    category: "Hackathon"
-    tags: ["React 18", "FastAPI", "PostgreSQL", "MapLibre GL", "JWT", "Render"]
-    description: "Full-stack campus P2P borrowing & lending platform with a God's Eye radar map, OTP/QR handover verification, real-time 1:1 chat, and a self-regulating KUET Karma Protocol. Built for ForkedArch Freshers Hackathon 2026."
-    github: "https://github.com/siddiquetanvir/CampusShare"
-    demo: "https://forkathon2026-team-kuet-mantis-3.onrender.com/"
+  - title: "CampAnalytics — Event Evaluation & Campaign Analytics"
+    category: "WebApp"
+    tags: ["Python", "Flask", "Streamlit", "Pandas", "Plotly", "Wikimedia Toolforge"]
+    description: "Analytics tool built for Project Korikath to evaluate Wikimedia Commons campaigns (WLM, WLE, WLF, WLA, WLB) and contributor retention. Deployed on Wikimedia Toolforge and Streamlit."
+    github: "https://github.com/siddiquetanvir/CampAnalytics"
+    demo: "https://campanalytics.toolforge.org/"
+    demo_label: "Live on Wikimedia Toolforge"
+    streamlit: "https://campanalytics.streamlit.app/"
+    streamlit_label: "Interactive Streamlit Dashboard"
     featured: true
 
-  - title: "Wikimedia Campaign Analytics Suite"
-    category: "WebApp"
-    tags: ["Python", "Streamlit", "Pandas", "Plotly", "Seaborn", "MediaWiki API"]
-    description: "Interactive analytics platform for evaluating Wikimedia campaign health and contributor retention. Supports 5-dimension weighted health scoring, regional peer benchmarking, and exportable choropleth world maps."
-    github: "https://github.com/siddiquetanvir/WebApp"
-    demo: "https://wikistats.streamlit.app/"
+  - title: "CodeFunc"
+    category: "Developer Tool"
+    tags: ["TypeScript", "VS Code Extension", "Chrome Extension", "Gemini API", "Groq", "AST Parser"]
+    description: "VS Code and Chrome extension providing an architectural file overview at Line 0. Features fast local AST parsing and contextual code summaries with Gemini, Groq, and Claude."
+    github: "https://github.com/siddiquetanvir/CodeFunc"
+    demo: "https://marketplace.visualstudio.com/items?itemName=TanvirSdq.codefunc-vscode"
+    demo_label: "VS Code Marketplace (v1.0.3)"
+    featured: true
+
+  - title: "CampusShare KUET"
+    category: "Hackathon"
+    tags: ["React 18", "FastAPI", "PostgreSQL", "MapLibre GL", "Capacitor Android", "Render"]
+    description: "1st Place (Champion) at Forkathon 2026. A peer-to-peer equipment borrowing platform for KUET residential halls. Built in 50 hours with FastAPI, React, MapLibre GL radar, OTP/QR handover verification, and an Android app."
+    github: "https://github.com/Forkship/Forkathon2026-Team-KUET_MANTIS"
+    demo: "https://forkathon2026-team-kuet-mantis-3.onrender.com/"
+    demo_label: "Live Web App"
+    apk: "https://github.com/Forkship/Forkathon2026-Team-KUET_MANTIS/releases"
+    apk_label: "Download Android APK"
+    featured: true
+
+  - title: "AgroScan — Crop Disease Detection & Smart Farm"
+    category: "ML/AI"
+    tags: ["Python", "TensorFlow", "Keras", "EfficientNet", "React", "Supabase", "Transfer Learning"]
+    description: "38-class plant pathology transfer learning model (crop_disease_model_final.keras) trained on leaf photos. Built from scratch with a Streamlit interface (AgroScan) and integrated into the Smart Farm project."
+    github: "https://github.com/siddiquetanvir/MainCropDiseaseDetection"
+    demo: "https://maincropdisease.streamlit.app/"
+    demo_label: "Live AgroScan App"
+    streamlit: "https://github.com/mugdha-sarker81/smart-farm"
+    streamlit_label: "Integrated in Smart Farm Repo"
     featured: true
 
   - title: "TanvirSdqBot — Wikimedia Automation Engine"
     category: "Automated Bot"
     tags: ["Python", "Pywikibot", "MediaWiki API", "Pandas", "Matplotlib"]
-    description: "Production-grade Pywikibot framework that structured the entire Fulani Wikipedia (~10,000 articles) with 25+ core categories, automated new-editor welcome messages, and processed event data for Wiki Loves campaigns."
+    description: "Pywikibot scripts used to structure ~10,000 articles on Fulfulde Wikipedia, automate welcome messages for new editors, and process event data for Wiki Loves campaigns."
     github: "https://github.com/siddiquetanvir/TanvirSdqBot"
-    featured: true
-
-  - title: "Crop Disease Detection"
-    category: "ML/AI"
-    tags: ["Python", "TensorFlow", "Keras", "EfficientNet", "Streamlit", "Transfer Learning"]
-    description: "CNN-based plant pathology classifier using EfficientNet transfer learning to detect 38 crop disease classes from leaf photos, served via a Streamlit web app."
-    github: "https://github.com/siddiquetanvir/MainCropDiseaseDetection"
     featured: true
 
   - title: "Kaggle ML & Data Science Workspace"
     category: "ML/AI"
     tags: ["Python", "Scikit-Learn", "XGBoost", "LightGBM", "Pandas", "Jupyter"]
-    description: "Hands-on repository of Kaggle competition solutions (Titanic, Spaceship Titanic, House Prices, Credit Card Fraud) and GCI World 2026 coursework from UTokyo's Matsuo-Iwasawa Laboratory."
+    description: "Hands-on repository of Kaggle competition solutions and coursework from the University of Tokyo Matsuo-Iwasawa Lab GCI World 2026 program."
     github: "https://github.com/siddiquetanvir/Kaggle"
     featured: false
 
-  - title: "MLP Implementation Lab"
+  - title: "MLP & Language Modeling Lab"
     category: "ML/AI"
     tags: ["Python", "PyTorch", "NLP", "Bigram LM", "Jupyter"]
-    description: "Experimental lab scaling simple ML projects toward production. Includes a character-level Bigram Language Model trained on The Wizard of Oz, with full tokenization, training, and autoregressive generation pipelines."
+    description: "Character-level Bigram Language Model trained on The Wizard of Oz in PyTorch, exploring tokenization, cross-entropy loss, and autoregressive text generation."
     github: "https://github.com/siddiquetanvir/MLP-Implementation"
     featured: false
 
-  - title: "C Academic Problem Solving"
+  - title: "Algorithmic Problem Solving"
     category: "Systems"
-    tags: ["C", "C99", "Problem Solving", "Academic"]
-    description: "C programming practice and problem solutions for academic coursework and fundamental logic building."
+    tags: ["C", "C++17", "STL", "Algorithms", "Data Structures"]
+    description: "Algorithmic problem solving practice in C and modern C++ STL for university coursework and programming fundamentals."
     github: "https://github.com/siddiquetanvir/guide"
     featured: false
-
 
 # ==============================================================================
 # PROFESSIONAL EXPERIENCE (Industry Internships & Jobs)
 # Reserved for formal work. Leave empty or populate when roles begin.
 # ==============================================================================
 professional_experience: []
-# Example format:
-# professional_experience:
-#   - role: "Software Engineering Intern"
-#     organization: "Tech Company / Lab"
-#     period: "Summer 2026"
-#     bullets:
-#       - "Built backend APIs using Python and PostgreSQL."
-#       - "Improved test coverage by 25%."
 
 # ==============================================================================
 # OPEN SOURCE CONTRIBUTIONS & INITIATIVES
 # Dedicated to open-source engineering, bot operations, and data infrastructure.
 # ==============================================================================
 open_source_contributions:
-  - role: "Volunteer Contributor & Bot Operator"
-    organization: "Wikimedia Ecosystem"
-    period: "2022 — Present"
+  - role: "Lead of Operations"
+    organization: "Project Koushal"
+    period: "Sep 2024 — Present"
     bullets:
-      - "Engineer automated Pywikibot scripts for cross-wiki maintenance and structural reconciliation."
-      - "Maintain taxonomic consistency across Wikipedia, Wikidata, and Wikimedia Commons."
-  - role: "Technical & Data Lead"
+      - "Direct technical and operational logistics for nationwide community learning initiatives."
+      - "Streamline communication channels, workflow pipelines, and resource distribution."
+  - role: "Team Member & Data Lead"
     organization: "Project Korikath"
-    period: "2023 — Present"
+    period: "Jan 2024 — Present"
     bullets:
-      - "Manage technical infrastructure supporting open-knowledge campaign analytics."
-      - "Build custom Python utility scripts for retention tracking and community reporting."
+      - "Architected and maintain CampAnalytics on Wikimedia Toolforge for campaign analytics and retention tracking."
+      - "Develop data pipelines analyzing contributor churn, event health scorecards, and cross-wiki metrics."
+  - role: "Contributor & Bot Operator"
+    organization: "Wikimedia Foundation"
+    period: "Jun 2022 — Present"
+    bullets:
+      - "Engineer automated Pywikibot pipelines for cross-wiki categorization and structural maintenance."
+      - "Structured ~10,000 articles on Fulani Wikipedia and categorized over 15,800 media files on Wikimedia Commons."
+  - role: "Category Manager"
+    organization: "Wiki Loves Folklore"
+    period: "Feb 2025 — Apr 2025"
+    bullets:
+      - "Curated and managed media metadata taxonomy for international photo competition submissions."
+      - "Audited bulk uploads and ensured compliance with Wikimedia Commons categorization standards."
 
 # ==============================================================================
 # EDUCATION (Strictly Degree-Granting Institutions)
@@ -176,31 +204,36 @@ education:
   degrees:
     - degree: "B.Sc. in Computer Science & Engineering"
       institution: "Khulna University of Engineering & Technology (KUET)"
-      period: "2026 — Present"
+      period: "Feb 2026 — Present"
       details: "Undergraduate coursework in algorithms, data structures, systems programming, and software engineering fundamentals."
-    - degree: "Higher Secondary Certificate"
+    - degree: "Higher Secondary Certificate (HSC)"
       institution: "Notre Dame College, Dhaka"
       period: "2023 — 2025"
       details: "Science division coursework with focus on physics, chemistry, and higher mathematics."
+    - degree: "Secondary School Certificate (SSC)"
+      institution: "Govt Naldanga Bhushan Pilot Secondary School"
+      period: "2018 — 2022"
+      details: "Secondary education in science division with distinction."
 
 # ==============================================================================
 # EXTRACURRICULAR ACTIVITIES (Clubs, Societies & Campus Leadership)
 # ==============================================================================
 extracurricular_activities:
   - role: "Director of Leadership & Management"
-    organization: "Notre Dame English Club (NDEC)"
-    period: "2023 — 2024"
-  - role: "Member"
-    organization: "KUET Photographic Society (KUETPS)"
-    period: "2026 — Present"
-
+    organization: "Notre Dame English Club (WERT)"
+    period: "Sep 2024 — Sep 2025"
+    bullets:
+      - "Led leadership operations and managed event coordination for college-wide literary and cultural programs."
+      - "Mentored junior executive members and coordinated inter-departmental communications."
   - role: "Member"
     organization: "Hardware Acceleration Club of KUET (HACK)"
-    period: "2026 — Present"
-
+    period: "Jul 2026 — Present"
   - role: "Member"
     organization: "Special Group Interested In Programming Contest (SGIPC)"
-    period: "2026 — Present"
+    period: "Jul 2026 — Present"
+  - role: "Member"
+    organization: "KUET Photographic Society (KUETPS)"
+    period: "Jul 2026 — Present"
 
 # ==============================================================================
 # RESEARCH TEASER (Teaser on Home -> Full SOP on /research.html)
@@ -208,7 +241,7 @@ extracurricular_activities:
 research_interests:
   category: "Statement of Purpose & Direction"
   title: "Building, Learning, and What Comes Next"
-  description: "First-year CSE student at KUET (3 months in) with a track record of open-source automation, full-stack shipping, and hands-on ML. Working toward mastering ML/AI from a systems perspective, starting with building tokenizers from scratch."
+  description: "First-year CSE student at KUET with a track record of open-source automation, full-stack shipping, and hands-on ML. Working toward mastering ML/AI from a systems perspective, starting with building tokenizers from scratch."
   link: "research.html"
 
 # ==============================================================================
@@ -231,44 +264,22 @@ contact:
       url: "https://www.kaggle.com/tanvirsdq"
 
 # ==============================================================================
-# ACHIEVEMENTS (Optional)
-# ------------------------------------------------------------------------------
-# achievements:
-#   - "Champion, National Hackathon 2025 (KUET Team Lead)."
-#   - "Top 5% finish in Codeforces Round #900 (Div. 2)."
-#   - "Recipient of KUET Dean's Scholarship for Academic Excellence."
+# ACHIEVEMENTS
 # ==============================================================================
-achievements: []
+achievements:
+  - "**Champion (1st Place)** — ForkedArch Freshers Hackathon 2026 (Forkathon 2026) for CampusShare KUET."
+  - "**46,900+ Automated Bot Edits** — Executed across global Wikimedia projects maintaining taxonomy and category structures."
 
 # ==============================================================================
-# COURSES & RELEVANT COURSEWORK (Optional)
-# ------------------------------------------------------------------------------
-# courses:
-#   - name: "Data Structures & Algorithms"
-#     status: "completed"
-#     grade: "A+"
-#   - name: "Object Oriented Programming (C++)"
-#     status: "completed"
-#   - name: "Discrete Mathematics"
-#     status: "ongoing"
+# COURSES & RELEVANT COURSEWORK
 # ==============================================================================
 courses: 
-    - name: "Machine Learning Specialization (Andrew Ng, Coursera)"
-      status: "completed"
-
-    - name: "Introduction to AI & Data Science (GCI World 2026, Matsuo-Iwasawa Lab U-Tokyo)"
-      status: "ongoing"
-      #grade:
+  - name: "Machine Learning Specialization (Andrew Ng, Coursera)"
+    status: "completed"
+  - name: "Introduction to AI & Data Science (GCI World 2026, Matsuo-Iwasawa Lab U-Tokyo)"
+    status: "ongoing"
 
 # ==============================================================================
-# CERTIFICATIONS & LICENSES (Optional)
-# ------------------------------------------------------------------------------
-# certifications:
-#   - name: "Deep Learning Specialization"
-#     issuer: "DeepLearning.AI"
-#     year: "2026"
-#   - name: "Problem Solving (Intermediate)"
-#     issuer: "HackerRank"
-#     year: "2025"
+# CERTIFICATIONS & LICENSES
 # ==============================================================================
 certifications: []
