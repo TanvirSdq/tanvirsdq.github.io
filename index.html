@@ -12,13 +12,13 @@
 <meta property="og:description" content="Building core programming foundations and automating open-data systems.">
 <!-- Uncomment and set a real absolute URL for your preview image (e.g. 1200x630 .png) when you have one -->
 <!-- <meta property="og:image" content="https://siddiquetanvir.github.io/preview.png"> -->
-<meta property="og:url" content="https://siddiquetanvir.github.io/">
+<meta property="og:url" content="https://tanvirsdq.github.io/">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Tanvir Siddique | Portfolio">
 <meta name="twitter:description" content="Building core programming foundations and automating open-data systems.">
-<!-- <meta name="twitter:image" content="https://siddiquetanvir.github.io/preview.png"> -->
+<!-- <meta name="twitter:image" content="https://tanvirsdq.github.io/preview.png"> -->
 
 <script type="application/ld+json">
 {
@@ -26,10 +26,12 @@
   "@type": "Person",
   "name": "Tanvir Siddique",
   "alternateName": [
-    "siddiquetanvir",
     "TanvirSdq",
+    "tanvirsdq",
+    "siddiquetanvir",
     "TanvirSdqBot"
   ],
+  "url": "https://tanvirsdq.github.io",
   "alumniOf": [
     {
       "@type": "EducationalOrganization",
@@ -62,13 +64,14 @@
     "ja"
   ],
   "sameAs": [
+    "https://orcid.org/0009-0009-8753-1114",
+    "https://github.com/tanvirsdq",
     "https://www.linkedin.com/in/tanvirsdq",
-    "https://github.com/siddiquetanvir",
-    "https://github.com/siddiquetanvir/CampAnalytics",
-    "https://github.com/siddiquetanvir/TanvirSdqBot",
-    "https://toolforge.org",
-    "https://orcid.org"
-    "https://www.facebook.com/TanvirSdq",
+    "https://marketplace.visualstudio.com/items?itemName=TanvirSdq.codefunc-vscode",
+    "https://github.com/tanvirsdq/CampAnalytics",
+    "https://github.com/tanvirsdq/CodeFunc",
+    "https://github.com/tanvirsdq/TanvirSdqBot",
+    "https://campanalytics.toolforge.org",
     "https://meta.wikimedia.org/wiki/User:TanvirSdq",
     "https://meta.wikimedia.org/wiki/User:TanvirSdqBot",
     "https://commons.wikimedia.org/wiki/User:TanvirSdq",
@@ -78,7 +81,8 @@
     "https://hi.wikipedia.org/wiki/User:TanvirSdq",
     "https://ur.wikipedia.org/wiki/User:TanvirSdq",
     "https://codeforces.com/profile/TanvirSdq",
-    "https://www.kaggle.com/tanvirsdq"
+    "https://www.kaggle.com/tanvirsdq",
+    "https://www.facebook.com/TanvirSdq"
   ]
 }
 </script>
@@ -113,7 +117,19 @@
      viewports via CSS. Items are rendered into #side-rail-list by script.js
      from data.yaml's `nav` list. -->
 <nav class="side-rail" aria-label="Section navigation">
-  <ol class="side-rail__list" id="side-rail-list"></ol>
+  <ol class="side-rail__list" id="side-rail-list">
+      <li><a href="#about" data-nav-target="about"><span class="side-rail__index">01</span><span>About</span></a></li>
+      <li><a href="#impact" data-nav-target="impact"><span class="side-rail__index">02</span><span>Impact</span></a></li>
+      <li><a href="#achievements" data-nav-target="achievements"><span class="side-rail__index">03</span><span>Awards</span></a></li>
+      <li><a href="#skills" data-nav-target="skills"><span class="side-rail__index">04</span><span>Toolkit</span></a></li>
+      <li><a href="#projects" data-nav-target="projects"><span class="side-rail__index">05</span><span>Projects</span></a></li>
+      <li><a href="#open_source" data-nav-target="open_source"><span class="side-rail__index">06</span><span>Experience</span></a></li>
+      <li><a href="#education" data-nav-target="education"><span class="side-rail__index">07</span><span>Education</span></a></li>
+      <li><a href="#extracurricular" data-nav-target="extracurricular"><span class="side-rail__index">08</span><span>Activities</span></a></li>
+      <li><a href="#courses" data-nav-target="courses"><span class="side-rail__index">09</span><span>Courses</span></a></li>
+      <li><a href="#research" data-nav-target="research"><span class="side-rail__index">10</span><span>Direction</span></a></li>
+      <li><a href="#contact" data-nav-target="contact"><span class="side-rail__index">11</span><span>Contact</span></a></li>
+  </ol>
 </nav>
 
 <!-- Icon-only theme toggle, fixed top-right. -->
@@ -128,9 +144,395 @@
 </button>
 
 <main id="app-root">
-  <!-- All content sections are injected at runtime by script.js from data.yaml -->
-  <noscript>This page requires JavaScript to render its content from data.yaml.</noscript>
-</main>
+    <noscript>
+      <style>
+        .reveal { opacity: 1 !important; transform: none !important; }
+      </style>
+    </noscript>
+  <header class="site-header wrap reveal" id="about">
+      <h1 class="masthead__name">Tanvir Siddique</h1>
+      <div class="masthead__subline">
+        <span>@TanvirSdq</span>
+        <span class="divider"></span>
+        <span class="badge badge--accent">KUET CSE · Open-Source &amp; Wikimedia Contributor</span>
+      </div>
+      <p class="hero__headline">Computer Science Student &amp; Practical Tools Builder</p>
+      <p class="hero__bio">First-year CSE student at KUET. Creator of CampAnalytics for Wikimedia campaign analytics and CodeFunc for VS Code. Building practical tools with Python, TypeScript, and C++, with active contributions across the Wikimedia ecosystem.</p>
+      <div class="tech-stack">
+        <span class="badge">Python</span>
+        <span class="badge">TypeScript</span>
+        <span class="badge">FastAPI &amp; React</span>
+        <span class="badge">Wikimedia Toolforge</span>
+        <span class="badge">Machine Learning</span>
+        <span class="badge">PostgreSQL</span>
+        <span class="badge">C / C++</span>
+      </div>
+      <div style="margin-top: 32px; display: flex; gap: 12px; flex-wrap: wrap; align-items: center;">
+        <a class="badge badge--accent" href="./MasterCV.pdf" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px; padding: 10px 16px; font-weight: bold; font-size: 12px; transition: transform 0.2s ease, background 0.2s ease;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          Download Master CV (PDF)
+        </a>
+        <a class="badge" href="./cv.html" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; padding: 10px 16px; font-size: 12px;">
+          View Master CV <span aria-hidden="true">&#8599;</span>
+        </a>
+      </div>
+    </header>
+
+  <section class="section wrap reveal" id="impact">
+      <div class="eyebrow">By the numbers</div>
+      <h2 class="section-title sr-only">Key Impact Metrics</h2>
+      <div class="ledger">
+        <div class="ledger__item">
+          <div class="ledger__number">46,900+</div>
+          <div class="ledger__label">Automated Bot Edits</div>
+        </div>
+        <div class="ledger__item">
+          <div class="ledger__number">6,000+</div>
+          <div class="ledger__label">Manual Open-Source Contributions</div>
+        </div>
+        <div class="ledger__item">
+          <div class="ledger__number">15,800+</div>
+          <div class="ledger__label">Media Files Categorized</div>
+        </div>
+        <div class="ledger__item">
+          <div class="ledger__number">10,000+</div>
+          <div class="ledger__label">Articles Structured</div>
+        </div>
+      </div>
+    </section>
+
+  <section class="section wrap reveal" id="achievements">
+      <div class="eyebrow">Recognition</div>
+      <h2 class="section-title">Achievements</h2>
+      <ul class="timeline__bullets">
+        <li><strong>Champion (1st Place)</strong> — ForkedArch Freshers Hackathon 2026 (Forkathon 2026) for CampusShare KUET.</li>
+        <li><strong>46,900+ Automated Bot Edits</strong> — Executed across global Wikimedia projects maintaining taxonomy and category structures.</li>
+      </ul>
+    </section>
+
+  <section class="section wrap reveal" id="skills">
+      <div class="eyebrow">Toolkit</div>
+      <h2 class="section-title">Skills &amp; areas of focus</h2>
+      <div class="columns">
+        <div class="column">
+          <div class="column__head">Core Programming</div>
+          <ul class="column__list">
+            <li>Python</li>
+            <li>TypeScript / JavaScript</li>
+            <li>C / C++</li>
+            <li>SQL (PostgreSQL)</li>
+            <li>Git &amp; GitHub</li>
+          </ul>
+        </div>
+        <div class="column">
+          <div class="column__head">Automation And Data</div>
+          <ul class="column__list">
+            <li>FastAPI &amp; REST APIs</li>
+            <li>React 18 &amp; Vite</li>
+            <li>VS Code Extension API</li>
+            <li>Wikimedia Toolforge &amp; Pywikibot</li>
+            <li>Streamlit &amp; Plotly</li>
+            <li>TensorFlow / Keras &amp; PyTorch</li>
+            <li>Numpy &amp; Pandas</li>
+            <li>Capacitor Mobile Runtime</li>
+          </ul>
+        </div>
+        <div class="column">
+          <div class="column__head">Leadership And Ops</div>
+          <ul class="column__list">
+            <li>Open Source Coordination</li>
+            <li>Metadata &amp; Categorization</li>
+            <li>Technical Operations</li>
+            <li>Linguistics &amp; Classical Arabic</li>
+            <li>Community Mentorship</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  <section class="section wrap reveal" id="projects">
+      <div class="eyebrow">Featured work</div>
+      <h2 class="section-title">Selected Projects</h2>
+      <div class="projects">
+      <article class="project-card">
+        <div class="project-card__tags">
+          <span class="badge badge--accent">WebApp</span><span class="badge">Python</span><span class="badge">Flask</span><span class="badge">Streamlit</span><span class="badge">Pandas</span><span class="badge">Plotly</span><span class="badge">Wikimedia Toolforge</span>
+        </div>
+        <h3 class="project-card__title">CampAnalytics — Event Evaluation &amp; Campaign Analytics</h3>
+        <p class="project-card__desc">Analytics tool built for Project Korikath to evaluate Wikimedia Commons campaigns (WLM, WLE, WLF, WLA, WLB) and contributor retention. Deployed on Wikimedia Toolforge and Streamlit.</p>
+        <div style="display: flex; flex-direction: column; width: 100%;">
+          <a class="project-card__link project-card__link--primary" href="https://github.com/tanvirsdq/CampAnalytics" target="_blank" rel="noopener noreferrer">
+            View on GitHub <span aria-hidden="true">&#8599;</span>
+          </a>
+          <a class="project-card__link project-card__link--secondary" href="https://campanalytics.toolforge.org/" target="_blank" rel="noopener noreferrer">
+            Live on Wikimedia Toolforge <span aria-hidden="true">&#8599;</span>
+          </a>
+          <a class="project-card__link project-card__link--secondary" href="https://campanalytics.streamlit.app/" target="_blank" rel="noopener noreferrer">
+            Interactive Streamlit Dashboard <span aria-hidden="true">&#8599;</span>
+          </a>
+        </div>
+      </article>
+      <article class="project-card">
+        <div class="project-card__tags">
+          <span class="badge badge--accent">Developer Tool</span><span class="badge">TypeScript</span><span class="badge">VS Code Extension</span><span class="badge">Chrome Extension</span><span class="badge">Gemini API</span><span class="badge">Groq</span><span class="badge">AST Parser</span>
+        </div>
+        <h3 class="project-card__title">CodeFunc</h3>
+        <p class="project-card__desc">VS Code and Chrome extension providing an architectural file overview at Line 0. Features fast local AST parsing and contextual code summaries with Gemini, Groq, and Claude.</p>
+        <div style="display: flex; flex-direction: column; width: 100%;">
+          <a class="project-card__link project-card__link--primary" href="https://github.com/tanvirsdq/CodeFunc" target="_blank" rel="noopener noreferrer">
+            View on GitHub <span aria-hidden="true">&#8599;</span>
+          </a>
+          <a class="project-card__link project-card__link--secondary" href="https://marketplace.visualstudio.com/items?itemName=TanvirSdq.codefunc-vscode" target="_blank" rel="noopener noreferrer">
+            VS Code Marketplace (v1.0.3) <span aria-hidden="true">&#8599;</span>
+          </a>
+        </div>
+      </article>
+      <article class="project-card">
+        <div class="project-card__tags">
+          <span class="badge badge--accent">Hackathon</span><span class="badge">React 18</span><span class="badge">FastAPI</span><span class="badge">PostgreSQL</span><span class="badge">MapLibre GL</span><span class="badge">Capacitor Android</span><span class="badge">Render</span>
+        </div>
+        <h3 class="project-card__title">CampusShare KUET</h3>
+        <p class="project-card__desc">1st Place (Champion) at Forkathon 2026. A peer-to-peer equipment borrowing platform for KUET residential halls. Built in 50 hours with FastAPI, React, MapLibre GL radar, OTP/QR handover verification, and an Android app.</p>
+        <div style="display: flex; flex-direction: column; width: 100%;">
+          <a class="project-card__link project-card__link--primary" href="https://github.com/Forkship/Forkathon2026-Team-KUET_MANTIS" target="_blank" rel="noopener noreferrer">
+            View on GitHub <span aria-hidden="true">&#8599;</span>
+          </a>
+          <a class="project-card__link project-card__link--secondary" href="https://forkathon2026-team-kuet-mantis-3.onrender.com/" target="_blank" rel="noopener noreferrer">
+            Live Web App <span aria-hidden="true">&#8599;</span>
+          </a>
+          <a class="project-card__link project-card__link--secondary" href="https://github.com/Forkship/Forkathon2026-Team-KUET_MANTIS/releases" target="_blank" rel="noopener noreferrer">
+            Download Android APK <span aria-hidden="true">&#8599;</span>
+          </a>
+        </div>
+      </article>
+      <article class="project-card">
+        <div class="project-card__tags">
+          <span class="badge badge--accent">ML/AI</span><span class="badge">Python</span><span class="badge">TensorFlow</span><span class="badge">Keras</span><span class="badge">EfficientNet</span><span class="badge">React</span><span class="badge">Supabase</span><span class="badge">Transfer Learning</span>
+        </div>
+        <h3 class="project-card__title">AgroScan — Crop Disease Detection &amp; Smart Farm</h3>
+        <p class="project-card__desc">38-class plant pathology transfer learning model (crop_disease_model_final.keras) trained on leaf photos. Built from scratch with a Streamlit interface (AgroScan) and integrated into the Smart Farm project.</p>
+        <div style="display: flex; flex-direction: column; width: 100%;">
+          <a class="project-card__link project-card__link--primary" href="https://github.com/tanvirsdq/MainCropDiseaseDetection" target="_blank" rel="noopener noreferrer">
+            View on GitHub <span aria-hidden="true">&#8599;</span>
+          </a>
+          <a class="project-card__link project-card__link--secondary" href="https://maincropdisease.streamlit.app/" target="_blank" rel="noopener noreferrer">
+            Live AgroScan App <span aria-hidden="true">&#8599;</span>
+          </a>
+          <a class="project-card__link project-card__link--secondary" href="https://github.com/mugdha-sarker81/smart-farm" target="_blank" rel="noopener noreferrer">
+            Integrated in Smart Farm Repo <span aria-hidden="true">&#8599;</span>
+          </a>
+        </div>
+      </article>
+      <article class="project-card">
+        <div class="project-card__tags">
+          <span class="badge badge--accent">Automated Bot</span><span class="badge">Python</span><span class="badge">Pywikibot</span><span class="badge">MediaWiki API</span><span class="badge">Pandas</span><span class="badge">Matplotlib</span>
+        </div>
+        <h3 class="project-card__title">TanvirSdqBot — Wikimedia Automation Engine</h3>
+        <p class="project-card__desc">Pywikibot scripts used to structure ~10,000 articles on Fulfulde Wikipedia, automate welcome messages for new editors, and process event data for Wiki Loves campaigns.</p>
+        <div style="display: flex; flex-direction: column; width: 100%;">
+          <a class="project-card__link project-card__link--primary" href="https://github.com/tanvirsdq/TanvirSdqBot" target="_blank" rel="noopener noreferrer">
+            View on GitHub <span aria-hidden="true">&#8599;</span>
+          </a>
+        </div>
+      </article>
+      </div>
+      <div style="margin-top: 36px; text-align: center;">
+        <a class="cta-link-btn" href="projects.html">
+          Explore All Projects &amp; Systems Archive (8) <span aria-hidden="true">&#8599;</span>
+        </a>
+      </div>
+    </section>
+
+  <section class="section wrap reveal" id="open_source">
+      <div class="eyebrow">Ecosystem</div>
+      <h2 class="section-title">Open Source Contributions</h2>
+      <div class="timeline">
+        <div class="timeline__item">
+          <div class="timeline__period">Sep 2024 — Present</div>
+          <div class="timeline__content">
+            <div class="timeline__role">Lead of Operations</div>
+            <div class="timeline__org">Project Koushal</div>
+            <ul class="timeline__bullets"><li>Direct technical and operational logistics for nationwide community learning initiatives.</li><li>Streamline communication channels, workflow pipelines, and resource distribution.</li></ul>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__period">Jan 2024 — Present</div>
+          <div class="timeline__content">
+            <div class="timeline__role">Team Member &amp; Data Lead</div>
+            <div class="timeline__org">Project Korikath</div>
+            <ul class="timeline__bullets"><li>Architected and maintain CampAnalytics on Wikimedia Toolforge for campaign analytics and retention tracking.</li><li>Develop data pipelines analyzing contributor churn, event health scorecards, and cross-wiki metrics.</li></ul>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__period">Jun 2022 — Present</div>
+          <div class="timeline__content">
+            <div class="timeline__role">Contributor &amp; Bot Operator</div>
+            <div class="timeline__org">Wikimedia Foundation</div>
+            <ul class="timeline__bullets"><li>Engineer automated Pywikibot pipelines for cross-wiki categorization and structural maintenance.</li><li>Structured ~10,000 articles on Fulani Wikipedia and categorized over 15,800 media files on Wikimedia Commons.</li></ul>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__period">Feb 2025 — Apr 2025</div>
+          <div class="timeline__content">
+            <div class="timeline__role">Category Manager</div>
+            <div class="timeline__org">Wiki Loves Folklore</div>
+            <ul class="timeline__bullets"><li>Curated and managed media metadata taxonomy for international photo competition submissions.</li><li>Audited bulk uploads and ensured compliance with Wikimedia Commons categorization standards.</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <section class="section wrap reveal" id="education">
+      <div class="eyebrow">Academia</div>
+      <h2 class="section-title">Academic Background</h2>
+      <div class="education__group">
+        <div class="degree-item">
+          <div class="degree-item__period">Feb 2026 — Present</div>
+          <div>
+            <div class="degree-item__degree">B.Sc. in Computer Science &amp; Engineering</div>
+            <div class="degree-item__institution">Khulna University of Engineering &amp; Technology (KUET)</div>
+            <p class="degree-item__details">Undergraduate coursework in algorithms, data structures, systems programming, and software engineering fundamentals.</p>
+          </div>
+        </div>
+        <div class="degree-item">
+          <div class="degree-item__period">2023 — 2025</div>
+          <div>
+            <div class="degree-item__degree">Higher Secondary Certificate (HSC)</div>
+            <div class="degree-item__institution">Notre Dame College, Dhaka</div>
+            <p class="degree-item__details">Science division coursework with focus on physics, chemistry, and higher mathematics.</p>
+          </div>
+        </div>
+        <div class="degree-item">
+          <div class="degree-item__period">2018 — 2022</div>
+          <div>
+            <div class="degree-item__degree">Secondary School Certificate (SSC)</div>
+            <div class="degree-item__institution">Govt Naldanga Bhushan Pilot Secondary School</div>
+            <p class="degree-item__details">Secondary education in science division with distinction.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <section class="section wrap reveal" id="extracurricular">
+      <div class="eyebrow">Campus &amp; Community</div>
+      <h2 class="section-title">Extracurricular Activities</h2>
+      <div class="timeline">
+        <div class="timeline__item">
+          <div class="timeline__period">Sep 2024 — Sep 2025</div>
+          <div class="timeline__content">
+            <div class="timeline__role">Director of Leadership &amp; Management</div>
+            <div class="timeline__org">Notre Dame English Club (WERT)</div>
+            <ul class="timeline__bullets"><li>Led leadership operations and managed event coordination for college-wide literary and cultural programs.</li><li>Mentored junior executive members and coordinated inter-departmental communications.</li></ul>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__period">Jul 2026 — Present</div>
+          <div class="timeline__content">
+            <div class="timeline__role">Member</div>
+            <div class="timeline__org">Hardware Acceleration Club of KUET (HACK)</div>
+            
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__period">Jul 2026 — Present</div>
+          <div class="timeline__content">
+            <div class="timeline__role">Member</div>
+            <div class="timeline__org">Special Group Interested In Programming Contest (SGIPC)</div>
+            
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__period">Jul 2026 — Present</div>
+          <div class="timeline__content">
+            <div class="timeline__role">Member</div>
+            <div class="timeline__org">KUET Photographic Society (KUETPS)</div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <section class="section wrap reveal" id="courses">
+      <div class="eyebrow">Coursework</div>
+      <h2 class="section-title">Courses</h2>
+      <div class="tech-stack">
+        <span class="badge">Machine Learning Specialization (Andrew Ng, Coursera)</span>
+        <span class="badge">Introduction to AI &amp; Data Science (GCI World 2026, Matsuo-Iwasawa Lab U-Tokyo) †</span>
+      </div>
+      <div class="courses__legend">† Ongoing</div>
+    </section>
+
+  <section class="section wrap reveal" id="research">
+      <div class="colophon">
+        <div class="eyebrow" style="justify-content:center;">Statement of Purpose &amp; Direction</div>
+        <h2 class="colophon__title">Building, Learning, and What Comes Next</h2>
+        <p class="colophon__desc">First-year CSE student at KUET with a track record of open-source automation, full-stack shipping, and hands-on ML. Working toward mastering ML/AI from a systems perspective, starting with building tokenizers from scratch.</p>
+        <div style="margin-top: 24px; text-align: center;">
+          <a class="cta-link-btn" href="research.html">
+            Read Research Statement &amp; Notes <span aria-hidden="true">&#8599;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  <section class="section wrap reveal" id="contact">
+      <div class="eyebrow">Get in touch</div>
+      <h2 class="section-title">Contact</h2>
+      <div class="contact__email-row">
+        <a class="contact__email" href="mailto:siddiquetanvir27@gmail.com">siddiquetanvir27@gmail.com</a>
+        <button type="button" class="copy-email-btn" id="copy-email-btn" data-email="siddiquetanvir27@gmail.com" aria-label="Copy email address">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          <span id="copy-email-text" aria-live="polite">Copy</span>
+        </button>
+      </div>
+      <ul class="social-list">
+        <li>
+          <a href="https://www.linkedin.com/in/tanvirsdq" target="_blank" rel="noopener noreferrer">
+            <span>LinkedIn</span><span class="arrow" aria-hidden="true">&#8599;</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/tanvirsdq" target="_blank" rel="noopener noreferrer">
+            <span>GitHub</span><span class="arrow" aria-hidden="true">&#8599;</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://orcid.org/0009-0009-8753-1114" target="_blank" rel="noopener noreferrer">
+            <span>ORCID</span><span class="arrow" aria-hidden="true">&#8599;</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://meta.wikimedia.org/wiki/User:TanvirSdq" target="_blank" rel="noopener noreferrer">
+            <span>Wikimedia</span><span class="arrow" aria-hidden="true">&#8599;</span>
+          </a>
+        </li>
+      </ul>
+      <div class="dev-footprint">
+        <div class="dev-footprint__title">Developer &amp; Knowledge Footprint</div>
+        <div class="dev-footprint__grid">
+            <a class="dev-chip" href="https://codeforces.com/profile/TanvirSdq" target="_blank" rel="noopener noreferrer">
+              <span>Codeforces</span>
+              <span class="arrow" style="font-size:10px; color:var(--text-secondary);" aria-hidden="true">&#8599;</span>
+            </a>
+            <a class="dev-chip" href="https://www.kaggle.com/tanvirsdq" target="_blank" rel="noopener noreferrer">
+              <span>Kaggle</span>
+              <span class="arrow" style="font-size:10px; color:var(--text-secondary);" aria-hidden="true">&#8599;</span>
+            </a>
+        </div>
+      </div>
+    </section>
+
+  <footer class="site-footer">
+    <div class="site-footer__group">
+      <span>V4</span>
+      <span>KUET — Khulna, Bangladesh</span>
+    </div>
+    <div class="site-footer__group">
+      <span>Updated September 24, 2026</span>
+      <span>&copy; 2026 Tanvir Siddique</span>
+    </div>
+  </footer>
+  </main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
 <script src="script.js?v=9"></script>

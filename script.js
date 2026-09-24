@@ -690,6 +690,14 @@
 
   document.addEventListener("DOMContentLoaded", () => {
     initThemeToggle();
+    initCopyEmail();
+    initScrollReveal();
+
+    const existingLinks = Array.from(document.querySelectorAll("[data-nav-target]"));
+    if (existingLinks.length > 0) {
+      const activeNav = existingLinks.map((l) => ({ id: l.dataset.navTarget }));
+      initScrollspy(activeNav);
+    }
 
     fetch(DATA_URL, { cache: "no-store" })
       .then((res) => {
@@ -701,8 +709,11 @@
         render(data);
       })
       .catch((err) => {
-        console.error(err);
-        renderError(err.message);
+        console.warn("Could not reload data.yaml; keeping pre-rendered content.", err);
+        const root = document.getElementById("app-root");
+        if (!root || root.children.length <= 1) {
+          renderError(err.message);
+        }
       });
   });
 })();

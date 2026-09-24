@@ -44,7 +44,7 @@
 
 <main id="main-content" class="subpage-wrap">
   <header class="sop-header">
-    <div class="sop-meta" id="archive-meta">Projects &bull; Archive</div>
+    <div class="sop-meta" id="archive-meta">WebApp &bull; Developer Tool &bull; Hackathon &bull; ML/AI &bull; Automated Bot &bull; Systems</div>
     <h1 class="sop-title">Projects &amp; Systems Archive</h1>
     <p class="sop-subtitle">All real projects — filterable by category.</p>
   </header>
@@ -52,11 +52,439 @@
   <!-- Filter buttons injected here -->
   <nav class="filter-bar" id="filter-bar" aria-label="Project category filters">
     <button type="button" class="filter-btn is-active" data-filter="all" aria-pressed="true">All Projects</button>
+    <button type="button" class="filter-btn" data-filter="WebApp" aria-pressed="false">WebApp</button>
+    <button type="button" class="filter-btn" data-filter="Developer Tool" aria-pressed="false">Developer Tool</button>
+    <button type="button" class="filter-btn" data-filter="Hackathon" aria-pressed="false">Hackathon</button>
+    <button type="button" class="filter-btn" data-filter="ML/AI" aria-pressed="false">ML/AI</button>
+    <button type="button" class="filter-btn" data-filter="Automated Bot" aria-pressed="false">Automated Bot</button>
+    <button type="button" class="filter-btn" data-filter="Systems" aria-pressed="false">Systems</button>
   </nav>
 
   <!-- Project cards injected here -->
   <div class="projects" id="projects-grid">
-    <p role="status" aria-live="polite" style="color: var(--text-secondary); font-family: var(--font-mono); font-size: 13px;">Loading projects…</p>
+    <article class="project-card" data-category="WebApp">
+      <div class="project-card__tags">
+        <span class="badge badge--accent">Python</span><span class="badge">Flask</span><span class="badge">Streamlit</span><span class="badge">Pandas</span><span class="badge">Plotly</span><span class="badge">Wikimedia Toolforge</span>
+      </div>
+      <h3 class="project-card__title">CampAnalytics — Event Evaluation &amp; Campaign Analytics<span class="badge badge--accent" style="margin-left:8px;font-size:10px;vertical-align:middle;">Featured</span></h3>
+      <p class="project-card__desc">Analytics tool built for Project Korikath to evaluate Wikimedia Commons campaigns (WLM, WLE, WLF, WLA, WLB) and contributor retention. Deployed on Wikimedia Toolforge and Streamlit.</p>
+      <div style="display: flex; flex-direction: column; width: 100%;">
+      <a class="project-card__link project-card__link--primary" href="https://github.com/tanvirsdq/CampAnalytics" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a>
+      <a class="project-card__link project-card__link--secondary" href="https://campanalytics.toolforge.org/" target="_blank" rel="noopener noreferrer">Live on Wikimedia Toolforge <span aria-hidden="true">&#8599;</span></a>
+      <a class="project-card__link project-card__link--secondary" href="https://campanalytics.streamlit.app/" target="_blank" rel="noopener noreferrer">Interactive Streamlit Dashboard <span aria-hidden="true">&#8599;</span></a>
+      </div>
+    </article>
+    <article class="project-card" data-category="Developer Tool">
+      <div class="project-card__tags">
+        <span class="badge badge--accent">TypeScript</span><span class="badge">VS Code Extension</span><span class="badge">Chrome Extension</span><span class="badge">Gemini API</span><span class="badge">Groq</span><span class="badge">AST Parser</span>
+      </div>
+      <h3 class="project-card__title">CodeFunc<span class="badge badge--accent" style="margin-left:8px;font-size:10px;vertical-align:middle;">Featured</span></h3>
+      <p class="project-card__desc">VS Code and Chrome extension providing an architectural file overview at Line 0. Features fast local AST parsing and contextual code summaries with Gemini, Groq, and Claude.</p>
+      <div style="display: flex; flex-direction: column; width: 100%;">
+      <a class="project-card__link project-card__link--primary" href="https://github.com/tanvirsdq/CodeFunc" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a>
+      <a class="project-card__link project-card__link--secondary" href="https://marketplace.visualstudio.com/items?itemName=TanvirSdq.codefunc-vscode" target="_blank" rel="noopener noreferrer">VS Code Marketplace (v1.0.3) <span aria-hidden="true">&#8599;</span></a>
+      </div>
+    </article>
+    <article class="project-card" data-category="Hackathon">
+      <div class="project-card__tags">
+        <span class="badge badge--accent">React 18</span><span class="badge">FastAPI</span><span class="badge">PostgreSQL</span><span class="badge">MapLibre GL</span><span class="badge">Capacitor Android</span><span class="badge">Render</span>
+      </div>
+      <h3 class="project-card__title">CampusShare KUET<span class="badge badge--accent" style="margin-left:8px;font-size:10px;vertical-align:middle;">Featured</span></h3>
+      <p class="project-card__desc">1st Place (Champion) at Forkathon 2026. A peer-to-peer equipment borrowing platform for KUET residential halls. Built in 50 hours with FastAPI, React, MapLibre GL radar, OTP/QR handover verification, and an Android app.</p>
+      <div style="display: flex; flex-direction: column; width: 100%;">
+      <a class="project-card__link project-card__link--primary" href="https://github.com/Forkship/Forkathon2026-Team-KUET_MANTIS" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a>
+      <a class="project-card__link project-card__link--secondary" href="https://forkathon2026-team-kuet-mantis-3.onrender.com/" target="_blank" rel="noopener noreferrer">Live Web App <span aria-hidden="true">&#8599;</span></a>
+      <a class="project-card__link project-card__link--secondary" href="https://github.com/Forkship/Forkathon2026-Team-KUET_MANTIS/releases" target="_blank" rel="noopener noreferrer">Download Android APK <span aria-hidden="true">&#8599;</span></a>
+      </div>
+    </article>
+    <article class="project-card" data-category="ML/AI">
+      <div class="project-card__tags">
+        <span class="badge badge--accent">Python</span><span class="badge">TensorFlow</span><span class="badge">Keras</span><span class="badge">EfficientNet</span><span class="badge">React</span><span class="badge">Supabase</span><span class="badge">Transfer Learning</span>
+      </div>
+      <h3 class="project-card__title">AgroScan — Crop Disease Detection &amp; Smart Farm<span class="badge badge--accent" style="margin-left:8px;font-size:10px;vertical-align:middle;">Featured</span></h3>
+      <p class="project-card__desc">38-class plant pathology transfer learning model (crop_disease_model_final.keras) trained on leaf photos. Built from scratch with a Streamlit interface (AgroScan) and integrated into the Smart Farm project.</p>
+      <div style="display: flex; flex-direction: column; width: 100%;">
+      <a class="project-card__link project-card__link--primary" href="https://github.com/tanvirsdq/MainCropDiseaseDetection" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a>
+      <a class="project-card__link project-card__link--secondary" href="https://maincropdisease.streamlit.app/" target="_blank" rel="noopener noreferrer">Live AgroScan App <span aria-hidden="true">&#8599;</span></a>
+      <a class="project-card__link project-card__link--secondary" href="https://github.com/mugdha-sarker81/smart-farm" target="_blank" rel="noopener noreferrer">Integrated in Smart Farm Repo <span aria-hidden="true">&#8599;</span></a>
+      </div>
+    </article>
+    <article class="project-card" data-category="Automated Bot">
+      <div class="project-card__tags">
+        <span class="badge badge--accent">Python</span><span class="badge">Pywikibot</span><span class="badge">MediaWiki API</span><span class="badge">Pandas</span><span class="badge">Matplotlib</span>
+      </div>
+      <h3 class="project-card__title">TanvirSdqBot — Wikimedia Automation Engine<span class="badge badge--accent" style="margin-left:8px;font-size:10px;vertical-align:middle;">Featured</span></h3>
+      <p class="project-card__desc">Pywikibot scripts used to structure ~10,000 articles on Fulfulde Wikipedia, automate welcome messages for new editors, and process event data for Wiki Loves campaigns.</p>
+      <div style="display: flex; flex-direction: column; width: 100%;">
+      <a class="project-card__link project-card__link--primary" href="https://github.com/tanvirsdq/TanvirSdqBot" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a>
+      </div>
+    </article>
+    <article class="project-card" data-category="ML/AI">
+      <div class="project-card__tags">
+        <span class="badge badge--accent">Python</span><span class="badge">Scikit-Learn</span><span class="badge">XGBoost</span><span class="badge">LightGBM</span><span class="badge">Pandas</span><span class="badge">Jupyter</span>
+      </div>
+      <h3 class="project-card__title">Kaggle ML &amp; Data Science Workspace</h3>
+      <p class="project-card__desc">Hands-on repository of Kaggle competition solutions and coursework from the University of Tokyo Matsuo-Iwasawa Lab GCI World 2026 program.</p>
+      <div style="display: flex; flex-direction: column; width: 100%;">
+      <a class="project-card__link project-card__link--primary" href="https://github.com/tanvirsdq/Kaggle" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a>
+      </div>
+    </article>
+    <article class="project-card" data-category="ML/AI">
+      <div class="project-card__tags">
+        <span class="badge badge--accent">Python</span><span class="badge">PyTorch</span><span class="badge">NLP</span><span class="badge">Bigram LM</span><span class="badge">Jupyter</span>
+      </div>
+      <h3 class="project-card__title">MLP &amp; Language Modeling Lab</h3>
+      <p class="project-card__desc">Character-level Bigram Language Model trained on The Wizard of Oz in PyTorch, exploring tokenization, cross-entropy loss, and autoregressive text generation.</p>
+      <div style="display: flex; flex-direction: column; width: 100%;">
+      <a class="project-card__link project-card__link--primary" href="https://github.com/tanvirsdq/MLP-Implementation" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a>
+      </div>
+    </article>
+    <article class="project-card" data-category="Systems">
+      <div class="project-card__tags">
+        <span class="badge badge--accent">C</span><span class="badge">C++17</span><span class="badge">STL</span><span class="badge">Algorithms</span><span class="badge">Data Structures</span>
+      </div>
+      <h3 class="project-card__title">Algorithmic Problem Solving</h3>
+      <p class="project-card__desc">Algorithmic problem solving practice in C and modern C++ STL for university coursework and programming fundamentals.</p>
+      <div style="display: flex; flex-direction: column; width: 100%;">
+      <a class="project-card__link project-card__link--primary" href="https://github.com/tanvirsdq/guide" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a>
+      </div>
+    </article>
+  </div>
+      <h3 class="project-card__title">CampAnalytics — Event Evaluation &amp; Campaign Analytics<span class="badge badge--accent" style="margin-left:8px;font-size:10px;vertical-align:middle;">Featured</span></h3>
+      <p class="project-card__desc">Analytics tool built for Project Korikath to evaluate Wikimedia Commons campaigns (WLM, WLE, WLF, WLA, WLB) and contributor retention. Deployed on Wikimedia Toolforge and Streamlit.</p>
+      <div style="display: flex; flex-direction: column; width: 100%;">
+      <a class="project-card__link project-card__link--primary" href="https://github.com/siddiquetanvir/CampAnalytics" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a>
+      <a class="project-card__link project-card__link--secondary" href="https://campanalytics.toolforge.org/" target="_blank" rel="noopener noreferrer">Live on Wikimedia Toolforge <span aria-hidden="true">&#8599;</span></a>
+      <a class="project-card__link project-card__link--secondary" href="https://campanalytics.streamlit.app/" target="_blank" rel="noopener noreferrer">Interactive Streamlit Dashboard <span aria-hidden="true">&#8599;</span></a>
+      </div>
+    </article>
+    <article class="project-card" data-category="Developer Tool">
+      <div class="project-card__tags">
+        <span class="badge badge--accent">TypeScript</span><span class="badge">VS Code Extension</span><span class="badge">Chrome Extension</span><span class="badge">Gemini API</span><span class="badge">Groq</span><span class="badge">AST Parser</span>
+      </div>
+      <h3 class="project-card__title">CodeFunc<span class="badge badge--accent" style="margin-left:8px;font-size:10px;vertical-align:middle;">Featured</span></h3>
+      <p class="project-card__desc">VS Code and Chrome extension providing an architectural file overview at Line 0. Features fast local AST parsing and contextual code summaries with Gemini, Groq, and Claude.</p>
+      <div style="display: flex; flex-direction: column; width: 100%;">
+      <a class="project-card__link project-card__link--primary" href="https://github.com/siddiquetanvir/CodeFunc" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a>
+      <a class="project-card__link project-card__link--secondary" href="https://marketplace.visualstudio.com/items?itemName=TanvirSdq.codefunc-vscode" target="_blank" rel="noopener noreferrer">VS Code Marketplace (v1.0.3) <span aria-hidden="true">&#8599;</span></a>
+      </div>
+    </article>
+    <article class="project-card" data-category="Hackathon">
+      <div class="project-card__tags">
+        <span class="badge badge--accent">React 18</span><span class="badge">FastAPI</span><span class="badge">PostgreSQL</span><span class="badge">MapLibre GL</span><span class="badge">Capacitor Android</span><span class="badge">Render</span>
+      </div>
+      <h3 class="project-card__title">CampusShare KUET<span class="badge badge--accent" style="margin-left:8px;font-size:10px;vertical-align:middle;">Featured</span></h3>
+      <p class="project-card__desc">1st Place (Champion) at Forkathon 2026. A peer-to-peer equipment borrowing platform for KUET residential halls. Built in 50 hours with FastAPI, React, MapLibre GL radar, OTP/QR handover verification, and an Android app.</p>
+      <div style="display: flex; flex-direction: column; width: 100%;">
+      <a class="project-card__link project-card__link--primary" href="https://github.com/Forkship/Forkathon2026-Team-KUET_MANTIS" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a>
+      <a class="project-card__link project-card__link--secondary" href="https://forkathon2026-team-kuet-mantis-3.onrender.com/" target="_blank" rel="noopener noreferrer">Live Web App <span aria-hidden="true">&#8599;</span></a>
+      <a class="project-card__link project-card__link--secondary" href="https://github.com/Forkship/Forkathon2026-Team-KUET_MANTIS/releases" target="_blank" rel="noopener noreferrer">Download Android APK <span aria-hidden="true">&#8599;</span></a>
+      </div>
+    </article>
+    <article class="project-card" data-category="ML/AI">
+      <div class="project-card__tags">
+        <span class="badge badge--accent">Python</span><span class="badge">TensorFlow</span><span class="badge">Keras</span><span class="badge">EfficientNet</span><span class="badge">React</span><span class="badge">Supabase</span><span class="badge">Transfer Learning</span>
+      </div>
+      <h3 class="project-card__title">AgroScan — Crop Disease Detection &amp; Smart Farm<span class="badge badge--accent" style="margin-left:8px;font-size:10px;vertical-align:middle;">Featured</span></h3>
+      <p class="project-card__desc">38-class plant pathology transfer learning model (crop_disease_model_final.keras) trained on leaf photos. Built from scratch with a Streamlit interface (AgroScan) and integrated into the Smart Farm project.</p>
+      <div style="display: flex; flex-direction: column; width: 100%;">
+      <a class="project-card__link project-card__link--primary" href="https://github.com/siddiquetanvir/MainCropDiseaseDetection" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a>
+      <a class="project-card__link project-card__link--secondary" href="https://maincropdisease.streamlit.app/" target="_blank" rel="noopener noreferrer">Live AgroScan App <span aria-hidden="true">&#8599;</span></a>
+      <a class="project-card__link project-card__link--secondary" href="https://github.com/mugdha-sarker81/smart-farm" target="_blank" rel="noopener noreferrer">Integrated in Smart Farm Repo <span aria-hidden="true">&#8599;</span></a>
+      </div>
+    </article>
+    <article class="project-card" data-category="Automated Bot">
+      <div class="project-card__tags">
+        <span class="badge badge--accent">Python</span><span class="badge">Pywikibot</span><span class="badge">MediaWiki API</span><span class="badge">Pandas</span><span class="badge">Matplotlib</span>
+      </div>
+      <h3 class="project-card__title">TanvirSdqBot — Wikimedia Automation Engine<span class="badge badge--accent" style="margin-left:8px;font-size:10px;vertical-align:middle;">Featured</span></h3>
+      <p class="project-card__desc">Pywikibot scripts used to structure ~10,000 articles on Fulfulde Wikipedia, automate welcome messages for new editors, and process event data for Wiki Loves campaigns.</p>
+      <div style="display: flex; flex-direction: column; width: 100%;">
+      <a class="project-card__link project-card__link--primary" href="https://github.com/siddiquetanvir/TanvirSdqBot" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a>
+      </div>
+    </article>
+    <article class="project-card" data-category="ML/AI">
+      <div class="project-card__tags">
+        <span class="badge badge--accent">Python</span><span class="badge">Scikit-Learn</span><span class="badge">XGBoost</span><span class="badge">LightGBM</span><span class="badge">Pandas</span><span class="badge">Jupyter</span>
+      </div>
+      <h3 class="project-card__title">Kaggle ML &amp; Data Science Workspace</h3>
+      <p class="project-card__desc">Hands-on repository of Kaggle competition solutions and coursework from the University of Tokyo Matsuo-Iwasawa Lab GCI World 2026 program.</p>
+      <div style="display: flex; flex-direction: column; width: 100%;">
+      <a class="project-card__link project-card__link--primary" href="https://github.com/siddiquetanvir/Kaggle" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a>
+      </div>
+    </article>
+    <article class="project-card" data-category="ML/AI">
+      <div class="project-card__tags">
+        <span class="badge badge--accent">Python</span><span class="badge">PyTorch</span><span class="badge">NLP</span><span class="badge">Bigram LM</span><span class="badge">Jupyter</span>
+      </div>
+      <h3 class="project-card__title">MLP &amp; Language Modeling Lab</h3>
+      <p class="project-card__desc">Character-level Bigram Language Model trained on The Wizard of Oz in PyTorch, exploring tokenization, cross-entropy loss, and autoregressive text generation.</p>
+      <div style="display: flex; flex-direction: column; width: 100%;">
+      <a class="project-card__link project-card__link--primary" href="https://github.com/siddiquetanvir/MLP-Implementation" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a>
+      </div>
+    </article>
+    <article class="project-card" data-category="Systems">
+      <div class="project-card__tags">
+        <span class="badge badge--accent">C</span><span class="badge">C++17</span><span class="badge">STL</span><span class="badge">Algorithms</span><span class="badge">Data Structures</span>
+      </div>
+      <h3 class="project-card__title">Algorithmic Problem Solving</h3>
+      <p class="project-card__desc">Algorithmic problem solving practice in C and modern C++ STL for university coursework and programming fundamentals.</p>
+      <div style="display: flex; flex-direction: column; width: 100%;">
+      <a class="project-card__link project-card__link--primary" href="https://github.com/siddiquetanvir/guide" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a>
+      </div>
+    </article>
+  </div>
+      <h3 class="project-card__title">CampAnalytics — Event Evaluation &amp; Campaign Analytics<span class="badge badge--accent" style="margin-left:8px;font-size:10px;vertical-align:middle;">Featured</span></h3>
+      <p class="project-card__desc">Analytics tool built for Project Korikath to evaluate Wikimedia Commons campaigns (WLM, WLE, WLF, WLA, WLB) and contributor retention. Deployed on Wikimedia Toolforge and Streamlit.</p>
+      <div style="display: flex; flex-direction: column; width: 100%;">
+      <a class="project-card__link project-card__link--primary" href="https://github.com/siddiquetanvir/CampAnalytics" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a>
+      <a class="project-card__link project-card__link--secondary" href="https://campanalytics.toolforge.org/" target="_blank" rel="noopener noreferrer">Live on Wikimedia Toolforge <span aria-hidden="true">&#8599;</span></a>
+      <a class="project-card__link project-card__link--secondary" href="https://campanalytics.streamlit.app/" target="_blank" rel="noopener noreferrer">Interactive Streamlit Dashboard <span aria-hidden="true">&#8599;</span></a>
+      </div>
+    </article>
+    <article class="project-card" data-category="Developer Tool">
+      <div class="project-card__tags">
+        <span class="badge badge--accent">TypeScript</span><span class="badge">VS Code Extension</span><span class="badge">Chrome Extension</span><span class="badge">Gemini API</span><span class="badge">Groq</span><span class="badge">AST Parser</span>
+      </div>
+      <h3 class="project-card__title">CodeFunc<span class="badge badge--accent" style="margin-left:8px;font-size:10px;vertical-align:middle;">Featured</span></h3>
+      <p class="project-card__desc">VS Code and Chrome extension providing an architectural file overview at Line 0. Features fast local AST parsing and contextual code summaries with Gemini, Groq, and Claude.</p>
+      <div style="display: flex; flex-direction: column; width: 100%;">
+      <a class="project-card__link project-card__link--primary" href="https://github.com/siddiquetanvir/CodeFunc" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a>
+      <a class="project-card__link project-card__link--secondary" href="https://marketplace.visualstudio.com/items?itemName=TanvirSdq.codefunc-vscode" target="_blank" rel="noopener noreferrer">VS Code Marketplace (v1.0.3) <span aria-hidden="true">&#8599;</span></a>
+      </div>
+    </article>
+    <article class="project-card" data-category="Hackathon">
+      <div class="project-card__tags">
+        <span class="badge badge--accent">React 18</span><span class="badge">FastAPI</span><span class="badge">PostgreSQL</span><span class="badge">MapLibre GL</span><span class="badge">Capacitor Android</span><span class="badge">Render</span>
+      </div>
+      <h3 class="project-card__title">CampusShare KUET<span class="badge badge--accent" style="margin-left:8px;font-size:10px;vertical-align:middle;">Featured</span></h3>
+      <p class="project-card__desc">1st Place (Champion) at Forkathon 2026. A peer-to-peer equipment borrowing platform for KUET residential halls. Built in 50 hours with FastAPI, React, MapLibre GL radar, OTP/QR handover verification, and an Android app.</p>
+      <div style="display: flex; flex-direction: column; width: 100%;">
+      <a class="project-card__link project-card__link--primary" href="https://github.com/Forkship/Forkathon2026-Team-KUET_MANTIS" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a>
+      <a class="project-card__link project-card__link--secondary" href="https://forkathon2026-team-kuet-mantis-3.onrender.com/" target="_blank" rel="noopener noreferrer">Live Web App <span aria-hidden="true">&#8599;</span></a>
+      <a class="project-card__link project-card__link--secondary" href="https://github.com/Forkship/Forkathon2026-Team-KUET_MANTIS/releases" target="_blank" rel="noopener noreferrer">Download Android APK <span aria-hidden="true">&#8599;</span></a>
+      </div>
+    </article>
+    <article class="project-card" data-category="ML/AI">
+      <div class="project-card__tags">
+        <span class="badge badge--accent">Python</span><span class="badge">TensorFlow</span><span class="badge">Keras</span><span class="badge">EfficientNet</span><span class="badge">React</span><span class="badge">Supabase</span><span class="badge">Transfer Learning</span>
+      </div>
+      <h3 class="project-card__title">AgroScan — Crop Disease Detection &amp; Smart Farm<span class="badge badge--accent" style="margin-left:8px;font-size:10px;vertical-align:middle;">Featured</span></h3>
+      <p class="project-card__desc">38-class plant pathology transfer learning model (crop_disease_model_final.keras) trained on leaf photos. Built from scratch with a Streamlit interface (AgroScan) and integrated into the Smart Farm project.</p>
+      <div style="display: flex; flex-direction: column; width: 100%;">
+      <a class="project-card__link project-card__link--primary" href="https://github.com/siddiquetanvir/MainCropDiseaseDetection" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a>
+      <a class="project-card__link project-card__link--secondary" href="https://maincropdisease.streamlit.app/" target="_blank" rel="noopener noreferrer">Live AgroScan App <span aria-hidden="true">&#8599;</span></a>
+      <a class="project-card__link project-card__link--secondary" href="https://github.com/mugdha-sarker81/smart-farm" target="_blank" rel="noopener noreferrer">Integrated in Smart Farm Repo <span aria-hidden="true">&#8599;</span></a>
+      </div>
+    </article>
+    <article class="project-card" data-category="Automated Bot">
+      <div class="project-card__tags">
+        <span class="badge badge--accent">Python</span><span class="badge">Pywikibot</span><span class="badge">MediaWiki API</span><span class="badge">Pandas</span><span class="badge">Matplotlib</span>
+      </div>
+      <h3 class="project-card__title">TanvirSdqBot — Wikimedia Automation Engine<span class="badge badge--accent" style="margin-left:8px;font-size:10px;vertical-align:middle;">Featured</span></h3>
+      <p class="project-card__desc">Pywikibot scripts used to structure ~10,000 articles on Fulfulde Wikipedia, automate welcome messages for new editors, and process event data for Wiki Loves campaigns.</p>
+      <div style="display: flex; flex-direction: column; width: 100%;">
+      <a class="project-card__link project-card__link--primary" href="https://github.com/siddiquetanvir/TanvirSdqBot" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a>
+      </div>
+    </article>
+    <article class="project-card" data-category="ML/AI">
+      <div class="project-card__tags">
+        <span class="badge badge--accent">Python</span><span class="badge">Scikit-Learn</span><span class="badge">XGBoost</span><span class="badge">LightGBM</span><span class="badge">Pandas</span><span class="badge">Jupyter</span>
+      </div>
+      <h3 class="project-card__title">Kaggle ML &amp; Data Science Workspace</h3>
+      <p class="project-card__desc">Hands-on repository of Kaggle competition solutions and coursework from the University of Tokyo Matsuo-Iwasawa Lab GCI World 2026 program.</p>
+      <div style="display: flex; flex-direction: column; width: 100%;">
+      <a class="project-card__link project-card__link--primary" href="https://github.com/siddiquetanvir/Kaggle" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a>
+      </div>
+    </article>
+    <article class="project-card" data-category="ML/AI">
+      <div class="project-card__tags">
+        <span class="badge badge--accent">Python</span><span class="badge">PyTorch</span><span class="badge">NLP</span><span class="badge">Bigram LM</span><span class="badge">Jupyter</span>
+      </div>
+      <h3 class="project-card__title">MLP &amp; Language Modeling Lab</h3>
+      <p class="project-card__desc">Character-level Bigram Language Model trained on The Wizard of Oz in PyTorch, exploring tokenization, cross-entropy loss, and autoregressive text generation.</p>
+      <div style="display: flex; flex-direction: column; width: 100%;">
+      <a class="project-card__link project-card__link--primary" href="https://github.com/siddiquetanvir/MLP-Implementation" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a>
+      </div>
+    </article>
+    <article class="project-card" data-category="Systems">
+      <div class="project-card__tags">
+        <span class="badge badge--accent">C</span><span class="badge">C++17</span><span class="badge">STL</span><span class="badge">Algorithms</span><span class="badge">Data Structures</span>
+      </div>
+      <h3 class="project-card__title">Algorithmic Problem Solving</h3>
+      <p class="project-card__desc">Algorithmic problem solving practice in C and modern C++ STL for university coursework and programming fundamentals.</p>
+      <div style="display: flex; flex-direction: column; width: 100%;">
+      <a class="project-card__link project-card__link--primary" href="https://github.com/siddiquetanvir/guide" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a>
+      </div>
+    </article>
+  </div>
+      <h3 class="project-card__title">CampAnalytics — Event Evaluation &amp; Campaign Analytics<span class="badge badge--accent" style="margin-left:8px;font-size:10px;vertical-align:middle;">Featured</span></h3>
+      <p class="project-card__desc">Analytics tool built for Project Korikath to evaluate Wikimedia Commons campaigns (WLM, WLE, WLF, WLA, WLB) and contributor retention. Deployed on Wikimedia Toolforge and Streamlit.</p>
+      <div style="display: flex; flex-direction: column; width: 100%;">
+      <a class="project-card__link project-card__link--primary" href="https://github.com/siddiquetanvir/CampAnalytics" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a>
+      <a class="project-card__link project-card__link--secondary" href="https://campanalytics.toolforge.org/" target="_blank" rel="noopener noreferrer">Live on Wikimedia Toolforge <span aria-hidden="true">&#8599;</span></a>
+      <a class="project-card__link project-card__link--secondary" href="https://campanalytics.streamlit.app/" target="_blank" rel="noopener noreferrer">Interactive Streamlit Dashboard <span aria-hidden="true">&#8599;</span></a>
+      </div>
+    </article>
+    <article class="project-card" data-category="Developer Tool">
+      <div class="project-card__tags">
+        <span class="badge badge--accent">TypeScript</span><span class="badge">VS Code Extension</span><span class="badge">Chrome Extension</span><span class="badge">Gemini API</span><span class="badge">Groq</span><span class="badge">AST Parser</span>
+      </div>
+      <h3 class="project-card__title">CodeFunc<span class="badge badge--accent" style="margin-left:8px;font-size:10px;vertical-align:middle;">Featured</span></h3>
+      <p class="project-card__desc">VS Code and Chrome extension providing an architectural file overview at Line 0. Features fast local AST parsing and contextual code summaries with Gemini, Groq, and Claude.</p>
+      <div style="display: flex; flex-direction: column; width: 100%;">
+      <a class="project-card__link project-card__link--primary" href="https://github.com/siddiquetanvir/CodeFunc" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a>
+      <a class="project-card__link project-card__link--secondary" href="https://marketplace.visualstudio.com/items?itemName=TanvirSdq.codefunc-vscode" target="_blank" rel="noopener noreferrer">VS Code Marketplace (v1.0.3) <span aria-hidden="true">&#8599;</span></a>
+      </div>
+    </article>
+    <article class="project-card" data-category="Hackathon">
+      <div class="project-card__tags">
+        <span class="badge badge--accent">React 18</span><span class="badge">FastAPI</span><span class="badge">PostgreSQL</span><span class="badge">MapLibre GL</span><span class="badge">Capacitor Android</span><span class="badge">Render</span>
+      </div>
+      <h3 class="project-card__title">CampusShare KUET<span class="badge badge--accent" style="margin-left:8px;font-size:10px;vertical-align:middle;">Featured</span></h3>
+      <p class="project-card__desc">1st Place (Champion) at Forkathon 2026. A peer-to-peer equipment borrowing platform for KUET residential halls. Built in 50 hours with FastAPI, React, MapLibre GL radar, OTP/QR handover verification, and an Android app.</p>
+      <div style="display: flex; flex-direction: column; width: 100%;">
+      <a class="project-card__link project-card__link--primary" href="https://github.com/Forkship/Forkathon2026-Team-KUET_MANTIS" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a>
+      <a class="project-card__link project-card__link--secondary" href="https://forkathon2026-team-kuet-mantis-3.onrender.com/" target="_blank" rel="noopener noreferrer">Live Web App <span aria-hidden="true">&#8599;</span></a>
+      <a class="project-card__link project-card__link--secondary" href="https://github.com/Forkship/Forkathon2026-Team-KUET_MANTIS/releases" target="_blank" rel="noopener noreferrer">Download Android APK <span aria-hidden="true">&#8599;</span></a>
+      </div>
+    </article>
+    <article class="project-card" data-category="ML/AI">
+      <div class="project-card__tags">
+        <span class="badge badge--accent">Python</span><span class="badge">TensorFlow</span><span class="badge">Keras</span><span class="badge">EfficientNet</span><span class="badge">React</span><span class="badge">Supabase</span><span class="badge">Transfer Learning</span>
+      </div>
+      <h3 class="project-card__title">AgroScan — Crop Disease Detection &amp; Smart Farm<span class="badge badge--accent" style="margin-left:8px;font-size:10px;vertical-align:middle;">Featured</span></h3>
+      <p class="project-card__desc">38-class plant pathology transfer learning model (crop_disease_model_final.keras) trained on leaf photos. Built from scratch with a Streamlit interface (AgroScan) and integrated into the Smart Farm project.</p>
+      <div style="display: flex; flex-direction: column; width: 100%;">
+      <a class="project-card__link project-card__link--primary" href="https://github.com/siddiquetanvir/MainCropDiseaseDetection" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a>
+      <a class="project-card__link project-card__link--secondary" href="https://maincropdisease.streamlit.app/" target="_blank" rel="noopener noreferrer">Live AgroScan App <span aria-hidden="true">&#8599;</span></a>
+      <a class="project-card__link project-card__link--secondary" href="https://github.com/mugdha-sarker81/smart-farm" target="_blank" rel="noopener noreferrer">Integrated in Smart Farm Repo <span aria-hidden="true">&#8599;</span></a>
+      </div>
+    </article>
+    <article class="project-card" data-category="Automated Bot">
+      <div class="project-card__tags">
+        <span class="badge badge--accent">Python</span><span class="badge">Pywikibot</span><span class="badge">MediaWiki API</span><span class="badge">Pandas</span><span class="badge">Matplotlib</span>
+      </div>
+      <h3 class="project-card__title">TanvirSdqBot — Wikimedia Automation Engine<span class="badge badge--accent" style="margin-left:8px;font-size:10px;vertical-align:middle;">Featured</span></h3>
+      <p class="project-card__desc">Pywikibot scripts used to structure ~10,000 articles on Fulfulde Wikipedia, automate welcome messages for new editors, and process event data for Wiki Loves campaigns.</p>
+      <div style="display: flex; flex-direction: column; width: 100%;">
+      <a class="project-card__link project-card__link--primary" href="https://github.com/siddiquetanvir/TanvirSdqBot" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a>
+      </div>
+    </article>
+    <article class="project-card" data-category="ML/AI">
+      <div class="project-card__tags">
+        <span class="badge badge--accent">Python</span><span class="badge">Scikit-Learn</span><span class="badge">XGBoost</span><span class="badge">LightGBM</span><span class="badge">Pandas</span><span class="badge">Jupyter</span>
+      </div>
+      <h3 class="project-card__title">Kaggle ML &amp; Data Science Workspace</h3>
+      <p class="project-card__desc">Hands-on repository of Kaggle competition solutions and coursework from the University of Tokyo Matsuo-Iwasawa Lab GCI World 2026 program.</p>
+      <div style="display: flex; flex-direction: column; width: 100%;">
+      <a class="project-card__link project-card__link--primary" href="https://github.com/siddiquetanvir/Kaggle" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a>
+      </div>
+    </article>
+    <article class="project-card" data-category="ML/AI">
+      <div class="project-card__tags">
+        <span class="badge badge--accent">Python</span><span class="badge">PyTorch</span><span class="badge">NLP</span><span class="badge">Bigram LM</span><span class="badge">Jupyter</span>
+      </div>
+      <h3 class="project-card__title">MLP &amp; Language Modeling Lab</h3>
+      <p class="project-card__desc">Character-level Bigram Language Model trained on The Wizard of Oz in PyTorch, exploring tokenization, cross-entropy loss, and autoregressive text generation.</p>
+      <div style="display: flex; flex-direction: column; width: 100%;">
+      <a class="project-card__link project-card__link--primary" href="https://github.com/siddiquetanvir/MLP-Implementation" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a>
+      </div>
+    </article>
+    <article class="project-card" data-category="Systems">
+      <div class="project-card__tags">
+        <span class="badge badge--accent">C</span><span class="badge">C++17</span><span class="badge">STL</span><span class="badge">Algorithms</span><span class="badge">Data Structures</span>
+      </div>
+      <h3 class="project-card__title">Algorithmic Problem Solving</h3>
+      <p class="project-card__desc">Algorithmic problem solving practice in C and modern C++ STL for university coursework and programming fundamentals.</p>
+      <div style="display: flex; flex-direction: column; width: 100%;">
+      <a class="project-card__link project-card__link--primary" href="https://github.com/siddiquetanvir/guide" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a>
+      </div>
+    </article>
+  </div>
+      <h3 class="project-card__title">CampAnalytics — Event Evaluation &amp; Campaign Analytics<span class="badge badge--accent" style="margin-left:8px;font-size:10px;vertical-align:middle;">Featured</span></h3>
+      <p class="project-card__desc">Analytics tool built for Project Korikath to evaluate Wikimedia Commons campaigns (WLM, WLE, WLF, WLA, WLB) and contributor retention. Deployed on Wikimedia Toolforge and Streamlit.</p>
+      <div style="display: flex; flex-direction: column; width: 100%;">
+      <a class="project-card__link project-card__link--primary" href="https://github.com/siddiquetanvir/CampAnalytics" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a>
+      <a class="project-card__link project-card__link--secondary" href="https://campanalytics.toolforge.org/" target="_blank" rel="noopener noreferrer">Live on Wikimedia Toolforge <span aria-hidden="true">&#8599;</span></a>
+      <a class="project-card__link project-card__link--secondary" href="https://campanalytics.streamlit.app/" target="_blank" rel="noopener noreferrer">Interactive Streamlit Dashboard <span aria-hidden="true">&#8599;</span></a>
+      </div>
+    </article>
+    <article class="project-card" data-category="Developer Tool">
+      <div class="project-card__tags">
+        <span class="badge badge--accent">TypeScript</span><span class="badge">VS Code Extension</span><span class="badge">Chrome Extension</span><span class="badge">Gemini API</span><span class="badge">Groq</span><span class="badge">AST Parser</span>
+      </div>
+      <h3 class="project-card__title">CodeFunc<span class="badge badge--accent" style="margin-left:8px;font-size:10px;vertical-align:middle;">Featured</span></h3>
+      <p class="project-card__desc">VS Code and Chrome extension providing an architectural file overview at Line 0. Features fast local AST parsing and contextual code summaries with Gemini, Groq, and Claude.</p>
+      <div style="display: flex; flex-direction: column; width: 100%;">
+      <a class="project-card__link project-card__link--primary" href="https://github.com/siddiquetanvir/CodeFunc" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a>
+      <a class="project-card__link project-card__link--secondary" href="https://marketplace.visualstudio.com/items?itemName=TanvirSdq.codefunc-vscode" target="_blank" rel="noopener noreferrer">VS Code Marketplace (v1.0.3) <span aria-hidden="true">&#8599;</span></a>
+      </div>
+    </article>
+    <article class="project-card" data-category="Hackathon">
+      <div class="project-card__tags">
+        <span class="badge badge--accent">React 18</span><span class="badge">FastAPI</span><span class="badge">PostgreSQL</span><span class="badge">MapLibre GL</span><span class="badge">Capacitor Android</span><span class="badge">Render</span>
+      </div>
+      <h3 class="project-card__title">CampusShare KUET<span class="badge badge--accent" style="margin-left:8px;font-size:10px;vertical-align:middle;">Featured</span></h3>
+      <p class="project-card__desc">1st Place (Champion) at Forkathon 2026. A peer-to-peer equipment borrowing platform for KUET residential halls. Built in 50 hours with FastAPI, React, MapLibre GL radar, OTP/QR handover verification, and an Android app.</p>
+      <div style="display: flex; flex-direction: column; width: 100%;">
+      <a class="project-card__link project-card__link--primary" href="https://github.com/Forkship/Forkathon2026-Team-KUET_MANTIS" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a>
+      <a class="project-card__link project-card__link--secondary" href="https://forkathon2026-team-kuet-mantis-3.onrender.com/" target="_blank" rel="noopener noreferrer">Live Web App <span aria-hidden="true">&#8599;</span></a>
+      <a class="project-card__link project-card__link--secondary" href="https://github.com/Forkship/Forkathon2026-Team-KUET_MANTIS/releases" target="_blank" rel="noopener noreferrer">Download Android APK <span aria-hidden="true">&#8599;</span></a>
+      </div>
+    </article>
+    <article class="project-card" data-category="ML/AI">
+      <div class="project-card__tags">
+        <span class="badge badge--accent">Python</span><span class="badge">TensorFlow</span><span class="badge">Keras</span><span class="badge">EfficientNet</span><span class="badge">React</span><span class="badge">Supabase</span><span class="badge">Transfer Learning</span>
+      </div>
+      <h3 class="project-card__title">AgroScan — Crop Disease Detection &amp; Smart Farm<span class="badge badge--accent" style="margin-left:8px;font-size:10px;vertical-align:middle;">Featured</span></h3>
+      <p class="project-card__desc">38-class plant pathology transfer learning model (crop_disease_model_final.keras) trained on leaf photos. Built from scratch with a Streamlit interface (AgroScan) and integrated into the Smart Farm project.</p>
+      <div style="display: flex; flex-direction: column; width: 100%;">
+      <a class="project-card__link project-card__link--primary" href="https://github.com/siddiquetanvir/MainCropDiseaseDetection" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a>
+      <a class="project-card__link project-card__link--secondary" href="https://maincropdisease.streamlit.app/" target="_blank" rel="noopener noreferrer">Live AgroScan App <span aria-hidden="true">&#8599;</span></a>
+      <a class="project-card__link project-card__link--secondary" href="https://github.com/mugdha-sarker81/smart-farm" target="_blank" rel="noopener noreferrer">Integrated in Smart Farm Repo <span aria-hidden="true">&#8599;</span></a>
+      </div>
+    </article>
+    <article class="project-card" data-category="Automated Bot">
+      <div class="project-card__tags">
+        <span class="badge badge--accent">Python</span><span class="badge">Pywikibot</span><span class="badge">MediaWiki API</span><span class="badge">Pandas</span><span class="badge">Matplotlib</span>
+      </div>
+      <h3 class="project-card__title">TanvirSdqBot — Wikimedia Automation Engine<span class="badge badge--accent" style="margin-left:8px;font-size:10px;vertical-align:middle;">Featured</span></h3>
+      <p class="project-card__desc">Pywikibot scripts used to structure ~10,000 articles on Fulfulde Wikipedia, automate welcome messages for new editors, and process event data for Wiki Loves campaigns.</p>
+      <div style="display: flex; flex-direction: column; width: 100%;">
+      <a class="project-card__link project-card__link--primary" href="https://github.com/siddiquetanvir/TanvirSdqBot" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a>
+      </div>
+    </article>
+    <article class="project-card" data-category="ML/AI">
+      <div class="project-card__tags">
+        <span class="badge badge--accent">Python</span><span class="badge">Scikit-Learn</span><span class="badge">XGBoost</span><span class="badge">LightGBM</span><span class="badge">Pandas</span><span class="badge">Jupyter</span>
+      </div>
+      <h3 class="project-card__title">Kaggle ML &amp; Data Science Workspace</h3>
+      <p class="project-card__desc">Hands-on repository of Kaggle competition solutions and coursework from the University of Tokyo Matsuo-Iwasawa Lab GCI World 2026 program.</p>
+      <div style="display: flex; flex-direction: column; width: 100%;">
+      <a class="project-card__link project-card__link--primary" href="https://github.com/siddiquetanvir/Kaggle" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a>
+      </div>
+    </article>
+    <article class="project-card" data-category="ML/AI">
+      <div class="project-card__tags">
+        <span class="badge badge--accent">Python</span><span class="badge">PyTorch</span><span class="badge">NLP</span><span class="badge">Bigram LM</span><span class="badge">Jupyter</span>
+      </div>
+      <h3 class="project-card__title">MLP &amp; Language Modeling Lab</h3>
+      <p class="project-card__desc">Character-level Bigram Language Model trained on The Wizard of Oz in PyTorch, exploring tokenization, cross-entropy loss, and autoregressive text generation.</p>
+      <div style="display: flex; flex-direction: column; width: 100%;">
+      <a class="project-card__link project-card__link--primary" href="https://github.com/siddiquetanvir/MLP-Implementation" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a>
+      </div>
+    </article>
+    <article class="project-card" data-category="Systems">
+      <div class="project-card__tags">
+        <span class="badge badge--accent">C</span><span class="badge">C++17</span><span class="badge">STL</span><span class="badge">Algorithms</span><span class="badge">Data Structures</span>
+      </div>
+      <h3 class="project-card__title">Algorithmic Problem Solving</h3>
+      <p class="project-card__desc">Algorithmic problem solving practice in C and modern C++ STL for university coursework and programming fundamentals.</p>
+      <div style="display: flex; flex-direction: column; width: 100%;">
+      <a class="project-card__link project-card__link--primary" href="https://github.com/siddiquetanvir/guide" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a>
+      </div>
+    </article>
   </div>
 
   <div style="margin-top: 56px; text-align: center;">
@@ -188,11 +616,55 @@
     });
 
     /* Wire up filter buttons */
+    function wireFilterButtons() {
+      const allCards = grid.querySelectorAll(".project-card");
+      const allBtns = filterBar.querySelectorAll(".filter-btn");
+
+      allBtns.forEach(btn => {
+        btn.onclick = () => {
+          allBtns.forEach(b => {
+            b.classList.remove("is-active");
+            b.setAttribute("aria-pressed", "false");
+          });
+          btn.classList.add("is-active");
+          btn.setAttribute("aria-pressed", "true");
+          const filter = btn.dataset.filter;
+          let visibleCount = 0;
+          allCards.forEach(card => {
+            const match = (filter === "all" || card.dataset.category === filter);
+            card.style.display = match ? "flex" : "none";
+            if (match) visibleCount++;
+          });
+
+          let emptyNotice = document.getElementById("projects-empty-notice");
+          if (visibleCount === 0) {
+            if (!emptyNotice) {
+              emptyNotice = document.createElement("div");
+              emptyNotice.id = "projects-empty-notice";
+              emptyNotice.className = "empty-state-notice";
+              emptyNotice.setAttribute("role", "status");
+              emptyNotice.textContent = `No projects found matching the "${filter}" category.`;
+              grid.appendChild(emptyNotice);
+            }
+          } else if (emptyNotice) {
+            emptyNotice.remove();
+          }
+        };
+      });
+    }
+
+    wireFilterButtons();
+  }
+
+  /* Wire up pre-rendered filter buttons immediately if present */
+  (function initExistingFilters() {
+    const grid = document.getElementById("projects-grid");
+    const filterBar = document.getElementById("filter-bar");
+    if (!grid || !filterBar) return;
     const allCards = grid.querySelectorAll(".project-card");
     const allBtns = filterBar.querySelectorAll(".filter-btn");
-
     allBtns.forEach(btn => {
-      btn.addEventListener("click", () => {
+      btn.onclick = () => {
         allBtns.forEach(b => {
           b.classList.remove("is-active");
           b.setAttribute("aria-pressed", "false");
@@ -206,23 +678,9 @@
           card.style.display = match ? "flex" : "none";
           if (match) visibleCount++;
         });
-
-        let emptyNotice = document.getElementById("projects-empty-notice");
-        if (visibleCount === 0) {
-          if (!emptyNotice) {
-            emptyNotice = document.createElement("div");
-            emptyNotice.id = "projects-empty-notice";
-            emptyNotice.className = "empty-state-notice";
-            emptyNotice.setAttribute("role", "status");
-            emptyNotice.textContent = `No projects found matching the "${filter}" category.`;
-            grid.appendChild(emptyNotice);
-          }
-        } else if (emptyNotice) {
-          emptyNotice.remove();
-        }
-      });
+      };
     });
-  }
+  })();
 
   /* ── Fetch data.yaml ── */
   fetch("data.yaml", { cache: "no-store" })
@@ -235,8 +693,12 @@
       render(data);
     })
     .catch(err => {
-      document.getElementById("projects-grid").innerHTML =
-        `<p style="color:var(--accent-color);font-family:var(--font-mono)">Could not load data.yaml: ${esc(err.message)}</p>`;
+      console.warn("Could not reload data.yaml; keeping pre-rendered projects.", err);
+      const grid = document.getElementById("projects-grid");
+      if (!grid || grid.querySelectorAll(".project-card").length === 0) {
+        grid.innerHTML =
+          `<p style="color:var(--accent-color);font-family:var(--font-mono)">Could not load data.yaml: ${esc(err.message)}</p>`;
+      }
     });
 })();
 </script>

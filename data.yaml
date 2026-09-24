@@ -95,7 +95,7 @@ projects:
     category: "WebApp"
     tags: ["Python", "Flask", "Streamlit", "Pandas", "Plotly", "Wikimedia Toolforge"]
     description: "Analytics tool built for Project Korikath to evaluate Wikimedia Commons campaigns (WLM, WLE, WLF, WLA, WLB) and contributor retention. Deployed on Wikimedia Toolforge and Streamlit."
-    github: "https://github.com/siddiquetanvir/CampAnalytics"
+    github: "https://github.com/tanvirsdq/CampAnalytics"
     demo: "https://campanalytics.toolforge.org/"
     demo_label: "Live on Wikimedia Toolforge"
     streamlit: "https://campanalytics.streamlit.app/"
@@ -106,7 +106,7 @@ projects:
     category: "Developer Tool"
     tags: ["TypeScript", "VS Code Extension", "Chrome Extension", "Gemini API", "Groq", "AST Parser"]
     description: "VS Code and Chrome extension providing an architectural file overview at Line 0. Features fast local AST parsing and contextual code summaries with Gemini, Groq, and Claude."
-    github: "https://github.com/siddiquetanvir/CodeFunc"
+    github: "https://github.com/tanvirsdq/CodeFunc"
     demo: "https://marketplace.visualstudio.com/items?itemName=TanvirSdq.codefunc-vscode"
     demo_label: "VS Code Marketplace (v1.0.3)"
     featured: true
@@ -126,7 +126,7 @@ projects:
     category: "ML/AI"
     tags: ["Python", "TensorFlow", "Keras", "EfficientNet", "React", "Supabase", "Transfer Learning"]
     description: "38-class plant pathology transfer learning model (crop_disease_model_final.keras) trained on leaf photos. Built from scratch with a Streamlit interface (AgroScan) and integrated into the Smart Farm project."
-    github: "https://github.com/siddiquetanvir/MainCropDiseaseDetection"
+    github: "https://github.com/tanvirsdq/MainCropDiseaseDetection"
     demo: "https://maincropdisease.streamlit.app/"
     demo_label: "Live AgroScan App"
     streamlit: "https://github.com/mugdha-sarker81/smart-farm"
@@ -137,28 +137,28 @@ projects:
     category: "Automated Bot"
     tags: ["Python", "Pywikibot", "MediaWiki API", "Pandas", "Matplotlib"]
     description: "Pywikibot scripts used to structure ~10,000 articles on Fulfulde Wikipedia, automate welcome messages for new editors, and process event data for Wiki Loves campaigns."
-    github: "https://github.com/siddiquetanvir/TanvirSdqBot"
+    github: "https://github.com/tanvirsdq/TanvirSdqBot"
     featured: true
 
   - title: "Kaggle ML & Data Science Workspace"
     category: "ML/AI"
     tags: ["Python", "Scikit-Learn", "XGBoost", "LightGBM", "Pandas", "Jupyter"]
     description: "Hands-on repository of Kaggle competition solutions and coursework from the University of Tokyo Matsuo-Iwasawa Lab GCI World 2026 program."
-    github: "https://github.com/siddiquetanvir/Kaggle"
+    github: "https://github.com/tanvirsdq/Kaggle"
     featured: false
 
   - title: "MLP & Language Modeling Lab"
     category: "ML/AI"
     tags: ["Python", "PyTorch", "NLP", "Bigram LM", "Jupyter"]
     description: "Character-level Bigram Language Model trained on The Wizard of Oz in PyTorch, exploring tokenization, cross-entropy loss, and autoregressive text generation."
-    github: "https://github.com/siddiquetanvir/MLP-Implementation"
+    github: "https://github.com/tanvirsdq/MLP-Implementation"
     featured: false
 
   - title: "Algorithmic Problem Solving"
     category: "Systems"
     tags: ["C", "C++17", "STL", "Algorithms", "Data Structures"]
     description: "Algorithmic problem solving practice in C and modern C++ STL for university coursework and programming fundamentals."
-    github: "https://github.com/siddiquetanvir/guide"
+    github: "https://github.com/tanvirsdq/guide"
     featured: false
 
 # ==============================================================================
@@ -254,7 +254,9 @@ contact:
     - label: "LinkedIn"
       url: "https://www.linkedin.com/in/tanvirsdq"
     - label: "GitHub"
-      url: "https://github.com/siddiquetanvir"
+      url: "https://github.com/tanvirsdq"
+    - label: "ORCID"
+      url: "https://orcid.org/0009-0009-8753-1114"
     - label: "Wikimedia"
       url: "https://meta.wikimedia.org/wiki/User:TanvirSdq"
   developer_profiles:
