@@ -1,6 +1,6 @@
 site:
   version: V4
-  location: "KUET \u2014 Khulna, Bangladesh"
+  location: KUET — Khulna, Bangladesh
   since: '2026'
 nav:
 - id: about
@@ -28,7 +28,7 @@ nav:
 hero:
   name: Tanvir Siddique
   alias: '@TanvirSdq'
-  status_badge: "KUET CSE \xB7 Open-Source & Wikimedia Contributor"
+  status_badge: KUET CSE · Open-Source & Wikimedia Contributor
   headline: Computer Science Student & Practical Tools Builder
   bio: First-year CSE student at KUET. Creator of CampAnalytics for Wikimedia campaign
     analytics and CodeFunc for VS Code. Building practical tools with Python, TypeScript,
@@ -77,18 +77,7 @@ skills:
   - Linguistics & Classical Arabic
   - Community Mentorship
 projects:
-- title: Nuvio
-  category: Open Source
-  tags:
-  - Kotlin
-  - Android TV
-  - Mobile
-  - Streaming
-  description: Contributor to the official open-source Nuvio media streaming clients
-    for mobile and Android TV devices.
-  github: https://github.com/NuvioMedia
-  featured: true
-- title: "CampAnalytics \u2014 Event Evaluation & Campaign Analytics"
+- title: CampAnalytics — Event Evaluation & Campaign Analytics
   category: WebApp
   tags:
   - Python
@@ -139,7 +128,7 @@ projects:
   apk: https://github.com/Forkship/Forkathon2026-Team-KUET_MANTIS/releases
   apk_label: Download Android APK
   featured: false
-- title: "AgroScan \u2014 Crop Disease Detection & Smart Farm"
+- title: AgroScan — Crop Disease Detection & Smart Farm
   category: ML/AI
   tags:
   - Python
@@ -158,7 +147,7 @@ projects:
   streamlit: https://github.com/mugdha-sarker81/smart-farm
   streamlit_label: Integrated in Smart Farm Repo
   featured: false
-- title: "TanvirSdqBot \u2014 Wikimedia Automation Engine"
+- title: TanvirSdqBot — Wikimedia Automation Engine
   category: Automated Bot
   tags:
   - Python
@@ -170,6 +159,17 @@ projects:
     automate welcome messages for new editors, and process event data for Wiki Loves
     campaigns.
   github: https://github.com/tanvirsdq/TanvirSdqBot
+  featured: true
+- title: Nuvio
+  category: Open Source
+  tags:
+  - Kotlin
+  - Android TV
+  - Mobile
+  - Streaming
+  description: Contributor to the official open-source Nuvio media streaming clients
+    for mobile and Android TV devices.
+  github: https://github.com/NuvioMedia
   featured: true
 - title: Kaggle ML & Data Science Workspace
   category: ML/AI
@@ -212,13 +212,13 @@ professional_experience: []
 open_source_contributions:
 - role: Lead of Operations
   organization: Project Koushal
-  period: "Sep 2024 \u2014 Present"
+  period: Sep 2024 — Present
   bullets:
   - Direct technical and operational logistics for nationwide community learning initiatives.
   - Streamline communication channels, workflow pipelines, and resource distribution.
 - role: Team Member & Data Lead
   organization: Project Korikath
-  period: "Jan 2024 \u2014 Present"
+  period: Jan 2024 — Present
   bullets:
   - Architected and maintain CampAnalytics on Wikimedia Toolforge for campaign analytics
     and retention tracking.
@@ -226,7 +226,7 @@ open_source_contributions:
     cross-wiki metrics.
 - role: Contributor & Bot Operator
   organization: Wikimedia Foundation
-  period: "Jun 2022 \u2014 Present"
+  period: Jun 2022 — Present
   bullets:
   - Engineer automated Pywikibot pipelines for cross-wiki categorization and structural
     maintenance.
@@ -234,7 +234,7 @@ open_source_contributions:
     media files on Wikimedia Commons.
 - role: Category Manager
   organization: Wiki Loves Folklore
-  period: "Feb 2025 \u2014 Apr 2025"
+  period: Feb 2025 — Apr 2025
   bullets:
   - Curated and managed media metadata taxonomy for international photo competition
     submissions.
@@ -244,35 +244,35 @@ education:
   degrees:
   - degree: B.Sc. in Computer Science & Engineering
     institution: Khulna University of Engineering & Technology (KUET)
-    period: "Feb 2026 \u2014 Present"
+    period: Feb 2026 — Present
     details: Undergraduate coursework in algorithms, data structures, systems programming,
       and software engineering fundamentals.
   - degree: Higher Secondary Certificate (HSC)
     institution: Notre Dame College, Dhaka
-    period: "2023 \u2014 2025"
+    period: 2023 — 2025
     details: Science division coursework with focus on physics, chemistry, and higher
       mathematics.
   - degree: Secondary School Certificate (SSC)
     institution: Govt Naldanga Bhushan Pilot Secondary School
-    period: "2018 \u2014 2022"
+    period: 2018 — 2022
     details: Secondary education in science division with distinction.
 extracurricular_activities:
 - role: Director of Leadership & Management
   organization: Notre Dame English Club (WERT)
-  period: "Sep 2024 \u2014 Sep 2025"
+  period: Sep 2024 — Sep 2025
   bullets:
   - Led leadership operations and managed event coordination for college-wide literary
     and cultural programs.
   - Mentored junior executive members and coordinated inter-departmental communications.
 - role: Member
   organization: Hardware Acceleration Club of KUET (HACK)
-  period: "Jul 2026 \u2014 Present"
+  period: Jul 2026 — Present
 - role: Member
   organization: Special Group Interested In Programming Contest (SGIPC)
-  period: "Jul 2026 \u2014 Present"
+  period: Jul 2026 — Present
 - role: Member
   organization: KUET Photographic Society (KUETPS)
-  period: "Jul 2026 \u2014 Present"
+  period: Jul 2026 — Present
 research_interests:
   category: Statement of Purpose & Direction
   title: Building, Learning, and What Comes Next
@@ -297,14 +297,14 @@ contact:
   - label: Kaggle
     url: https://www.kaggle.com/tanvirsdq
 achievements:
-- "**Champion (1st Place)** \u2014 ForkedArch Freshers Hackathon 2026 (Forkathon 2026)\
-  \ for CampusShare KUET."
-- "**Spearheaded Bengali Localization** \u2014 Engineered native Bengali language\
-  \ support across Nuvio's mobile and Android TV clients, serving over a million users."
-- "**Wikimedia Tool Developer** \u2014 Deployed production analytics tools on Toolforge\
-  \ and earned full developer privileges in Wikimedia Phabricator."
-- "**Global Bot Approvals** \u2014 Secured cross-wiki automated editing permissions\
-  \ for mass structural maintenance across the Wikimedia ecosystem."
+- '**Champion (1st Place)** — ForkedArch Freshers Hackathon 2026 (Forkathon 2026)
+  for CampusShare KUET.'
+- '**Spearheaded Bengali Localization** — Engineered native Bengali language support
+  across Nuvio''s mobile and Android TV clients, serving over a million users.'
+- '**Wikimedia Tool Developer** — Deployed production analytics tools on Toolforge
+  and earned full developer privileges in Wikimedia Phabricator.'
+- '**Global Bot Approvals** — Secured cross-wiki automated editing permissions for
+  mass structural maintenance across the Wikimedia ecosystem.'
 courses:
 - name: Machine Learning Specialization (Andrew Ng, Coursera)
   status: completed

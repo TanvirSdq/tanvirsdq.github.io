@@ -90,9 +90,12 @@ def build_impact(data):
         label = esc(m.get("label", ""))
         url = m.get("url")
         if url:
-            num = f'<a href="{esc(url)}" target="_blank" style="color:inherit; text-decoration:none;">{num}</a>'
-        
-        items.append(f'''        <div class="ledger__item">
+            items.append(f'''        <a href="{esc(url)}" target="_blank" class="ledger__item" style="display:block; text-decoration:none; color:inherit; cursor:pointer;">
+          <div class="ledger__number" style="color:var(--accent-color);">{num}</div>
+          <div class="ledger__label">{label}</div>
+        </a>''')
+        else:
+            items.append(f'''        <div class="ledger__item">
           <div class="ledger__number">{num}</div>
           <div class="ledger__label">{label}</div>
         </div>''')
