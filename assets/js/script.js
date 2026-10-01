@@ -699,6 +699,23 @@
       initScrollspy(activeNav);
     }
 
+
+    // Index Page Project Search
+    const indexSearchInput = document.getElementById("index-project-search");
+    if (indexSearchInput) {
+      indexSearchInput.addEventListener("input", (e) => {
+        const term = e.target.value.toLowerCase();
+        const grid = document.getElementById("index-projects-grid");
+        if (grid) {
+          const cards = grid.querySelectorAll(".project-card");
+          cards.forEach(card => {
+            const matchText = card.textContent.toLowerCase().includes(term);
+            card.style.display = matchText ? "flex" : "none";
+          });
+        }
+      });
+    }
+
     fetch(DATA_URL, { cache: "no-store" })
       .then((res) => {
         if (!res.ok) throw new Error(`HTTP ${res.status} while fetching ${DATA_URL}`);

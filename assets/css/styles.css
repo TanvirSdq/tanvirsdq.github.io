@@ -223,7 +223,7 @@ button { font: inherit; }
    THEME TOGGLE — icon only, fixed top-right
    ========================================================================== */
 .theme-toggle-btn {
-  position: fixed;
+  position: absolute;
   top: 22px;
   right: var(--gutter);
   z-index: 250;
@@ -1031,4 +1031,28 @@ button { font: inherit; }
     box-shadow: 0 6px 16px -4px rgba(0, 0, 0, 0.15);
   }
   .site-footer { flex-direction: column; align-items: flex-start; }
+}
+
+/* ==========================================================================
+   SEARCH INPUT (Clean Design)
+   ========================================================================== */
+.clean-search-input {
+  width: 100%;
+  max-width: 420px;
+  padding: 12px 16px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--rule-color);
+  border-radius: 6px;
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 15px;
+  transition: border-color 0.2s var(--ease), box-shadow 0.2s var(--ease);
+}
+.clean-search-input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(var(--accent-color-rgb, 107,70,193), 0.15);
+}
+.clean-search-input::placeholder {
+  color: var(--text-secondary);
 }

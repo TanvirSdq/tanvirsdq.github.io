@@ -197,7 +197,11 @@ def build_projects(data):
     return f"""  <section class="section wrap reveal" id="projects">
       <div class="eyebrow">Featured work</div>
       <h2 class="section-title">Selected Projects</h2>
-      <div class="projects">
+      
+      <div class="index-search" style="margin-bottom: 24px;">
+        <input type="search" id="index-project-search" placeholder="Search featured projects..." aria-label="Search featured projects" class="clean-search-input">
+      </div>
+      <div class="projects" id="index-projects-grid">
 {cards_html}
       </div>
       <div style="margin-top: 36px; text-align: center;">
