@@ -716,21 +716,5 @@
       });
     }
 
-    fetch(DATA_URL, { cache: "no-store" })
-      .then((res) => {
-        if (!res.ok) throw new Error(`HTTP ${res.status} while fetching ${DATA_URL}`);
-        return res.text();
-      })
-      .then((text) => {
-        const data = jsyaml.load(text);
-        render(data);
-      })
-      .catch((err) => {
-        console.warn("Could not reload data.yaml; keeping pre-rendered content.", err);
-        const root = document.getElementById("app-root");
-        if (!root || root.children.length <= 1) {
-          renderError(err.message);
-        }
-      });
   });
 })();
