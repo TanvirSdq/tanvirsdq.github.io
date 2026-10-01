@@ -86,18 +86,26 @@ def build_impact(data):
         return ""
     items = []
     for m in metrics:
-        items.append(f"""        <div class="ledger__item">
-          <div class="ledger__number">{esc(m.get("number", ""))}</div>
-          <div class="ledger__label">{esc(m.get("label", ""))}</div>
-        </div>""")
+        num = esc(m.get("number", ""))
+        label = esc(m.get("label", ""))
+        url = m.get("url")
+        if url:
+            num = f'<a href="{esc(url)}" target="_blank" style="color:inherit; text-decoration:none;">{num}</a>'
+        
+        items.append(f'''        <div class="ledger__item">
+          <div class="ledger__number">{num}</div>
+          <div class="ledger__label">{label}</div>
+        </div>''')
     items_html = "\n".join(items)
-    return f"""  <section class="section wrap reveal" id="impact">
-      <div class="eyebrow">By the numbers</div>
-      <h2 class="section-title sr-only">Key Impact Metrics</h2>
-      <div class="ledger">
+    return f'''  <section class="section wrap reveal" id="impact">
+    <div class="section-header">
+      <h2 class="h2">By the numbers</h2>
+      <h3 class="h3" style="color:var(--text-main); margin-top:8px;">Key Impact Metrics</h3>
+    </div>
+    <div class="ledger" style="margin-top:32px;">
 {items_html}
-      </div>
-    </section>"""
+    </div>
+  </section>'''
 
 def build_achievements(data):
     items = data.get("achievements", [])

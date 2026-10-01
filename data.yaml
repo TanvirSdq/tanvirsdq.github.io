@@ -42,14 +42,18 @@ hero:
   - PostgreSQL
   - C / C++
 impact_metrics:
-- number: 46,900+
+- number: 47,000+
   label: Automated Bot Edits
-- number: 6,000+
-  label: Manual Open-Source Contributions
-- number: 15,800+
+  url: https://xtools.wmcloud.org/globalcontribs/TanvirSdqBot
+- number: 35,000+
   label: Media Files Categorized
-- number: 10,000+
+  url: https://xtools.wmcloud.org/ec/commons.wikimedia.org/TanvirSdqBot
+- number: 11,500+
   label: Articles Structured
+  url: https://xtools.wmcloud.org/ec/ff.wikipedia.org/TanvirSdqBot
+- number: 5,500+
+  label: Manual Open-Source Contributions
+  url: https://xtools.wmcloud.org/globalcontribs/TanvirSdq
 skills:
   core_programming:
   - Python
@@ -73,6 +77,17 @@ skills:
   - Linguistics & Classical Arabic
   - Community Mentorship
 projects:
+- title: Nuvio
+  category: Open Source
+  tags:
+  - Kotlin
+  - Android TV
+  - Mobile
+  - Streaming
+  description: Contributor to the official open-source Nuvio media streaming clients
+    for mobile and Android TV devices.
+  github: https://github.com/NuvioMedia
+  featured: true
 - title: "CampAnalytics \u2014 Event Evaluation & Campaign Analytics"
   category: WebApp
   tags:
@@ -123,7 +138,7 @@ projects:
   demo_label: Live Web App
   apk: https://github.com/Forkship/Forkathon2026-Team-KUET_MANTIS/releases
   apk_label: Download Android APK
-  featured: true
+  featured: false
 - title: "AgroScan \u2014 Crop Disease Detection & Smart Farm"
   category: ML/AI
   tags:
@@ -142,7 +157,7 @@ projects:
   demo_label: Live AgroScan App
   streamlit: https://github.com/mugdha-sarker81/smart-farm
   streamlit_label: Integrated in Smart Farm Repo
-  featured: true
+  featured: false
 - title: "TanvirSdqBot \u2014 Wikimedia Automation Engine"
   category: Automated Bot
   tags:
@@ -284,11 +299,12 @@ contact:
 achievements:
 - "**Champion (1st Place)** \u2014 ForkedArch Freshers Hackathon 2026 (Forkathon 2026)\
   \ for CampusShare KUET."
-- "**47,000+ Automated Bot Edits** \u2014 Executed via TanvirSdqBot maintaining global\
-  \ Wikimedia taxonomy and structures."
-- "**5,500+ Manual Open-Source Contributions** \u2014 Across Wikimedia projects."
-- "**35,000+ Media File Actions** \u2014 On Wikimedia Commons."
-- "**11,500+ Articles Structured** \u2014 On Fulfulde Wikipedia."
+- "**Spearheaded Bengali Localization** \u2014 Engineered native Bengali language\
+  \ support across Nuvio's mobile and Android TV clients, serving over a million users."
+- "**Wikimedia Tool Developer** \u2014 Deployed production analytics tools on Toolforge\
+  \ and earned full developer privileges in Wikimedia Phabricator."
+- "**Global Bot Approvals** \u2014 Secured cross-wiki automated editing permissions\
+  \ for mass structural maintenance across the Wikimedia ecosystem."
 courses:
 - name: Machine Learning Specialization (Andrew Ng, Coursera)
   status: completed
