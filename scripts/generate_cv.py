@@ -11,7 +11,7 @@ import html
 import subprocess
 import yaml
 
-ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 YAML_PATH = os.path.join(ROOT_DIR, "data.yaml")
 CV_HTML_PATH = os.path.join(ROOT_DIR, "cv.html")
 PDF_PATH = os.path.join(ROOT_DIR, "MasterCV.pdf")

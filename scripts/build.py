@@ -17,7 +17,7 @@ from datetime import datetime
 import yaml
 from bs4 import BeautifulSoup
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 YAML_PATH = os.path.join(BASE_DIR, "data.yaml")
 INDEX_PATH = os.path.join(BASE_DIR, "index.html")
 PROJECTS_PATH = os.path.join(BASE_DIR, "projects.html")

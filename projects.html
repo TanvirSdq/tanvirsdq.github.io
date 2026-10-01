@@ -52,6 +52,10 @@ WebApp &bull; Developer Tool &bull; Hackathon &bull; ML/AI &bull; Automated Bot 
   </header>
 
   <!-- Filter buttons injected here -->
+  <div class="search-container" style="margin-bottom: 20px; text-align: center;">
+      <input type="search" id="project-search" placeholder="Search projects by keyword..." aria-label="Search projects" style="padding: 10px; width: 100%; max-width: 400px; border-radius: 4px; border: 1px solid #ccc; background-color: var(--card-bg); color: var(--text-main);">
+  </div>
+
   <nav class="filter-bar" id="filter-bar" aria-label="Project category filters">
   <!-- FILTER_BUTTONS_START -->
     <button type="button" class="filter-btn is-active" data-filter="all" aria-pressed="true">All Projects</button>
@@ -80,7 +84,7 @@ WebApp &bull; Developer Tool &bull; Hackathon &bull; ML/AI &bull; Automated Bot 
     <article class="project-card" data-category="Developer Tool">
       <div class="project-card__tags"><span class="badge badge--accent">TypeScript</span><span class="badge">VS Code Extension</span><span class="badge">Chrome Extension</span><span class="badge">Gemini API</span><span class="badge">Groq</span><span class="badge">AST Parser</span></div>
       <h2 class="project-card__title">CodeFunc<span class="badge badge--accent" style="margin-left:8px;font-size:10px;vertical-align:middle;">Featured</span></h2>
-      <p class="project-card__desc">VS Code and Chrome extension providing an architectural file overview at Line 0. Features fast local AST parsing and contextual code summaries with Gemini, Groq, and Claude.</p>
+      <p class="project-card__desc">Zero-click architectural file overviews for VS Code. Uses local AST heuristics for non-intrusive structure mapping.</p>
       <div style="display:flex;flex-direction:column;width:100%;gap:8px;">
         <a class="project-card__link project-card__link--primary" href="https://github.com/tanvirsdq/CodeFunc" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a>
         <a class="project-card__link project-card__link--secondary" href="https://marketplace.visualstudio.com/items?itemName=TanvirSdq.codefunc-vscode" target="_blank" rel="noopener noreferrer">VS Code Marketplace (v1.0.3) <span aria-hidden="true">&#8599;</span></a>
@@ -272,7 +276,7 @@ WebApp &bull; Developer Tool &bull; Hackathon &bull; ML/AI &bull; Automated Bot 
 
     /* Wire up filter buttons */
     function setupFilterListeners() {
-      const allCards = grid.querySelectorAll(".project-card");
+      var allCards = grid.querySelectorAll(".project-card");
       const allBtns = filterBar.querySelectorAll(".filter-btn");
 
       allBtns.forEach(btn => {
@@ -286,7 +290,7 @@ WebApp &bull; Developer Tool &bull; Hackathon &bull; ML/AI &bull; Automated Bot 
           const filter = btn.dataset.filter;
           let visibleCount = 0;
           allCards.forEach(card => {
-            const match = (filter === "all" || card.dataset.category === filter);
+            const searchTerm = document.getElementById("project-search")?.value.toLowerCase() || ""; const matchCat = (filter === "all" || card.dataset.category === filter); const matchText = card.textContent.toLowerCase().includes(searchTerm); const match = matchCat && matchText;
             card.style.display = match ? "flex" : "none";
             if (match) visibleCount++;
           });
@@ -312,13 +316,49 @@ WebApp &bull; Developer Tool &bull; Hackathon &bull; ML/AI &bull; Automated Bot 
     }
 
     setupFilterListeners();
+
+    var searchInput = document.getElementById("project-search");
+    if (searchInput) {
+      searchInput.addEventListener("input", (e) => {
+        var term = e.target.value.toLowerCase();
+        var allCards = document.querySelectorAll(".project-card");
+        var activeFilter = filterBar.querySelector(".is-active")?.dataset.filter || "all";
+        
+        let visibleCount = 0;
+        allCards.forEach(card => {
+          const matchCat = (activeFilter === "all" || card.dataset.category === activeFilter);
+          const matchText = card.textContent.toLowerCase().includes(term);
+          const match = matchCat && matchText;
+          card.style.display = match ? "flex" : "none";
+          if (match) visibleCount++;
+        });
+        
+        let emptyNotice = document.getElementById("projects-empty-notice");
+        if (visibleCount === 0) {
+          if (!emptyNotice) {
+            emptyNotice = document.createElement("div");
+            emptyNotice.id = "projects-empty-notice";
+            emptyNotice.className = "empty-state-notice";
+            emptyNotice.setAttribute("role", "status");
+            emptyNotice.style.padding = "40px";
+            emptyNotice.style.textAlign = "center";
+            emptyNotice.style.color = "var(--text-secondary)";
+            emptyNotice.textContent = "No projects found.";
+            grid.appendChild(emptyNotice);
+          }
+        } else if (emptyNotice) {
+          emptyNotice.remove();
+        }
+      });
+    }
+
   }
 
   function setupFilterListeners() {
     const grid = document.getElementById("projects-grid");
     const filterBar = document.getElementById("filter-bar");
     if (!grid || !filterBar) return;
-    const allCards = grid.querySelectorAll(".project-card");
+    var allCards = grid.querySelectorAll(".project-card");
     const allBtns = filterBar.querySelectorAll(".filter-btn");
 
     allBtns.forEach(btn => {
@@ -332,7 +372,7 @@ WebApp &bull; Developer Tool &bull; Hackathon &bull; ML/AI &bull; Automated Bot 
         const filter = btn.dataset.filter;
         let visibleCount = 0;
         allCards.forEach(card => {
-          const match = (filter === "all" || card.dataset.category === filter);
+          const searchTerm = document.getElementById("project-search")?.value.toLowerCase() || ""; const matchCat = (filter === "all" || card.dataset.category === filter); const matchText = card.textContent.toLowerCase().includes(searchTerm); const match = matchCat && matchText;
           card.style.display = match ? "flex" : "none";
           if (match) visibleCount++;
         });
@@ -359,6 +399,42 @@ WebApp &bull; Developer Tool &bull; Hackathon &bull; ML/AI &bull; Automated Bot 
 
   // Bind listeners to pre-rendered markup immediately
   setupFilterListeners();
+
+    var searchInput = document.getElementById("project-search");
+    if (searchInput) {
+      searchInput.addEventListener("input", (e) => {
+        var term = e.target.value.toLowerCase();
+        var allCards = document.querySelectorAll(".project-card");
+        var activeFilter = filterBar.querySelector(".is-active")?.dataset.filter || "all";
+        
+        let visibleCount = 0;
+        allCards.forEach(card => {
+          const matchCat = (activeFilter === "all" || card.dataset.category === activeFilter);
+          const matchText = card.textContent.toLowerCase().includes(term);
+          const match = matchCat && matchText;
+          card.style.display = match ? "flex" : "none";
+          if (match) visibleCount++;
+        });
+        
+        let emptyNotice = document.getElementById("projects-empty-notice");
+        if (visibleCount === 0) {
+          if (!emptyNotice) {
+            emptyNotice = document.createElement("div");
+            emptyNotice.id = "projects-empty-notice";
+            emptyNotice.className = "empty-state-notice";
+            emptyNotice.setAttribute("role", "status");
+            emptyNotice.style.padding = "40px";
+            emptyNotice.style.textAlign = "center";
+            emptyNotice.style.color = "var(--text-secondary)";
+            emptyNotice.textContent = "No projects found.";
+            grid.appendChild(emptyNotice);
+          }
+        } else if (emptyNotice) {
+          emptyNotice.remove();
+        }
+      });
+    }
+
 
   /* ── Fetch data.yaml ── */
   fetch("data.yaml", { cache: "no-store" })
