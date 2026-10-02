@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0d14"/>
+      <stop offset="50%" stop-color="#0f131f"/>
+      <stop offset="100%" stop-color="#090b10"/>
+    </linearGradient>
+
+    <linearGradient id="accent-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="50%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#93c5fd"/>
+    </linearGradient>
+
+    <linearGradient id="card-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#151928" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#101320" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1c2237" stroke-width="1" stroke-opacity="0.45"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg-grad)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- Subtle glow top right -->
+  <circle cx="1080" cy="120" r="320" fill="#2563eb" opacity="0.12" filter="blur(80px)"/>
+  <circle cx="150" cy="550" r="260" fill="#1d4ed8" opacity="0.08" filter="blur(70px)"/>
+
+  <!-- Outer frame border -->
+  <rect x="24" y="24" width="1152" height="582" rx="16" fill="none" stroke="#232a42" stroke-width="1.5"/>
+
+  <!-- Top Metadata Bar -->
+  <g transform="translate(68, 68)">
+    <!-- Status Pill -->
+    <rect x="0" y="0" width="350" height="34" rx="17" fill="#131826" stroke="#252d47" stroke-width="1.2"/>
+    <circle cx="18" cy="17" r="5" fill="#10b981"/>
+    <text x="34" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#93c5fd" letter-spacing="0.08em">B.SC. IN CSE @ KUET &#8226; 2026 — PRESENT</text>
+
+    <!-- Right-aligned domain -->
+    <text x="1064" y="22" text-anchor="end" font-family="'Space Mono', monospace, Courier" font-size="13" font-weight="700" fill="#64748b" letter-spacing="0.05em">tanvirsdq.github.io</text>
+  </g>
+
+  <!-- Main Title & Headline -->
+  <g transform="translate(68, 168)">
+    <text x="0" y="56" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Playfair Display', Georgia, serif" font-size="64" font-weight="800" fill="#f8fafc" letter-spacing="-0.03em">Tanvir Siddique</text>
+    <text x="0" y="104" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="24" font-weight="500" fill="url(#accent-grad)" letter-spacing="-0.01em">Building CS Foundations &amp; Open Source Automation</text>
+    <text x="0" y="142" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="400" fill="#94a3b8">Undergraduate student passionate about systems programming, data automation, and ML engineering.</text>
+  </g>
+
+  <!-- Key Metrics / Ledger Grid -->
+  <g transform="translate(68, 350)">
+    <!-- Box 1 -->
+    <rect x="0" y="0" width="248" height="114" rx="12" fill="url(#card-grad)" stroke="#232a42" stroke-width="1.2"/>
+    <text x="24" y="52" font-family="'Space Mono', monospace, Courier" font-size="34" font-weight="800" fill="#f8fafc" letter-spacing="-0.02em">47k+</text>
+    <text x="24" y="82" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" font-weight="600" fill="#94a3b8" letter-spacing="0.04em">AUTOMATED EDITS</text>
+    <text x="24" y="98" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#64748b">Cross-wiki Pywikibot</text>
+
+    <!-- Box 2 -->
+    <rect x="272" y="0" width="248" height="114" rx="12" fill="url(#card-grad)" stroke="#232a42" stroke-width="1.2"/>
+    <text x="296" y="52" font-family="'Space Mono', monospace, Courier" font-size="34" font-weight="800" fill="#f8fafc" letter-spacing="-0.02em">1M+</text>
+    <text x="296" y="82" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" font-weight="600" fill="#94a3b8" letter-spacing="0.04em">ACTIVE USERS</text>
+    <text x="296" y="98" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#64748b">Nuvio Bengali Localization</text>
+
+    <!-- Box 3 -->
+    <rect x="544" y="0" width="248" height="114" rx="12" fill="url(#card-grad)" stroke="#232a42" stroke-width="1.2"/>
+    <text x="568" y="52" font-family="'Space Mono', monospace, Courier" font-size="34" font-weight="800" fill="#f8fafc" letter-spacing="-0.02em">1st Place</text>
+    <text x="568" y="82" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" font-weight="600" fill="#94a3b8" letter-spacing="0.04em">FORKATHON 2026</text>
+    <text x="568" y="98" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#64748b">CampusShare KUET</text>
+
+    <!-- Box 4 -->
+    <rect x="816" y="0" width="248" height="114" rx="12" fill="url(#card-grad)" stroke="#232a42" stroke-width="1.2"/>
+    <text x="840" y="52" font-family="'Space Mono', monospace, Courier" font-size="34" font-weight="800" fill="#f8fafc" letter-spacing="-0.02em">35k+</text>
+    <text x="840" y="82" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" font-weight="600" fill="#94a3b8" letter-spacing="0.04em">COMMONS MEDIA</text>
+    <text x="840" y="98" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#64748b">Taxonomy &amp; Metadata</text>
+  </g>
+
+  <!-- Bottom Technology Chips & Handles -->
+  <g transform="translate(68, 510)">
+    <!-- Tech chips -->
+    <rect x="0" y="0" width="76" height="30" rx="6" fill="#171e31" stroke="#252d47" stroke-width="1"/>
+    <text x="38" y="19" text-anchor="middle" font-family="'Space Mono', monospace" font-size="12" font-weight="700" fill="#94a3b8">Python</text>
+
+    <rect x="86" y="0" width="78" height="30" rx="6" fill="#171e31" stroke="#252d47" stroke-width="1"/>
+    <text x="125" y="19" text-anchor="middle" font-family="'Space Mono', monospace" font-size="12" font-weight="700" fill="#94a3b8">C/C++</text>
+
+    <rect x="174" y="0" width="94" height="30" rx="6" fill="#171e31" stroke="#252d47" stroke-width="1"/>
+    <text x="221" y="19" text-anchor="middle" font-family="'Space Mono', monospace" font-size="12" font-weight="700" fill="#94a3b8">Pywikibot</text>
+
+    <rect x="278" y="0" width="138" height="30" rx="6" fill="#171e31" stroke="#252d47" stroke-width="1"/>
+    <text x="347" y="19" text-anchor="middle" font-family="'Space Mono', monospace" font-size="12" font-weight="700" fill="#94a3b8">Machine Learning</text>
+
+    <rect x="426" y="0" width="86" height="30" rx="6" fill="#171e31" stroke="#252d47" stroke-width="1"/>
+    <text x="469" y="19" text-anchor="middle" font-family="'Space Mono', monospace" font-size="12" font-weight="700" fill="#94a3b8">FastAPI</text>
+
+    <!-- Social Footprint Links -->
+    <text x="1064" y="20" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#94a3b8">
+      github.com/tanvirsdq &#8226; linkedin.com/in/tanvirsdq
+    </text>
+  </g>
+</svg>

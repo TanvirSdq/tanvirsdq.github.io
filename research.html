@@ -6,6 +6,53 @@
 <title>Tanvir Siddique | Statement of Purpose &amp; Direction</title>
 <meta name="description" content="Statement of Purpose and Engineering Direction of Tanvir Siddique: First-year CSE student at KUET, open-source bot builder, full-stack developer, and aspiring ML systems engineer.">
 
+<!-- Canonical URL -->
+<link rel="canonical" href="https://tanvirsdq.github.io/research.html">
+
+<!-- Open Graph / Facebook / LinkedIn / Discord -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Tanvir Siddique Portfolio">
+<meta property="og:title" content="Tanvir Siddique | Statement of Purpose &amp; Direction">
+<meta property="og:description" content="First-year CSE student at KUET. Building practical tools, open-source automation, and learning ML foundations.">
+<meta property="og:url" content="https://tanvirsdq.github.io/research.html">
+<meta property="og:image" content="https://tanvirsdq.github.io/assets/og-card.png">
+<meta property="og:image:secure_url" content="https://tanvirsdq.github.io/assets/og-card.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Tanvir Siddique — Statement of Purpose &amp; Direction">
+
+<!-- Twitter / X Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@TanvirSdq">
+<meta name="twitter:creator" content="@TanvirSdq">
+<meta name="twitter:title" content="Tanvir Siddique | Statement of Purpose &amp; Direction">
+<meta name="twitter:description" content="First-year CSE student at KUET. Building practical tools, open-source automation, and learning ML foundations.">
+<meta name="twitter:image" content="https://tanvirsdq.github.io/assets/og-card.png">
+<meta name="twitter:image:alt" content="Tanvir Siddique — Statement of Purpose &amp; Direction">
+
+<!-- Schema.org Article Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Building, Learning, and What Comes Next",
+  "description": "Statement of Purpose and Engineering Direction of Tanvir Siddique: First-year CSE student at KUET, open-source bot builder, full-stack developer, and aspiring ML systems engineer.",
+  "author": {
+    "@type": "Person",
+    "name": "Tanvir Siddique",
+    "url": "https://tanvirsdq.github.io"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Tanvir Siddique"
+  },
+  "mainEntityOfPage": "https://tanvirsdq.github.io/research.html",
+  "timeRequired": "PT3M",
+  "wordCount": "650"
+}
+</script>
+
 <script>
   (function () {
     try {
@@ -26,6 +73,11 @@
 </head>
 <body>
 
+<!-- Subtle reading progress bar at very top -->
+<div class="reading-progress-track" aria-hidden="true">
+  <div id="reading-progress-bar" class="reading-progress-bar"></div>
+</div>
+
 <a class="skip-link" href="#main-content">Skip to content</a>
 
 <header class="subpage-header">
@@ -43,110 +95,184 @@
   </button>
 </header>
 
-<main id="main-content" class="subpage-wrap">
-  <article class="sop-article">
-    <header class="sop-header">
+<main id="main-content" class="subpage-wrap subpage-wrap--research">
+  <header class="sop-header">
+    <div class="sop-meta-row">
       <div class="sop-meta">Statement of Purpose &bull; Direction</div>
-      <h1 class="sop-title">Building, Learning, and What Comes Next</h1>
-      <p class="sop-subtitle">
-        First-year CSE student at KUET. Building practical tools, open-source automation, and learning ML foundations.
-      </p>
-    </header>
-
-  <div class="sop-prose">
-    <blockquote>
-      "If there's a repetitive manual task, a messy dataset, or a real problem students face, I sit down, learn what's needed, and write the code to solve it."
-    </blockquote>
-
-    <h2>1. Who I Am: Building &amp; Contributing to Open Source</h2>
-    <p>
-      I am currently a first-year undergraduate in Computer Science &amp; Engineering at Khulna University of Engineering &amp; Technology (KUET). My programming journey has always been about learning by building real, useful things.
-    </p>
-    <p>
-      During my college years at Notre Dame College, Dhaka, as part of the <strong>Notre Dame English Club Wikipedia Editorial &amp; Research Team (NDEC WERT)</strong>, I started writing Python scripts using Pywikibot to automate community operations. Since then, I've expanded to large-scale infrastructure and localization:
-    </p>
-    <ul>
-      <li><strong>Nuvio Streaming Ecosystem:</strong> Engineered native Bengali (bn) localization across the official <strong>NuvioMobile</strong> and <strong>NuvioTV</strong> Kotlin repositories, bringing accessibility to over a million active users on Android and Android TV platforms.</li>
-      <li><strong>Wikimedia Tool Developer:</strong> Built <a href="https://campanalytics.toolforge.org/" target="_blank" rel="noopener noreferrer">CampAnalytics</a> for Project Korikath—a production analytics tool deployed on <strong>Wikimedia Toolforge</strong> and Streamlit that tracks campaign participation and contributor retention.</li>
-      <li><strong>Global Bot Operations:</strong> Secured cross-wiki automated editing permissions, completing over <strong>47,000 automated bot edits</strong> and <strong>35,000+ media file operations</strong> across Wikipedia, Wikidata, and Wikimedia Commons. Structured roughly 10,000 articles on Fulfulde Wikipedia to map core categories from English Wikipedia.</li>
-    </ul>
-
-    <h2>2. Developer Tooling: Building CodeFunc</h2>
-    <p>
-      I like tools that are lightweight and stay out of the way. When inspecting unfamiliar codebases or checking PRs, jumping between files and documentation creates friction.
-    </p>
-    <p>
-      To solve that, I built and published <strong><a href="https://marketplace.visualstudio.com/items?itemName=TanvirSdq.codefunc-vscode" target="_blank" rel="noopener noreferrer">CodeFunc</a></strong> (available on the VS Code Marketplace and Chrome Web Store):
-    </p>
-    <ul>
-      <li><strong>Line 0 File Summary:</strong> Uses VS Code's CodeLens API to show a concise summary and structure at the top of each file without opening side panels.</li>
-      <li><strong>AI Code Explanations:</strong> Connects to Gemini, Groq, OpenRouter, and Claude for contextual code breakdowns.</li>
-      <li><strong>Local AST Parsing:</strong> Works offline using regex and AST heuristics for instant signature and export analysis.</li>
-    </ul>
-
-    <h2>3. Shipping Under Pressure: CampusShare KUET</h2>
-    <p>
-      During the <strong>50-hour ForkedArch Freshers Hackathon 2026 (Forkathon 2026)</strong>, our team secured <strong>1st Place</strong> building <strong><a href="https://forkathon2026-team-kuet-mantis-3.onrender.com/" target="_blank" rel="noopener noreferrer">CampusShare KUET</a></strong>. We tackled a common problem in KUET residential halls: <em>"Does anyone have an Arduino kit or a scientific calculator right now?"</em>:
-    </p>
-    <ul>
-      <li><strong>Full-Stack Setup:</strong> Built an asynchronous <strong>FastAPI</strong> backend with <strong>PostgreSQL</strong> on Render, paired with a <strong>React 18</strong> web app.</li>
-      <li><strong>Handover Verification:</strong> A dynamic 6-digit OTP and QR code system ensuring items are verified in person before marking as borrowed or returned.</li>
-      <li><strong>Cross-Platform Build:</strong> Packaged the app with <strong>Capacitor</strong> into an installable Android APK for students.</li>
-    </ul>
-
-    <h2>4. Applied Machine Learning</h2>
-    <p>
-      I am actively studying machine learning and data science, aiming to understand the underlying mathematics rather than just calling pre-packaged APIs:
-    </p>
-    <ul>
-      <li><strong>AgroScan &amp; Smart Farm:</strong> Trained a 38-class plant pathology classifier on leaf photos as <a href="https://maincropdisease.streamlit.app/" target="_blank" rel="noopener noreferrer">AgroScan</a>. Contributed the model into production for the <a href="https://github.com/mugdha-sarker81/smart-farm" target="_blank" rel="noopener noreferrer">smart-farm</a> platform (React + Supabase).</li>
-      <li><strong>From Scratch (<code>MLP-Implementation</code>):</strong> Built a character-level Bigram Language Model in PyTorch on <em>The Wizard of Oz</em> text—writing tokenization tables, calculating cross-entropy loss, and sampling text with temperature.</li>
-      <li><strong>Competitions:</strong> Participating in the University of Tokyo Matsuo-Iwasawa Lab GCI World 2026 program and Kaggle challenges to practice feature engineering and gradient boosting.</li>
-    </ul>
-
-    <h2>5. Where I Am Heading: Systems &amp; Architecture</h2>
-    <p>
-      As I progress through my CSE coursework at KUET, my goals are focused on deeper technical layers:
-    </p>
-    <ul>
-      <li><strong>Tokenizers from Scratch:</strong> Writing byte-pair encoding (BPE) tokenizers in C/C++ and pure Python to understand tokenization without third-party libraries.</li>
-      <li><strong>Systems Fundamentals:</strong> Learning operating systems, memory management, and data structures to write highly efficient software.</li>
-      <li><strong>Autonomous Multi-Agent Systems:</strong> Integrating and orchestrating local LLM pipelines and automated agents (via Google Antigravity and Ollama) for workflow automation and repository maintenance.</li>
-    </ul>
-
-    <h2>6. Working Together</h2>
-    <p>
-      If you are looking for an intern, mentee, or collaborator:
-    </p>
-    <ul>
-      <li><strong>Fast Learner:</strong> When I encounter a new problem or stack, I dive in, read the documentation, and build a working solution.</li>
-      <li><strong>Hands-On Experience:</strong> Comfortable working across Python, TypeScript, React, Kotlin, C++, and basic ML workflows.</li>
-      <li><strong>Work Ethic:</strong> Early in my degree, but highly motivated, open to feedback, and dedicated to writing clean, maintainable code.</li>
-    </ul>
-
-    <p>
-      I am eager to take on software engineering internships, research opportunities, and open-source collaborations. Feel free to reach out.
-    </p>
-
-    <div style="margin-top: 36px; padding-top: 24px; border-top: var(--rule-hair); display: flex; gap: 16px; flex-wrap: wrap;">
-      <a class="badge badge--accent" href="mailto:siddiquetanvir27@gmail.com" style="padding: 10px 18px; font-size: 13px; min-height: 44px; display: inline-flex; align-items: center;">
-        Email Me &rarr;
-      </a>
-      <a class="badge" href="https://www.linkedin.com/in/tanvirsdq" target="_blank" rel="noopener noreferrer" style="padding: 10px 18px; font-size: 13px; min-height: 44px; display: inline-flex; align-items: center;">
-        LinkedIn <span aria-hidden="true">&#8599;</span>
-      </a>
-      <a class="badge" href="https://github.com/tanvirsdq" target="_blank" rel="noopener noreferrer" style="padding: 10px 18px; font-size: 13px; min-height: 44px; display: inline-flex; align-items: center;">
-        GitHub <span aria-hidden="true">&#8599;</span>
-      </a>
-      <a class="badge" href="https://orcid.org/0009-0009-8753-1114" target="_blank" rel="noopener noreferrer" style="padding: 10px 18px; font-size: 13px; min-height: 44px; display: inline-flex; align-items: center;">
-        ORCID <span aria-hidden="true">&#8599;</span>
-      </a>
-      <a class="badge" href="./" style="padding: 10px 18px; font-size: 13px; min-height: 44px; display: inline-flex; align-items: center;">
-        &larr; Back to Portfolio
-      </a>
+      <div class="sop-badge-group">
+        <span class="sop-reading-time">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          ~3 min read
+        </span>
+        <span class="sop-word-count">650 words</span>
+      </div>
     </div>
+    <h1 class="sop-title">Building, Learning, and What Comes Next</h1>
+    <p class="sop-subtitle">
+      First-year CSE student at KUET. Building practical tools, open-source automation, and learning ML foundations.
+    </p>
+  </header>
+
+  <!-- Mobile quick navigation dropdown -->
+  <details class="sop-mobile-nav">
+    <summary>Jump to Section &#9662;</summary>
+    <ul>
+      <li><a href="#open-source">01. Open Source &amp; Background</a></li>
+      <li><a href="#developer-tooling">02. Developer Tooling (CodeFunc)</a></li>
+      <li><a href="#campusshare">03. Shipping Under Pressure (CampusShare)</a></li>
+      <li><a href="#applied-ml">04. Applied Machine Learning</a></li>
+      <li><a href="#systems-architecture">05. Systems &amp; Architecture</a></li>
+      <li><a href="#working-together">06. Working Together</a></li>
+    </ul>
+  </details>
+
+  <div class="sop-layout">
+    <!-- Sticky Table of Contents Sidebar (Desktop) -->
+    <aside class="sop-toc" aria-label="Table of contents">
+      <div class="sop-toc__eyebrow">Contents</div>
+      <nav class="sop-toc__nav" id="sop-toc-nav">
+        <a href="#open-source" class="sop-toc__link active">
+          <span class="sop-toc__num">01</span>
+          <span class="sop-toc__text">Open Source &amp; Background</span>
+        </a>
+        <a href="#developer-tooling" class="sop-toc__link">
+          <span class="sop-toc__num">02</span>
+          <span class="sop-toc__text">CodeFunc Tooling</span>
+        </a>
+        <a href="#campusshare" class="sop-toc__link">
+          <span class="sop-toc__num">03</span>
+          <span class="sop-toc__text">CampusShare KUET</span>
+        </a>
+        <a href="#applied-ml" class="sop-toc__link">
+          <span class="sop-toc__num">04</span>
+          <span class="sop-toc__text">Applied Machine Learning</span>
+        </a>
+        <a href="#systems-architecture" class="sop-toc__link">
+          <span class="sop-toc__num">05</span>
+          <span class="sop-toc__text">Systems &amp; Architecture</span>
+        </a>
+        <a href="#working-together" class="sop-toc__link">
+          <span class="sop-toc__num">06</span>
+          <span class="sop-toc__text">Working Together</span>
+        </a>
+      </nav>
+      <div class="sop-toc__footer">
+        <a href="./MasterCV.pdf" target="_blank" rel="noopener noreferrer" class="sop-toc__cv-link">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          Curriculum Vitae (PDF)
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Prose Content -->
+    <article class="sop-article">
+      <div class="sop-prose">
+        <blockquote>
+          "If there's a repetitive manual task, a messy dataset, or a real problem students face, I sit down, learn what's needed, and write the code to solve it."
+        </blockquote>
+
+        <section id="open-source" class="sop-section">
+          <h2>1. Who I Am: Building &amp; Contributing to Open Source</h2>
+          <p>
+            I am currently a first-year undergraduate in Computer Science &amp; Engineering at Khulna University of Engineering &amp; Technology (KUET). My programming journey has always been about learning by building real, useful things.
+          </p>
+          <p>
+            During my college years at Notre Dame College, Dhaka, as part of the <strong>Notre Dame English Club Wikipedia Editorial &amp; Research Team (NDEC WERT)</strong>, I started writing Python scripts using Pywikibot to automate community operations. Since then, I've expanded to large-scale infrastructure and localization:
+          </p>
+          <ul>
+            <li><strong>Nuvio Streaming Ecosystem:</strong> Engineered native Bengali (bn) localization across the official <strong>NuvioMobile</strong> and <strong>NuvioTV</strong> Kotlin repositories, bringing accessibility to over a million active users on Android and Android TV platforms.</li>
+            <li><strong>Wikimedia Tool Developer:</strong> Built <a href="https://campanalytics.toolforge.org/" target="_blank" rel="noopener noreferrer">CampAnalytics</a> for Project Korikath—a production analytics tool deployed on <strong>Wikimedia Toolforge</strong> and Streamlit that tracks campaign participation and contributor retention.</li>
+            <li><strong>Global Bot Operations:</strong> Secured cross-wiki automated editing permissions, completing over <strong>47,000 automated bot edits</strong> and <strong>35,000+ media file operations</strong> across Wikipedia, Wikidata, and Wikimedia Commons. Structured roughly 10,000 articles on Fulfulde Wikipedia to map core categories from English Wikipedia.</li>
+          </ul>
+        </section>
+
+        <section id="developer-tooling" class="sop-section">
+          <h2>2. Developer Tooling: Building CodeFunc</h2>
+          <p>
+            I like tools that are lightweight and stay out of the way. When inspecting unfamiliar codebases or checking PRs, jumping between files and documentation creates friction.
+          </p>
+          <p>
+            To solve that, I built and published <strong><a href="https://marketplace.visualstudio.com/items?itemName=TanvirSdq.codefunc-vscode" target="_blank" rel="noopener noreferrer">CodeFunc</a></strong> (available on the VS Code Marketplace and Chrome Web Store):
+          </p>
+          <ul>
+            <li><strong>Line 0 File Summary:</strong> Uses VS Code's CodeLens API to show a concise summary and structure at the top of each file without opening side panels.</li>
+            <li><strong>AI Code Explanations:</strong> Connects to Gemini, Groq, OpenRouter, and Claude for contextual code breakdowns.</li>
+            <li><strong>Local AST Parsing:</strong> Works offline using regex and AST heuristics for instant signature and export analysis.</li>
+          </ul>
+        </section>
+
+        <section id="campusshare" class="sop-section">
+          <h2>3. Shipping Under Pressure: CampusShare KUET</h2>
+          <p>
+            During the <strong>50-hour ForkedArch Freshers Hackathon 2026 (Forkathon 2026)</strong>, our team secured <strong>1st Place</strong> building <strong><a href="https://forkathon2026-team-kuet-mantis-3.onrender.com/" target="_blank" rel="noopener noreferrer">CampusShare KUET</a></strong>. We tackled a common problem in KUET residential halls: <em>"Does anyone have an Arduino kit or a scientific calculator right now?"</em>:
+          </p>
+          <ul>
+            <li><strong>Full-Stack Setup:</strong> Built an asynchronous <strong>FastAPI</strong> backend with <strong>PostgreSQL</strong> on Render, paired with a <strong>React 18</strong> web app.</li>
+            <li><strong>Handover Verification:</strong> A dynamic 6-digit OTP and QR code system ensuring items are verified in person before marking as borrowed or returned.</li>
+            <li><strong>Cross-Platform Build:</strong> Packaged the app with <strong>Capacitor</strong> into an installable Android APK for students.</li>
+          </ul>
+        </section>
+
+        <section id="applied-ml" class="sop-section">
+          <h2>4. Applied Machine Learning</h2>
+          <p>
+            I am actively studying machine learning and data science, aiming to understand the underlying mathematics rather than just calling pre-packaged APIs:
+          </p>
+          <ul>
+            <li><strong>AgroScan &amp; Smart Farm:</strong> Trained a 38-class plant pathology classifier on leaf photos as <a href="https://maincropdisease.streamlit.app/" target="_blank" rel="noopener noreferrer">AgroScan</a>. Contributed the model into production for the <a href="https://github.com/mugdha-sarker81/smart-farm" target="_blank" rel="noopener noreferrer">smart-farm</a> platform (React + Supabase).</li>
+            <li><strong>From Scratch (<code>MLP-Implementation</code>):</strong> Built a character-level Bigram Language Model in PyTorch on <em>The Wizard of Oz</em> text—writing tokenization tables, calculating cross-entropy loss, and sampling text with temperature.</li>
+            <li><strong>Competitions:</strong> Participating in the University of Tokyo Matsuo-Iwasawa Lab GCI World 2026 program and Kaggle challenges to practice feature engineering and gradient boosting.</li>
+          </ul>
+        </section>
+
+        <section id="systems-architecture" class="sop-section">
+          <h2>5. Where I Am Heading: Systems &amp; Architecture</h2>
+          <p>
+            As I progress through my CSE coursework at KUET, my goals are focused on deeper technical layers:
+          </p>
+          <ul>
+            <li><strong>Tokenizers from Scratch:</strong> Writing byte-pair encoding (BPE) tokenizers in C/C++ and pure Python to understand tokenization without third-party libraries.</li>
+            <li><strong>Systems Fundamentals:</strong> Learning operating systems, memory management, and data structures to write highly efficient software.</li>
+            <li><strong>Autonomous Multi-Agent Systems:</strong> Integrating and orchestrating local LLM pipelines and automated agents (via Google Antigravity and Ollama) for workflow automation and repository maintenance.</li>
+          </ul>
+        </section>
+
+        <section id="working-together" class="sop-section">
+          <h2>6. Working Together</h2>
+          <p>
+            If you are looking for an intern, mentee, or collaborator:
+          </p>
+          <ul>
+            <li><strong>Fast Learner:</strong> When I encounter a new problem or stack, I dive in, read the documentation, and build a working solution.</li>
+            <li><strong>Hands-On Experience:</strong> Comfortable working across Python, TypeScript, React, Kotlin, C++, and basic ML workflows.</li>
+            <li><strong>Work Ethic:</strong> Early in my degree, but highly motivated, open to feedback, and dedicated to writing clean, maintainable code.</li>
+          </ul>
+
+          <p>
+            I am eager to take on software engineering internships, research opportunities, and open-source collaborations. Feel free to reach out.
+          </p>
+
+          <div style="margin-top: 36px; padding-top: 24px; border-top: var(--rule-hair); display: flex; gap: 16px; flex-wrap: wrap;">
+            <a class="badge badge--accent" href="mailto:siddiquetanvir27@gmail.com" style="padding: 10px 18px; font-size: 13px; min-height: 44px; display: inline-flex; align-items: center;">
+              Email Me &rarr;
+            </a>
+            <a class="badge" href="https://www.linkedin.com/in/tanvirsdq" target="_blank" rel="noopener noreferrer" style="padding: 10px 18px; font-size: 13px; min-height: 44px; display: inline-flex; align-items: center;">
+              LinkedIn <span aria-hidden="true">&#8599;</span>
+            </a>
+            <a class="badge" href="https://github.com/tanvirsdq" target="_blank" rel="noopener noreferrer" style="padding: 10px 18px; font-size: 13px; min-height: 44px; display: inline-flex; align-items: center;">
+              GitHub <span aria-hidden="true">&#8599;</span>
+            </a>
+            <a class="badge" href="https://orcid.org/0009-0009-8753-1114" target="_blank" rel="noopener noreferrer" style="padding: 10px 18px; font-size: 13px; min-height: 44px; display: inline-flex; align-items: center;">
+              ORCID <span aria-hidden="true">&#8599;</span>
+            </a>
+            <a class="badge" href="./" style="padding: 10px 18px; font-size: 13px; min-height: 44px; display: inline-flex; align-items: center;">
+              &larr; Back to Portfolio
+            </a>
+          </div>
+        </section>
+      </div>
+    </article>
   </div>
-  </article>
 </main>
 
 <footer class="site-footer">
@@ -161,14 +287,54 @@
 
 <script>
   (function () {
+    // Theme toggle
     const btn = document.getElementById("theme-toggle");
-    if (!btn) return;
-    btn.addEventListener("click", () => {
-      const current = document.documentElement.getAttribute("data-theme") || "light";
-      const next = current === "dark" ? "light" : "dark";
-      document.documentElement.setAttribute("data-theme", next);
-      try { localStorage.setItem("theme", next); } catch (e) {}
-    });
+    if (btn) {
+      btn.addEventListener("click", () => {
+        const current = document.documentElement.getAttribute("data-theme") || "light";
+        const next = current === "dark" ? "light" : "dark";
+        document.documentElement.setAttribute("data-theme", next);
+        try { localStorage.setItem("theme", next); } catch (e) {}
+      });
+    }
+
+    // Reading progress bar
+    const progressBar = document.getElementById("reading-progress-bar");
+    if (progressBar) {
+      window.addEventListener("scroll", () => {
+        const docElem = document.documentElement;
+        const totalHeight = docElem.scrollHeight - docElem.clientHeight;
+        if (totalHeight > 0) {
+          const progress = (window.scrollY / totalHeight) * 100;
+          progressBar.style.width = Math.min(100, Math.max(0, progress)) + "%";
+        }
+      }, { passive: true });
+    }
+
+    // Table of contents ScrollSpy
+    const sections = document.querySelectorAll(".sop-section");
+    const tocLinks = document.querySelectorAll(".sop-toc__link");
+
+    if (sections.length > 0 && tocLinks.length > 0) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute("id");
+            tocLinks.forEach((link) => {
+              if (link.getAttribute("href") === "#" + id) {
+                link.classList.add("active");
+              } else {
+                link.classList.remove("active");
+              }
+            });
+          }
+        });
+      }, {
+        rootMargin: "-20% 0px -65% 0px"
+      });
+
+      sections.forEach((sec) => observer.observe(sec));
+    }
   })();
 </script>
 
