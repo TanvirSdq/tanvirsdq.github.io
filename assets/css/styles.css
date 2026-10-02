@@ -182,8 +182,8 @@ button { font: inherit; }
 .side-rail__list {
   display: flex;
   flex-direction: column;
-  gap: 22px;
-  padding: 0 40px;
+  gap: 14px;
+  padding: 0 32px;
   width: 100%;
 }
 
@@ -192,13 +192,14 @@ button { font: inherit; }
   align-items: baseline;
   gap: 10px;
   border-left: 2px solid var(--border-color);
-  padding-left: 14px;
+  padding-left: 12px;
+  padding-block: 2px;
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--text-secondary);
-  transition: border-color 0.25s var(--ease), color 0.25s var(--ease);
+  transition: border-color 0.25s var(--ease), color 0.25s var(--ease), padding-left 0.2s var(--ease);
 }
 
 .side-rail__index {
@@ -209,14 +210,28 @@ button { font: inherit; }
 
 .side-rail__list a:hover {
   color: var(--text-primary);
+  padding-left: 14px;
 }
 
 .side-rail__list a.is-active {
   color: var(--text-primary);
   border-left-color: var(--accent-color);
+  padding-left: 14px;
 }
 .side-rail__list a.is-active .side-rail__index {
   color: var(--accent-color);
+}
+
+@media (min-width: 1025px) and (max-height: 860px) {
+  .side-rail__list {
+    gap: 8px;
+    padding: 0 24px;
+  }
+  .side-rail__list a {
+    font-size: 10.5px;
+    padding-left: 10px;
+    gap: 8px;
+  }
 }
 
 /* ==========================================================================
@@ -322,6 +337,68 @@ button { font: inherit; }
   background-color: var(--accent-color);
 }
 
+/* Tactile Action Buttons */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background-color: var(--accent-color);
+  color: #FFFFFF !important;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(168, 28, 36, 0.2);
+  cursor: pointer;
+  transition: transform 0.2s var(--ease), box-shadow 0.2s var(--ease), opacity 0.2s var(--ease);
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 14px rgba(168, 28, 36, 0.35);
+  opacity: 0.96;
+}
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background-color: transparent;
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.2s var(--ease), border-color 0.2s var(--ease), color 0.2s var(--ease), background-color 0.2s var(--ease);
+}
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  border-color: var(--text-primary);
+  background-color: var(--card-bg);
+}
+.btn-secondary:active {
+  transform: translateY(0);
+}
+
+[data-theme="dark"] .btn-primary {
+  color: #111113 !important;
+  box-shadow: 0 2px 10px rgba(255, 92, 84, 0.25);
+}
+[data-theme="dark"] .btn-primary:hover {
+  box-shadow: 0 5px 18px rgba(255, 92, 84, 0.45);
+}
+
 .hero__headline {
   margin-top: 40px;
   font-family: var(--font-display);
@@ -350,21 +427,35 @@ button { font: inherit; }
 }
 
 /* ==========================================================================
-   IMPACT — LEDGER STRIP
+   IMPACT — METRIC LEDGER STRIP
    ========================================================================== */
+#impact {
+  padding-block: clamp(36px, 6vw, 64px);
+}
+#impact .eyebrow {
+  margin-bottom: 24px;
+}
+
 .ledger {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  border-top: var(--rule-heavy);
-  border-bottom: var(--rule-heavy);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  background: transparent;
   transition: border-color 0.35s var(--ease);
 }
 
 .ledger__item {
-  padding: 32px 24px;
+  padding: clamp(20px, 3vw, 30px) clamp(12px, 2vw, 20px);
   text-align: center;
-  border-right: var(--rule-hair);
-  transition: background-color 0.35s var(--ease), border-color 0.35s var(--ease);
+  border-right: 1px solid var(--border-color);
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.25s var(--ease), border-color 0.25s var(--ease);
 }
 .ledger__item:last-child { border-right: none; }
 .ledger__item:hover { background: var(--card-bg); }
@@ -372,16 +463,23 @@ button { font: inherit; }
 .ledger__number {
   font-family: var(--font-mono);
   font-weight: 700;
-  font-size: clamp(22px, 3vw, 32px);
+  font-size: clamp(24px, 3.4vw, 36px);
   color: var(--accent-color);
   letter-spacing: -0.02em;
+  line-height: 1.15;
+  transition: transform 0.2s var(--ease);
+}
+.ledger__item:hover .ledger__number {
+  transform: translateY(-2px);
 }
 
 .ledger__label {
   margin-top: 8px;
-  font-size: 12px;
+  font-size: 12.5px;
   color: var(--text-secondary);
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
+  line-height: 1.4;
+  max-width: 22ch;
 }
 
 /* ==========================================================================
@@ -422,22 +520,30 @@ button { font: inherit; }
 
 .project-card {
   background: var(--card-bg);
-  border: 2px solid var(--text-primary);
-  padding: 34px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 32px;
   display: flex;
   flex-direction: column;
   gap: 18px;
   position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
   transition: background-color 0.35s var(--ease), border-color 0.25s var(--ease),
     transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
 }
 .project-card:hover {
   border-color: var(--accent-color);
   transform: translateY(-3px);
-  box-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 12px 28px -8px rgba(168, 28, 36, 0.12);
+}
+[data-theme="dark"] .project-card {
+  background: linear-gradient(180deg, #1C1C21 0%, #161619 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
 }
 [data-theme="dark"] .project-card:hover {
-  box-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.45);
+  border-color: var(--accent-color);
+  box-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 92, 84, 0.25);
 }
 
 .project-card__tags {
@@ -469,19 +575,29 @@ button { font: inherit; }
 .project-card__link {
   font-family: var(--font-mono);
   font-size: 12px;
+  font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   display: inline-flex;
   align-items: center;
   gap: 8px;
   align-self: flex-start;
-  padding-top: 10px;
+  padding-top: 12px;
   border-top: var(--rule-hair);
   width: 100%;
+  color: var(--text-primary);
   transition: color 0.2s var(--ease);
 }
 .project-card__link:hover,
 .project-card__link:focus-visible { color: var(--accent-color); }
+
+.project-card__link span[aria-hidden="true"] {
+  display: inline-block;
+  transition: transform 0.2s var(--ease);
+}
+.project-card__link:hover span[aria-hidden="true"] {
+  transform: translate(3px, -3px);
+}
 
 .project-card__link--primary::after {
   content: "";
@@ -659,17 +775,22 @@ button { font: inherit; }
 .contact__email {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: clamp(28px, 5vw, 48px);
+  font-size: clamp(24px, 4.5vw, 44px);
   letter-spacing: -0.01em;
   display: inline-block;
   border-bottom: 2px solid var(--text-primary);
   padding-bottom: 6px;
+  cursor: pointer;
   transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
 }
 .contact__email:hover,
 .contact__email:focus-visible {
   color: var(--accent-color);
   border-color: var(--accent-color);
+}
+.contact__email.is-copied {
+  color: #10B981 !important;
+  border-color: #10B981 !important;
 }
 
 .contact__email-row {
@@ -683,12 +804,14 @@ button { font: inherit; }
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 6px 12px;
+  padding: 8px 14px;
+  border-radius: 4px;
   background: var(--card-bg);
   border: 1px solid var(--border-color);
   color: var(--text-secondary);
   font-family: var(--font-mono);
   font-size: 11px;
+  font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   cursor: pointer;
@@ -697,11 +820,14 @@ button { font: inherit; }
 .copy-email-btn:hover {
   border-color: var(--accent-color);
   color: var(--accent-color);
+  transform: translateY(-1px);
 }
 .copy-email-btn.is-copied {
   border-color: #10B981;
   color: #10B981;
-  background: rgba(16, 185, 129, 0.08);
+  background: rgba(16, 185, 129, 0.1);
+  transform: scale(1.03);
+}
 }
 
 .social-list {

@@ -8,21 +8,21 @@ nav:
 - id: impact
   label: Impact
 - id: achievements
-  label: Awards
+  label: Achievements
 - id: skills
-  label: Toolkit
+  label: Skills
 - id: projects
   label: Projects
 - id: open_source
-  label: Experience
+  label: Open Source
 - id: education
   label: Education
 - id: extracurricular
-  label: Activities
+  label: Extracurricular
 - id: courses
   label: Courses
 - id: research
-  label: Direction
+  label: Research
 - id: contact
   label: Contact
 hero:
@@ -256,12 +256,12 @@ education:
     period: 2018 — 2022
     details: Secondary education in science division with distinction.
 extracurricular_activities:
-- role: Active Member (WERT & Linguistic Group)
+- role: Director of Leadership & Management
   organization: Notre Dame English Club (NDEC)
   period: 2023 — 2025
   bullets:
-  - Active contributor in WERT (Wikipedia Editorial and Research Team), contributing to open-knowledge research and documentation.
-  - Member of the NDEC Linguistic Group, engaging in language studies and linguistic analysis.
+  - Part of WERT, contributing to open-knowledge research and documentation.
+  - Part of the IOL team, engaging in language studies and linguistic analysis.
   - Participated in the 7th National English Carnival organized by NDEC.
 - role: Member
   organization: Hardware Acceleration Club of KUET (HACK)

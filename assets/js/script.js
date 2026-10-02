@@ -629,19 +629,26 @@
   function initCopyEmail() {
     const btn = document.getElementById("copy-email-btn");
     const textSpan = document.getElementById("copy-email-text");
+    const emailLink = document.querySelector(".contact__email");
     if (!btn || !textSpan) return;
 
-    btn.addEventListener("click", () => {
-      const email = btn.dataset.email;
-      if (!email) return;
+    const email = btn.dataset.email || (emailLink ? emailLink.textContent.trim() : "");
+    if (!email) return;
+
+    let timer = null;
+    const triggerCopy = (e) => {
+      if (e) e.preventDefault();
 
       const onSuccess = () => {
         textSpan.textContent = "Copied!";
         btn.classList.add("is-copied");
-        setTimeout(() => {
+        if (emailLink) emailLink.classList.add("is-copied");
+        clearTimeout(timer);
+        timer = setTimeout(() => {
           textSpan.textContent = "Copy";
           btn.classList.remove("is-copied");
-        }, 2000);
+          if (emailLink) emailLink.classList.remove("is-copied");
+        }, 2200);
       };
 
       if (navigator.clipboard && navigator.clipboard.writeText) {
@@ -651,7 +658,13 @@
       } else {
         fallbackCopyText(email, onSuccess);
       }
-    });
+    };
+
+    btn.addEventListener("click", triggerCopy);
+    if (emailLink) {
+      emailLink.setAttribute("title", "Click to copy email address");
+      emailLink.addEventListener("click", triggerCopy);
+    }
   }
 
   function fallbackCopyText(text, callback) {

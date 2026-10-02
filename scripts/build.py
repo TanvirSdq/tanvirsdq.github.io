@@ -74,14 +74,14 @@ def build_about(data):
       <p class="hero__headline">{esc(hero.get("headline", ""))}</p>
       <p class="hero__bio">{esc(hero.get("bio", ""))}</p>
       <div class="tech-stack">
-        {techBadges}
+        {tech_badges}
       </div>
-      <div style="margin-top: 32px; display: flex; gap: 12px; flex-wrap: wrap; align-items: center;">
-        <a class="badge badge--accent" href="./MasterCV.pdf" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px; padding: 10px 16px; font-weight: bold; font-size: 12px; transition: transform 0.2s ease, background 0.2s ease;">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+      <div style="margin-top: 36px; display: flex; gap: 14px; flex-wrap: wrap; align-items: center;">
+        <a class="btn-primary" href="./MasterCV.pdf" target="_blank" rel="noopener noreferrer">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
           Download Master CV (PDF)
         </a>
-        <a class="badge" href="./cv.html" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; padding: 10px 16px; font-size: 12px;">
+        <a class="btn-secondary" href="./cv.html" target="_blank">
           View Master CV <span aria-hidden="true">&#8599;</span>
         </a>
       </div>
