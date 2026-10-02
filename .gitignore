@@ -1,35 +1,48 @@
-# OS & Editor
+# ==============================================================================
+# .gitignore — Tanvir Siddique Portfolio (GitHub Pages)
+# ==============================================================================
+
+# OS Metadata & Files
 .DS_Store
 .DS_Store?
 ._*
 Thumbs.db
 desktop.ini
+ehthumbs.db
+$RECYCLE.BIN/
 
-# IDE
+# IDE & Editor Directories
 .vscode/
 .idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
 
-# Node & Dependencies
+# Dependencies & Package Managers
 node_modules/
+.npm/
+.cache/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
 
-# Environment
+# Environment & Local Secrets
 .env
 .env.local
 .env.*.local
 .env.example
 
-# AI Studio Container Files (Local preview only — do not push to GitHub)
+# AI Studio Container Files (Local preview only — not needed on GitHub Pages)
 metadata.json
 server.js
-build.js
-package.json
 bun.lock
 
-# Misc
+# Logs, Cache & Temporary Files
 *.log
 *.tmp
 *.bak
-
+*.pid
+.temp/

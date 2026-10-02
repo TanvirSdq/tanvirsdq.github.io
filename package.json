@@ -1,0 +1,19 @@
+{
+  "name": "tanvirsdq-portfolio",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Portfolio of Tanvir Siddique, building core programming foundations and automating open-data systems.",
+  "scripts": {
+    "dev": "node server.js",
+    "build:og": "node scripts/generate-og.js",
+    "build": "node build.js && node scripts/generate-favicons.js && node scripts/generate-og.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "js-yaml": "^5.4.2"
+  },
+  "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2"
+  }
+}
