@@ -79,6 +79,7 @@ skills:
 projects:
 - title: CampAnalytics — Event Evaluation & Campaign Analytics
   category: WebApp
+  status: Active on Toolforge
   tags:
   - Python
   - Flask
@@ -97,6 +98,7 @@ projects:
   featured: true
 - title: CodeFunc
   category: Developer Tool
+  status: Marketplace v2.0.3
   tags:
   - TypeScript
   - VS Code Extension
@@ -108,10 +110,11 @@ projects:
     heuristics for non-intrusive structure mapping.
   github: https://github.com/tanvirsdq/CodeFunc
   demo: https://marketplace.visualstudio.com/items?itemName=TanvirSdq.codefunc-vscode
-  demo_label: VS Code Marketplace (v1.0.3)
+  demo_label: VS Code Marketplace (v2.0.3)
   featured: true
 - title: CampusShare KUET
   category: Hackathon
+  status: Hackathon 1st Place
   tags:
   - React 18
   - FastAPI
@@ -130,6 +133,7 @@ projects:
   featured: false
 - title: AgroScan — Crop Disease Detection & Smart Farm
   category: ML/AI
+  status: Transfer Learning Model
   tags:
   - Python
   - TensorFlow
@@ -149,6 +153,7 @@ projects:
   featured: false
 - title: TanvirSdqBot — Wikimedia Automation Engine
   category: Automated Bot
+  status: 47k+ Automated Edits
   tags:
   - Python
   - Pywikibot
@@ -162,6 +167,7 @@ projects:
   featured: true
 - title: Nuvio
   category: Open Source
+  status: 1M+ Active Users
   tags:
   - Kotlin
   - Android TV
@@ -210,20 +216,13 @@ projects:
   featured: false
 professional_experience: []
 open_source_contributions:
-- role: Lead of Operations
-  organization: Project Koushal
-  period: Sep 2024 — Present
-  bullets:
-  - Direct technical and operational logistics for nationwide community learning initiatives.
-  - Streamline communication channels, workflow pipelines, and resource distribution.
-- role: Team Member & Data Lead
+- role: Data Lead & Operations
   organization: Project Korikath
   period: Jan 2024 — Present
   bullets:
-  - Architected and maintain CampAnalytics on Wikimedia Toolforge for campaign analytics
-    and retention tracking.
-  - Develop data pipelines analyzing contributor churn, event health scorecards, and
-    cross-wiki metrics.
+  - Architected and maintain CampAnalytics on Wikimedia Toolforge for campaign analytics and retention tracking.
+  - Develop data pipelines analyzing contributor churn, event health scorecards, and cross-wiki metrics.
+  - Direct operational logistics and technical pipelines for sister initiative Project Koushal.
 - role: Contributor & Bot Operator
   organization: Wikimedia Foundation
   period: Jun 2022 — Present
@@ -257,13 +256,13 @@ education:
     period: 2018 — 2022
     details: Secondary education in science division with distinction.
 extracurricular_activities:
-- role: Director of Leadership & Management
-  organization: Notre Dame English Club (WERT)
-  period: Sep 2024 — Sep 2025
+- role: Active Member (WERT & Linguistic Group)
+  organization: Notre Dame English Club (NDEC)
+  period: 2023 — 2025
   bullets:
-  - Led leadership operations and managed event coordination for college-wide literary
-    and cultural programs.
-  - Mentored junior executive members and coordinated inter-departmental communications.
+  - Active contributor in WERT (Wikipedia Editorial and Research Team), contributing to open-knowledge research and documentation.
+  - Member of the NDEC Linguistic Group, engaging in language studies and linguistic analysis.
+  - Participated in the 7th National English Carnival organized by NDEC.
 - role: Member
   organization: Hardware Acceleration Club of KUET (HACK)
   period: Jul 2026 — Present

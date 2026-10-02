@@ -113,7 +113,13 @@
     if (!("IntersectionObserver" in window) || sections.length === 0) return;
 
     const setActive = (id) => {
-      links.forEach((l) => l.classList.toggle("is-active", l.dataset.navTarget === id));
+      links.forEach((l) => {
+        const isActive = l.dataset.navTarget === id;
+        l.classList.toggle("is-active", isActive);
+        if (isActive && window.innerWidth < 960) {
+          l.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+        }
+      });
     };
 
     const observer = new IntersectionObserver(
@@ -170,19 +176,32 @@
     section.id = "impact";
     section.innerHTML = `
       <div class="eyebrow">By the numbers</div>
-      <h2 class="section-title sr-only">Key Impact Metrics</h2>
+      <h2 class="section-title">Key Impact Metrics</h2>
     `;
 
     const ledger = el("div", "ledger");
     metrics.forEach((m) => {
-      ledger.appendChild(
-        el(
-          "div",
+      if (m.url) {
+        const item = el(
+          "a",
           "ledger__item",
           `<div class="ledger__number">${escapeHtml(m.number)}</div>
            <div class="ledger__label">${escapeHtml(m.label)}</div>`
-        )
-      );
+        );
+        item.href = m.url;
+        item.target = "_blank";
+        item.rel = "noopener noreferrer";
+        ledger.appendChild(item);
+      } else {
+        ledger.appendChild(
+          el(
+            "div",
+            "ledger__item",
+            `<div class="ledger__number">${escapeHtml(m.number)}</div>
+             <div class="ledger__label">${escapeHtml(m.label)}</div>`
+          )
+        );
+      }
     });
     section.appendChild(ledger);
     return section;
@@ -616,26 +635,26 @@
       const email = btn.dataset.email;
       if (!email) return;
 
+      const onSuccess = () => {
+        textSpan.textContent = "Copied!";
+        btn.classList.add("is-copied");
+        setTimeout(() => {
+          textSpan.textContent = "Copy";
+          btn.classList.remove("is-copied");
+        }, 2000);
+      };
+
       if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(email).then(() => {
-          textSpan.textContent = "Copied!";
-          btn.style.borderColor = "var(--accent-color)";
-          btn.style.color = "var(--accent-color)";
-          setTimeout(() => {
-            textSpan.textContent = "Copy";
-            btn.style.borderColor = "";
-            btn.style.color = "";
-          }, 2000);
-        }).catch(() => {
-          fallbackCopyText(email, textSpan, btn);
+        navigator.clipboard.writeText(email).then(onSuccess).catch(() => {
+          fallbackCopyText(email, onSuccess);
         });
       } else {
-        fallbackCopyText(email, textSpan, btn);
+        fallbackCopyText(email, onSuccess);
       }
     });
   }
 
-  function fallbackCopyText(text, textSpan, btn) {
+  function fallbackCopyText(text, callback) {
     const textArea = document.createElement("textarea");
     textArea.value = text;
     textArea.style.position = "fixed";
@@ -644,14 +663,70 @@
     textArea.select();
     try {
       document.execCommand("copy");
-      textSpan.textContent = "Copied!";
-      setTimeout(() => {
-        textSpan.textContent = "Copy";
-      }, 2000);
+      if (callback) callback();
     } catch (err) {
       console.error("Copy failed", err);
     }
     document.body.removeChild(textArea);
+  }
+
+  function initCounterAnimation() {
+    const impactSection = document.getElementById("impact");
+    if (!impactSection) return;
+
+    if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      return;
+    }
+
+    const numbers = impactSection.querySelectorAll(".ledger__number");
+    if (!numbers.length) return;
+
+    let hasAnimated = false;
+
+    const animateNumber = (el) => {
+      const originalText = el.textContent.trim();
+      const match = originalText.match(/([\d,]+)(\+?)/);
+      if (!match) return;
+
+      const rawNum = parseInt(match[1].replace(/,/g, ""), 10);
+      const suffix = match[2] || "";
+      if (isNaN(rawNum)) return;
+
+      const duration = 1400;
+      const startTime = performance.now();
+
+      const update = (now) => {
+        const elapsed = now - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        // Exponential ease-out
+        const ease = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+        const current = Math.floor(ease * rawNum);
+
+        el.textContent = current.toLocaleString("en-US") + suffix;
+
+        if (progress < 1) {
+          requestAnimationFrame(update);
+        } else {
+          el.textContent = rawNum.toLocaleString("en-US") + suffix;
+        }
+      };
+
+      requestAnimationFrame(update);
+    };
+
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated) {
+            hasAnimated = true;
+            numbers.forEach((numEl) => animateNumber(numEl));
+            observer.disconnect();
+          }
+        });
+      }, { threshold: 0.2 });
+
+      observer.observe(impactSection);
+    }
   }
 
   function initScrollReveal() {
@@ -692,6 +767,7 @@
     initThemeToggle();
     initCopyEmail();
     initScrollReveal();
+    initCounterAnimation();
 
     const existingLinks = Array.from(document.querySelectorAll("[data-nav-target]"));
     if (existingLinks.length > 0) {

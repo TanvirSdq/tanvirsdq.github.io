@@ -302,6 +302,25 @@ button { font: inherit; }
   border-color: var(--accent-color);
   color: var(--accent-color);
 }
+.badge--status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+  background: rgba(168, 28, 36, 0.04);
+}
+[data-theme="dark"] .badge--status {
+  background: rgba(255, 92, 84, 0.08);
+}
+.badge--status::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+}
 
 .hero__headline {
   margin-top: 40px;
@@ -653,6 +672,38 @@ button { font: inherit; }
   border-color: var(--accent-color);
 }
 
+.contact__email-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.copy-email-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s var(--ease);
+}
+.copy-email-btn:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+.copy-email-btn.is-copied {
+  border-color: #10B981;
+  color: #10B981;
+  background: rgba(16, 185, 129, 0.08);
+}
+
 .social-list {
   margin-top: 44px;
   display: flex;
@@ -985,6 +1036,8 @@ button { font: inherit; }
     width: 100%;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    scroll-behavior: smooth;
+    scroll-snap-type: x proximity;
   }
   .side-rail__list::-webkit-scrollbar { display: none; }
   .side-rail__list a {
@@ -997,6 +1050,11 @@ button { font: inherit; }
     align-items: center;
     white-space: nowrap;
     flex-shrink: 0;
+    scroll-snap-align: center;
+    transition: all 0.2s var(--ease);
+  }
+  .side-rail__list a:active {
+    transform: scale(0.95);
   }
   .side-rail__list a.is-active {
     border-left-color: transparent;
@@ -1023,6 +1081,20 @@ button { font: inherit; }
   .ledger__item:nth-child(3),
   .ledger__item:nth-child(4) { border-top: var(--rule-hair); }
   .cert-item { flex-direction: column; align-items: flex-start; gap: 4px; }
+}
+
+@media (max-width: 480px) {
+  .ledger__item {
+    padding: 22px 12px;
+  }
+  .ledger__number {
+    font-size: 24px;
+    letter-spacing: -0.01em;
+  }
+  .ledger__label {
+    font-size: 11px;
+    line-height: 1.35;
+  }
 }
 
 @media (max-width: 520px) {
