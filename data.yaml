@@ -77,24 +77,20 @@ skills:
   - Linguistics & Classical Arabic
   - Community Mentorship
 projects:
-- title: CampAnalytics — Event Evaluation & Campaign Analytics
+- title: CampTools — Campaign Analytics & Comparative Health Suite
   category: WebApp
   status: Active on Toolforge
   tags:
-  - Python
-  - Flask
-  - Streamlit
-  - Pandas
-  - Plotly
+  - TypeScript
+  - Node.js
+  - Express
   - Wikimedia Toolforge
-  description: Analytics tool built for Project Korikath to evaluate Wikimedia Commons
-    campaigns (WLM, WLE, WLF, WLA, WLB) and contributor retention. Deployed on Wikimedia
-    Toolforge and Streamlit.
-  github: https://github.com/tanvirsdq/CampAnalytics
-  demo: https://campanalytics.toolforge.org/
+  - Wikimedia Codex
+  - REST API
+  description: High-performance TypeScript analytics platform for Wikimedia Commons campaigns, providing multi-country longitudinal comparisons, contributor retention matrices, and regional health benchmarking. Deployed on Wikimedia Toolforge.
+  github: https://github.com/tanvirsdq/CampAnalytics-rewrite
+  demo: https://camptools.toolforge.org/
   demo_label: Live on Wikimedia Toolforge
-  streamlit: https://campanalytics.streamlit.app/
-  streamlit_label: Interactive Streamlit Dashboard
   featured: true
 - title: CodeFunc
   category: Developer Tool
@@ -165,17 +161,18 @@ projects:
     campaigns.
   github: https://github.com/tanvirsdq/TanvirSdqBot
   featured: true
-- title: Nuvio
+- title: Nuvio & Obtainium — Open Source Localization
   category: Open Source
   status: 1M+ Active Users
   tags:
-  - Kotlin
+  - Bengali Localization
+  - Android
   - Android TV
-  - Mobile
-  - Streaming
-  description: Contributor to the official open-source Nuvio media streaming clients
-    for mobile and Android TV devices.
+  - Open Source
+  description: Localization and terminology contributor delivering native Bengali (bn) translation and UI terminology refinement across open-source Android applications (Nuvio mobile/TV and Obtainium app updater).
   github: https://github.com/NuvioMedia
+  demo: https://github.com/ImranR98/Obtainium
+  demo_label: View Obtainium Upstream
   featured: true
 - title: Kaggle ML & Data Science Workspace
   category: ML/AI
@@ -199,7 +196,7 @@ projects:
   - Bigram LM
   - Jupyter
   description: Character-level Bigram Language Model trained on The Wizard of Oz in
-    PyTorch, exploring tokenization, cross-entropy loss, and autoregressive text generation.
+    PyTorch, exploring vocabulary mappings, cross-entropy loss, and autoregressive text generation.
   github: https://github.com/tanvirsdq/MLP-Implementation
   featured: false
 - title: Algorithmic Problem Solving
@@ -216,11 +213,16 @@ projects:
   featured: false
 professional_experience: []
 open_source_contributions:
+- role: Contributor (Localization)
+  organization: Obtainium
+  period: Oct 2026
+  bullets:
+  - Implemented native Bengali (bn) localization and aligned technical terminology with standard software conventions for the open-source Android app manager.
 - role: Data Lead & Operations
   organization: Project Korikath
   period: Jan 2024 — Present
   bullets:
-  - Architected and maintain CampAnalytics on Wikimedia Toolforge for campaign analytics and retention tracking.
+  - Architected and maintain CampAnalytics and CampTools on Wikimedia Toolforge for campaign analytics and retention tracking.
   - Develop data pipelines analyzing contributor churn, event health scorecards, and cross-wiki metrics.
   - Direct operational logistics and technical pipelines for sister initiative Project Koushal.
 - role: Contributor & Bot Operator
@@ -276,8 +278,8 @@ research_interests:
   category: Statement of Purpose & Direction
   title: Building, Learning, and What Comes Next
   description: First-year CSE student at KUET with a track record of open-source automation,
-    full-stack shipping, and hands-on ML. Working toward mastering ML/AI from a systems
-    perspective, starting with building tokenizers from scratch.
+    full-stack shipping, and hands-on ML. Actively practicing algorithmic problem solving
+    in C++ alongside practical data engineering and applied machine learning.
   link: research.html
 contact:
   email: siddiquetanvir27@gmail.com
