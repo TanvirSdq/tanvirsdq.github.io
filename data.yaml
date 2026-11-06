@@ -161,18 +161,18 @@ projects:
     campaigns.
   github: https://github.com/tanvirsdq/TanvirSdqBot
   featured: true
-- title: Nuvio & Obtainium — Open Source Localization
+- title: Open Source App Localization
   category: Open Source
   status: 1M+ Active Users
   tags:
   - Bengali Localization
   - Android
-  - Android TV
   - Open Source
-  description: Localization and terminology contributor delivering native Bengali (bn) translation and UI terminology refinement across open-source Android applications (Nuvio mobile/TV and Obtainium app updater).
-  github: https://github.com/NuvioMedia
-  demo: https://github.com/ImranR98/Obtainium
-  demo_label: View Obtainium Upstream
+  - i18n
+  description: Native Bengali (bn) translation, typography, and UI terminology refinement across popular open-source Android clients including Nuvio (Mobile & TV), Obtainium, and Echo Music.
+  github: https://github.com/TanvirSdq
+  demo: https://github.com/NuvioMedia
+  demo_label: Explore Upstream Repositories
   featured: true
 - title: Kaggle ML & Data Science Workspace
   category: ML/AI
@@ -213,11 +213,11 @@ projects:
   featured: false
 professional_experience: []
 open_source_contributions:
-- role: Contributor (Localization)
-  organization: Obtainium
-  period: Oct 2026
+- role: Contributor (Bengali Localization)
+  organization: Open Source Android Apps
+  period: 2024 — Present
   bullets:
-  - Implemented native Bengali (bn) localization and aligned technical terminology with standard software conventions for the open-source Android app manager.
+  - Implemented native Bengali (bn) localization and software terminology alignment across Nuvio (Mobile & Android TV), Obtainium, and Echo Music.
 - role: Data Lead & Operations
   organization: Project Korikath
   period: Jan 2024 — Present
@@ -300,8 +300,8 @@ contact:
 achievements:
 - '**Champion (1st Place)** — ForkedArch Freshers Hackathon 2026 (Forkathon 2026)
   for CampusShare KUET.'
-- '**Spearheaded Bengali Localization** — Engineered native Bengali language support
-  across Nuvio''s mobile and Android TV clients, serving over a million users.'
+- '**Bengali Localization** — Engineered native Bengali language support across Nuvio,
+  Obtainium, Echo Music, and other open-source applications, serving over a million users.'
 - '**Wikimedia Tool Developer** — Deployed production analytics tools on Toolforge
   and earned full developer privileges in Wikimedia Phabricator.'
 - '**Global Bot Approvals** — Secured cross-wiki automated editing permissions for
